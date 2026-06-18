@@ -11,7 +11,7 @@
         {/* Hero */}
         <section style={{ background: 'var(--surface-card)' }}>
           <div className="hero-bg" style={{ background: '#e9e9ea url(assets/hero-laura-full.png) no-repeat right center / cover' }}>
-            <div className="container" style={{ paddingTop: 88, paddingBottom: 88, minHeight: 520, display: 'flex', alignItems: 'center' }}>
+            <div className="container" style={{ paddingTop: 88, paddingBottom: 88, minHeight: 740, display: 'flex', alignItems: 'center' }}>
               <div className="reveal" style={{ maxWidth: 520 }}>
                 <h1 className="h-display" style={{ fontSize: 'var(--fs-display)', marginBottom: 20 }}>
                   Be seen. Be trusted. Be chosen.
