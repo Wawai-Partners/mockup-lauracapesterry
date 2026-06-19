@@ -17,6 +17,57 @@
     );
   }
 
+  function EpisodeCard({ n, title, date, len, desc }) {
+    return (
+      <div className="reveal ep-card">
+        <h3 className="ed-serif ep-card__title">{n} — {title}</h3>
+        <p className="ep-card__date">{date}</p>
+        <div className="ep-player">
+          <img className="ep-player__art" src="assets/be-locally-loved-cover.jpg" alt="Be Locally Loved" />
+          <div className="ep-player__body">
+            <div className="ep-player__label">Be Locally Loved</div>
+            <div className="ep-player__name">{n} — {title}</div>
+            <div className="ep-player__bar">
+              <button className="ep-player__play" aria-label={`Play episode ${n}`}><i className="fa-solid fa-play"></i></button>
+              <span className="ep-player__time">0:00</span>
+              <span className="ep-player__track"><span></span></span>
+              <span className="ep-player__time">{len}</span>
+            </div>
+          </div>
+        </div>
+        <p className="ep-card__desc">{desc}</p>
+        <Button variant="outline" size="small" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">View Episode</Button>
+      </div>
+    );
+  }
+
+  const EPISODES = [
+    ['018', 'Behind the Message: How Georgetown Builds Trust, Connection, and Community Through Communication', 'June 17, 2026', '44 min',
+      'How clear, consistent communication builds the trust that turns a Georgetown business into a true community staple.'],
+    ['017', 'Building Belonging: How Alison Scovie and Jason Evers Helmlich Are Helping Communities Thrive Through Connection', 'June 3, 2026', '47 min',
+      'Alison Scovie and Jason Evers Helmlich on creating spaces where people genuinely belong — and why connection is the real growth strategy.'],
+    ['016', 'Building Community From the Inside Out with Cat Phelps of the Georgetown Family YMCA', 'May 20, 2026', '42 min',
+      'Cat Phelps of the Georgetown Family YMCA on building community from the inside out, one relationship at a time.'],
+    ['015', 'How Marketing Works (Part 4 of 4): Marketing is a System, Not a Campaign', 'May 13, 2026', '31 min',
+      'The finale of the marketing series: why marketing is a system you build, not a campaign you launch.'],
+    ['014', 'How Marketing Works (Part 3 of 4) — The Real ROI of Marketing and Why Most Businesses Measure It Wrong', 'May 6, 2026', '34 min',
+      'Most businesses measure marketing ROI wrong. Here’s the real way to think about return — and the long game it requires.'],
+    ['013', 'How Marketing Works (Part 2 of 4): The Timeline of Marketing and Why People Quit Too Early', 'April 29, 2026', '33 min',
+      'Marketing works on a timeline — and most people quit right before it pays off. Why patience is a strategy.'],
+    ['012', 'How Marketing Works (Part 1 of 4): Why “More Leads” is the Wrong First Goal', 'April 22, 2026', '30 min',
+      '“More leads” feels like the goal, but it’s usually the wrong first goal. What to focus on instead.'],
+    ['011', 'The Power of Moments: How to Elevate Customer Experience Inspired by Disney', 'April 15, 2026', '36 min',
+      'Lessons from Disney on designing moments that elevate the customer experience and make people feel genuinely cared for.'],
+    ['010', 'Tori Clark — How Faith, Risk, and Surrender Shaped an Award-Winning Entrepreneur', 'April 8, 2026', '49 min',
+      'Award-winning entrepreneur Tori Clark on how faith, risk, and surrender shaped her path in business.'],
+    ['009', 'The Silent Threat to Every Beloved Local Brand', 'April 1, 2026', '28 min',
+      'The quiet threat that erodes even the most beloved local brands — and how to protect against it.'],
+    ['008', 'How Marketing Works (Overview): Reframing ROI, Trust, and What Actually Drives Growth', 'March 25, 2026', '35 min',
+      'An overview of the marketing series: reframing ROI, trust, and what actually drives sustainable growth.'],
+    ['007', 'How to Use AI Without Losing Your Voice', 'March 18, 2026', '32 min',
+      'A grounded approach to using AI in your marketing without losing the voice that makes you, you.'],
+  ];
+
   function PodcastPage() {
     const { BookButton } = window;
     return (
@@ -39,10 +90,8 @@
               </div>
             </div>
             <div className="reveal" style={{ alignSelf: 'center' }}>
-              <div style={{ aspectRatio: '1 / 1', maxWidth: 360, marginLeft: 'auto', borderRadius: 'var(--radius-lg)', background: 'linear-gradient(150deg, var(--color-primary), var(--color-primary-active))', boxShadow: 'var(--shadow-lg)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#fff', textAlign: 'center', padding: 36 }}>
-                <i className="fa-solid fa-microphone-lines" style={{ fontSize: 44, marginBottom: 18, opacity: 0.9 }}></i>
-                <div className="h-display" style={{ fontSize: 'var(--fs-h3)', color: '#fff', lineHeight: 1.15 }}>Be Locally Loved</div>
-                <div style={{ fontFamily: 'var(--font-body)', fontSize: 13, letterSpacing: '0.14em', textTransform: 'uppercase', marginTop: 14, color: 'var(--lct-sky-200)' }}>A BeLocal Georgetown Show</div>
+              <div style={{ aspectRatio: '1 / 1', maxWidth: 360, marginLeft: 'auto', borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', background: '#fff' }}>
+                <img src="assets/be-locally-loved-cover.jpg" alt="Be Locally Loved podcast cover" style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
               </div>
             </div>
           </div>
@@ -74,15 +123,15 @@
         {/* Episodes */}
         <section className="bg-page section">
           <window.Container>
-            <window.SectionTitle align="left" title="Latest episodes"
+            <window.SectionTitle align="left" title="All episodes"
               sub="New conversations with the people building stronger, more connected communities." />
-            <div style={{ marginTop: 36, display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 820 }}>
-              <PlayRow n="03" title="Why being chosen starts with being trusted" len="38 min" />
-              <PlayRow n="02" title="The first 90 days: welcoming new neighbors well" len="41 min" />
-              <PlayRow n="01" title="Welcome to Be Locally Loved" len="29 min" />
+            <div className="ep-list">
+              {EPISODES.map((e) => (
+                <EpisodeCard key={e[0]} n={e[0]} title={e[1]} date={e[2]} len={e[3]} desc={e[4]} />
+              ))}
             </div>
-            <div style={{ marginTop: 32 }}>
-              <Button variant="outline" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">See all episodes</Button>
+            <div style={{ marginTop: 36 }}>
+              <Button variant="outline" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">Subscribe for new episodes</Button>
             </div>
           </window.Container>
         </section>

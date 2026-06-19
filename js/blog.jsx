@@ -1,106 +1,190 @@
-/* Laura Capes Terry — Blog */
+/* Laura Capes Terry — Blog (index redesign, June 2026)
+   Layout adapted from an editorial creator blog: featured hero,
+   "Most Recent" + sidebar, browse-by-topic rows, and search. */
 (function () {
   const { Button, Pill, Input } = window.LauraCapesTerryDesignSystem_1d8d61;
 
-  const POSTS = [
-    ['Clarity', 'Does your homepage answer the three questions every visitor asks?', 'If your website feels “almost right” but not quite effective, it’s usually a clarity issue — not a design problem. Here’s the simple above-the-fold test.', 'laura-office-writing.jpg', '6 min read'],
-    ['AI', 'All in with AI — without losing your voice', 'AI doesn’t replace heart — it amplifies it. A grounded framework for using modern tools with wisdom, clarity, and purpose.', 'laura-all-in-with-ai.png', '8 min read'],
-    ['Local Marketing', 'Be the business new neighbors trust first', 'New movers choose their go-to businesses in their first few months. Here’s how to make a great first impression before they choose someone else.', 'belocal-georgetown-cover.jpg', '5 min read'],
+  const FEATURED = {
+    cat: 'Clarity', time: '6 min read',
+    title: 'Does your homepage answer the three questions every visitor asks?',
+    excerpt: 'If your website feels “almost right” but not quite effective, it’s usually a clarity issue — not a design problem. Here’s the simple above-the-fold test that helps visitors instantly understand who you help, what you offer, and what to do next.',
+    img: 'laura-office-writing.jpg',
+  };
+
+  const RECENT = [
+    ['AI', '8 min read', 'All in with AI — without losing your voice', 'AI doesn’t replace heart — it amplifies it. A grounded framework for using modern tools with wisdom, clarity, and purpose.', 'laura-all-in-with-ai.png'],
+    ['Local Marketing', '5 min read', 'Be the business new neighbors trust first', 'New movers choose their go-to businesses in their first few months. Make a great first impression before they choose someone else.', 'belocal-georgetown-cover.jpg'],
+    ['Strategy', '6 min read', 'Stop reacting to trends. Start leading with focus.', 'A calmer, more confident way to run your marketing — one that puts your goals ahead of the algorithm’s.', 'laura-candid.jpg'],
+    ['Mindset', '4 min read', 'You don’t have to figure it out alone', 'Why the most successful local owners lean on experienced guidance instead of carrying the weight by themselves.', 'laura-headshot.jpg'],
   ];
-  const MORE = [
-    ['Branding', 'Magnetic brands are built on trust, not noise'],
-    ['Strategy', 'Stop reacting to trends. Start leading with focus.'],
-    ['Mindset', 'You don’t have to figure it out alone'],
-    ['AI', 'Five AI prompts that sharpen your message'],
-    ['Local Marketing', 'Why word-of-mouth still wins in a digital world'],
-    ['Clarity', 'The one-sentence test for your marketing message'],
+
+  const PICKS = [
+    ['The one-sentence test for your marketing message', 'Clarity'],
+    ['Five AI prompts that sharpen your message', 'AI'],
+    ['Magnetic brands are built on trust, not noise', 'Branding'],
+    ['Why word-of-mouth still wins in a digital world', 'Local Marketing'],
+    ['A simple weekly rhythm for marketing that sticks', 'Strategy'],
   ];
+
+  const TOPICS = [
+    ['BeLocal', [
+      ['How BeLocal connects you with your community', 'moments/belocal-group.png'],
+      ['Why new neighbors trust BeLocal businesses first', 'belocal-georgetown-cover.jpg'],
+      ['Getting featured in BeLocal Georgetown', 'moments/award-couple.png'],
+      ['The story behind why Laura publishes BeLocal', 'moments/gala.png'],
+    ]],
+    ['Georgetown', [
+      ['Marketing that fits the Georgetown community', 'moments/library-couple.png'],
+      ['Be the local business Georgetown recommends', 'belocal-georgetown-cover.jpg'],
+      ['Connecting with new Georgetown movers', 'moments/belocal-group.png'],
+      ['Showing up at Georgetown events that matter', 'moments/gala.png'],
+    ]],
+    ['Local Marketing', [
+      ['Be the business new neighbors trust first', 'belocal-georgetown-cover.jpg'],
+      ['Word-of-mouth still wins in a digital world', 'moments/award-couple.png'],
+      ['Show up where your customers already are', 'laura-headshot.jpg'],
+      ['A simple weekly rhythm for local marketing', 'laura-office-writing.jpg'],
+    ]],
+    ['AI', [
+      ['A grounded framework for using AI with wisdom', 'laura-all-in-with-ai.png'],
+      ['Five prompts that sharpen your marketing message', 'moments/gala.png'],
+      ['How to sound like you — not a robot — with AI', 'laura-candid.jpg'],
+      ['The human work AI can’t replace', 'moments/beach-sunset.png'],
+    ]],
+    ['Branding', [
+      ['Magnetic brands are built on trust, not noise', 'laura-headshot.jpg'],
+      ['Why clear beats clever every time', 'moments/podcast.png'],
+      ['The three questions your brand must answer', 'moments/library-couple.png'],
+      ['Make a great first impression before they choose', 'moments/resort.png'],
+    ]],
+    ['Community Connection', [
+      ['How connection builds a referable business', 'moments/belocal-group.png'],
+      ['Giving back as a marketing strategy that lasts', 'moments/award-couple.png'],
+      ['Building relationships before you need them', 'moments/gala.png'],
+      ['Why local partnerships outperform ads', 'moments/library-couple.png'],
+    ]],
+    ['Business Growth', [
+      ['Stop reacting to trends. Start leading with focus.', 'laura-candid.jpg'],
+      ['What a fractional CMO does for your business', 'moments/pool-portrait.png'],
+      ['Advertising as the engine of sustainable growth', 'laura-office-writing.jpg'],
+      ['Lead your marketing instead of letting it lead you', 'moments/resort.png'],
+    ]],
+    ['Visibility', [
+      ['Be seen, be trusted, be chosen', 'moments/resort.png'],
+      ['54 ways to get noticed in your market', 'moments/beach-sunset.png'],
+      ['Show up consistently without burning out', 'laura-headshot.jpg'],
+      ['The above-the-fold test for instant clarity', 'laura-office-writing.jpg'],
+    ]],
+  ];
+
+  const TAGS = ['Clarity', 'AI', 'Local Marketing', 'Branding', 'Strategy', 'Mindset'];
+
+  const CATEGORIES = ['BeLocal', 'Georgetown', 'Local Marketing', 'AI', 'Branding', 'Community Connection', 'Business Growth', 'Visibility'];
+
+  const stop = (e) => e.preventDefault();
+
+  const slugify = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
+  const postHref = (o) =>
+    `post.html?p=${slugify(o.title)}&c=${encodeURIComponent(o.cat || '')}` +
+    `&img=${encodeURIComponent(o.img || '')}&t=${encodeURIComponent(o.title)}`;
 
   function BlogPage() {
     const toast = window.useToast();
-    const [feat, ...rest] = POSTS;
     return (
       <div>
-        {/* Hero */}
-        <section className="bg-tint section--sm">
+        {/* Featured hero */}
+        <section className="blog-hero section" data-screen-label="Blog hero">
           <window.Container>
-            <div className="reveal" style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
-              <Pill variant="soft" style={{ marginBottom: 16 }}>The Blog</Pill>
-              <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 14 }}>Clarity for the overwhelmed entrepreneur</h1>
-              <p className="lead">Practical, grounded guidance on marketing, AI, and building a brand people trust — blending modern tools with timeless wisdom.</p>
-            </div>
-          </window.Container>
-        </section>
-
-        {/* Featured */}
-        <section className="bg-page section">
-          <window.Container>
-            <a className="reveal card" href="#" onClick={(e) => e.preventDefault()} style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 0, overflow: 'hidden', padding: 0, textDecoration: 'none' }}>
-              <div style={{ minHeight: 320, background: `var(--surface-tint) url(assets/${feat[3]}) no-repeat center/cover` }}></div>
-              <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 14 }}>
-                  <Pill variant="soft">{feat[0]}</Pill>
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)' }}>{feat[4]}</span>
+            <div className="blog-hero__grid">
+              <div className="reveal">
+                <p className="ed-eyebrow ed-eyebrow--light" style={{ color: 'var(--lct-sky-500)' }}>The Blog · Featured</p>
+                <h1 className="ed-serif" style={{ fontSize: 'var(--fs-h1)', color: '#fff', margin: '0 0 16px' }}>{FEATURED.title}</h1>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.65, color: 'rgba(255,255,255,0.9)', margin: '0 0 24px', maxWidth: 540 }}>{FEATURED.excerpt}</p>
+                <div className="bmeta" style={{ marginBottom: 24 }}>
+                  <Pill>{FEATURED.cat}</Pill>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>{FEATURED.time}</span>
                 </div>
-                <h2 className="h-display" style={{ fontSize: 'var(--fs-h3)', marginBottom: 12 }}>{feat[1]}</h2>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 18px' }}>{feat[2]}</p>
-                <span className="accent" style={{ fontFamily: 'var(--font-body)', fontWeight: 700 }}>Read article →</span>
+                <Button href={postHref(FEATURED)} variant="onDark">Read article</Button>
               </div>
-            </a>
-          </window.Container>
-        </section>
-
-        {/* Recent grid */}
-        <section className="bg-card section">
-          <window.Container>
-            <window.SectionTitle align="left" title="Recent articles" />
-            <div className="grid grid-3" style={{ marginTop: 36 }}>
-              {rest.concat([['AI', 'A simple weekly rhythm for marketing that sticks', 'Consistency beats intensity. Build a repeatable system you can actually sustain — even when you’re stretched thin.', 'laura-candid.jpg', '4 min read']]).map((p, i) => (
-                <a key={i} className="reveal card" href="#" onClick={(e) => e.preventDefault()} style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ height: 180, background: `var(--surface-tint) url(assets/${p[3]}) no-repeat center/cover` }}></div>
-                  <div style={{ padding: 24, display: 'flex', flexDirection: 'column', flex: 1 }}>
-                    <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 12 }}>
-                      <Pill variant="soft">{p[0]}</Pill>
-                      <span style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, color: 'var(--text-muted)' }}>{p[4]}</span>
-                    </div>
-                    <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{p[1]}</h3>
-                    <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 14px', flex: 1 }}>{p[2]}</p>
-                    <span className="accent" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 14 }}>Read more →</span>
-                  </div>
-                </a>
-              ))}
+              <a className="blog-hero__media reveal" href={postHref(FEATURED)}>
+                <img src={`assets/${FEATURED.img}`} alt={FEATURED.title} />
+              </a>
             </div>
           </window.Container>
         </section>
 
-        {/* More titles */}
+        {/* Most recent + sidebar */}
         <section className="bg-page section">
           <window.Container>
-            <window.SectionTitle align="left" title="More from the blog" />
-            <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 860 }}>
-              {MORE.map(([cat, title], i) => (
-                <a key={i} href="#" onClick={(e) => e.preventDefault()} className="reveal" style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '20px 4px', borderBottom: '1px solid var(--border-subtle)', textDecoration: 'none' }}>
-                  <Pill variant="soft" style={{ flex: 'none' }}>{cat}</Pill>
-                  <span className="h-display" style={{ fontSize: 18, flex: 1 }}>{title}</span>
-                  <i className="fa-solid fa-arrow-right" style={{ color: 'var(--color-primary)' }}></i>
-                </a>
-              ))}
+            <div className="blog-main">
+              <div>
+                <window.SectionTitle align="left" title="Most recent" />
+                <div className="recent-list" style={{ marginTop: 28 }}>
+                  {RECENT.map(([cat, time, title, excerpt, img], i) => (
+                    <a key={i} className="recent-row reveal" href={postHref({ title, cat, img })}>
+                      <div className="recent-row__media"><img src={`assets/${img}`} alt={title} /></div>
+                      <div className="recent-row__body">
+                        <div className="bmeta">
+                          <Pill variant="soft">{cat}</Pill>
+                          <span className="bmeta__time">{time}</span>
+                        </div>
+                        <h3 className="ed-serif" style={{ fontSize: 'var(--fs-h4)', margin: '0 0 10px' }}>{title}</h3>
+                        <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 14px' }}>{excerpt}</p>
+                        <span className="accent" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 14 }}>Read more →</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <aside className="blog-side">
+                <div className="side-card reveal">
+                  <div className="ed-eyebrow" style={{ color: 'var(--lct-sky-500)', margin: 0 }}>Free guide</div>
+                  <h3>Building Better Websites: six clarity-first fixes</h3>
+                  <p>Plus AI prompts to help you implement them faster — so visitors instantly know who you help and what to do next.</p>
+                  <Button href="resources.html#guides" variant="onDark" fullWidth>Get the free guide</Button>
+                </div>
+                <div className="side-picks reveal">
+                  <p className="side-picks__head">Top picks</p>
+                  {PICKS.map(([title, cat], i) => (
+                    <a key={i} className="pick" href={postHref({ title, cat })}>
+                      <span className="pick__n">{i + 1}</span>
+                      <span>
+                        <span className="pick__title">{title}</span>
+                        <span className="pick__cat" style={{ display: 'block' }}>{cat}</span>
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </aside>
             </div>
           </window.Container>
         </section>
 
-        {/* Newsletter */}
-        <section className="bg-dark section">
+        {/* Browse by topic */}
+        <section className="bg-tint section">
           <window.Container>
-            <div className="reveal" style={{ maxWidth: 620, margin: '0 auto', textAlign: 'center', color: '#fff' }}>
-              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 12 }}>Get clarity in your inbox</h2>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 26px' }}>
-                Occasional, practical notes on marketing, AI, and building a brand people trust. No spam — unsubscribe anytime.
-              </p>
-              <form onSubmit={(e) => { e.preventDefault(); toast('Thanks for subscribing!'); }} style={{ display: 'flex', gap: 12, maxWidth: 460, margin: '0 auto', flexWrap: 'wrap' }}>
-                <div style={{ flex: '1 1 220px' }}><Input placeholder="Your email" type="email" aria-label="Email" required /></div>
-                <Button type="submit" variant="onDark">Subscribe</Button>
-              </form>
+            <window.SectionTitle align="left" overline="Browse" title="Find your next read by topic" />
+            <div style={{ marginTop: 40 }}>
+              {TOPICS.map(([name, posts], ti) => (
+                <div key={ti} className="topic">
+                  <div className="topic-head">
+                    <h3 className="ed-serif" style={{ fontSize: 'var(--fs-h3)' }}>{name}</h3>
+                    <a className="topic-head__see" href="#" onClick={stop}>See all →</a>
+                  </div>
+                  <div className="grid grid-4">
+                    {posts.map(([title, img], i) => (
+                      <a key={i} className="bcard reveal" href={postHref({ title, cat: name, img })}>
+                        <div className="bcard__media"><img src={`assets/${img}`} alt={title} /></div>
+                        <div className="bcard__body">
+                          <Pill variant="soft" style={{ alignSelf: 'flex-start' }}>{name}</Pill>
+                          <p className="bcard__title">{title}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </window.Container>
         </section>

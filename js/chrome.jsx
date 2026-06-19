@@ -12,96 +12,244 @@ const MEGA = [
   {
     label: 'About',
     href: 'about.html',
-    columns: [
-      { head: 'Meet Laura', links: [
-        ['About Laura', 'about.html'],
-        ["Laura’s Story", 'about.html#story'],
-        ['Why Businesses Trust Laura', 'about.html#trust'],
-        ['Why Laura Publishes BeLocal', 'belocal.html'],
+    items: [
+      { label: 'About Laura', href: 'about.html' },
+      { label: 'Awards & Certifications', href: 'about.html#awards' },
+      { label: 'Client Reviews', href: 'reviews.html' },
+      { label: 'Giving Back', kids: [
+        { label: 'ROCK Ride on Center for Kids', href: 'about.html' },
+        { label: 'The Horseshoe Club', href: 'about.html' },
+        { label: 'Downtown Georgetown Association', href: 'about.html' },
+        { label: 'Georgetown Chamber of Commerce', href: 'about.html' },
+        { label: 'Professional Women of Williamson County', href: 'about.html' },
+        { label: 'N2 Gives - Fighting Human Trafficking', href: 'about.html' },
+        { label: 'BNI GTX - Business by Referral', href: 'about.html' },
+        { label: 'East View High School Patriots Band', href: 'about.html' },
       ] },
-      { head: 'Recognition & Reach', links: [
-        ['Awards & Certifications', 'about.html#awards'],
-        ['In the Media / Press', 'about.html'],
-        ['Speaking & Writing', 'about.html'],
-        ['Video: StoryBrand Guide', 'about.html'],
-      ] },
-      { head: 'Proof & Community', links: [
-        ['Client Reviews', 'reviews.html'],
-        ['Giving Back', 'about.html'],
-        ['BeLocal Georgetown', 'belocal.html'],
-      ] },
+      { label: 'Laura’s Story', href: 'about.html#story' },
+      { label: 'In the Media / Press', href: 'about.html' },
+      { label: 'Speaking & Writing', href: 'about.html' },
+      { label: 'Video: StoryBrand Guide', href: 'https://drive.google.com/file/d/16UoXlUX214Gdj5NkHwORo9feKo90q3gI/view?usp=drive_link' },
+      { label: 'Video: Meet Our Publisher', href: 'https://drive.google.com/file/d/1NE92p4MA9_qbFrXTbq7CZQlpG_GQDHIP/view?usp=drive_link' },
+      { label: 'Why Businesses Trust Laura', href: 'about.html#trust' },
+      { label: 'Why Laura Publishes BeLocal', href: 'belocal.html' },
     ],
-    feature: {
-      eyebrow: 'Meet your guide',
-      title: '30+ years of marketing leadership, in your corner',
-      cta: 'Read Laura’s story', href: 'about.html#story',
-    },
   },
   {
     label: 'How I Help',
     href: 'services.html',
-    columns: [
-      { head: 'Brand Awareness', links: [
-        ['BeLocal Georgetown', 'belocal.html'],
-        ['Let’s Go Locals Directory', 'services.html'],
-        ['Social Media Marketing', 'services.html'],
+    items: [
+      { label: 'Brand Awareness', kids: [
+        { label: 'BeLocal Georgetown', href: 'belocal.html', kids: [
+          { label: 'Print', href: 'belocal.html' },
+          { label: 'Digital', href: 'belocal.html' },
+          { label: 'Mobile', href: 'belocal.html' },
+          { label: 'Social', href: 'belocal.html' },
+          { label: 'Events', href: 'belocal.html' },
+        ] },
+        { label: 'Let’s Go Locals Directory & Stories', href: 'services.html' },
+        { label: 'Social Media Marketing', href: 'services.html' },
       ] },
-      { head: 'Community Connections', links: [
-        ['BNI GTX — Business by Referral', 'services.html'],
-        ['BeLocal B2B', 'belocal.html'],
-        ['Let’s Go Locals Events', 'services.html'],
+      { label: 'Community Connections', kids: [
+        { label: 'BeLocal Georgetown', href: 'belocal.html' },
+        { label: 'BNI GTX - Business by Referral', href: 'services.html' },
+        { label: 'BeLocal B2B', href: 'belocal.html' },
+        { label: 'Let’s Go Locals Events', href: 'services.html' },
       ] },
-      { head: 'Strategy & Leadership', links: [
-        ['Private & Group Coaching', 'services.html'],
-        ['AI Consulting', 'services.html'],
-        ['Fractional CMO', 'services.html'],
-        ['Public Speaking & Workshops', 'services.html'],
+      { label: 'Marketing Strategy & Leadership', kids: [
+        { label: 'Private Coaching', href: 'services.html' },
+        { label: 'Group Coaching', href: 'services.html' },
+        { label: 'AI Consulting', href: 'services.html' },
+        { label: 'Fractional CMO', href: 'services.html' },
+        { label: 'Public Speaking', href: 'services.html' },
+        { label: 'Workshops', href: 'services.html' },
       ] },
-      { head: 'Education & Inspiration', links: [
-        ['Be Locally Loved Podcast', 'podcast.html'],
-        ['The Unbridled Creative', 'https://theunbridledcreative.com/'],
+      { label: 'Education & Inspiration', kids: [
+        { label: 'Podcasting', kids: [
+          { label: 'Be Locally Loved Podcast', href: 'podcast.html', kids: [
+            { label: 'Apple', href: 'https://podcasts.apple.com/us/podcast/be-locally-loved/id1877734623' },
+            { label: 'Spotify', href: 'https://open.spotify.com/show/0Udm3hNFpfE5xTQ8pX1j76' },
+            { label: 'YouTube', href: 'https://www.youtube.com/@BeLocallyLoved' },
+          ] },
+          { label: 'The Unbridled Creative Podcast', href: 'https://theunbridledcreative.com/', kids: [
+            { label: 'Apple', href: 'https://podcasts.apple.com/us/podcast/the-unbridled-creative-podcast/id1851005801' },
+            { label: 'Spotify', href: 'https://open.spotify.com/show/46yq7TDKXnGsc5ZSjMgEto' },
+            { label: 'YouTube', href: 'https://www.youtube.com/channel/UCmataK4SiM0uZ44Kxm0N6QA' },
+          ] },
+        ] },
       ] },
     ],
-    feature: {
-      eyebrow: 'Not sure where to start?',
-      title: 'Tell Laura your biggest marketing challenge',
-      cta: 'Start here', href: 'start-here.html',
-    },
   },
   {
     label: 'Resources',
     href: 'resources.html',
-    columns: [
-      { head: 'Ask & Read', links: [
-        ['Ask Laura — FAQs', 'ask-laura.html'],
-        ['Blog', 'blog.html'],
-        ['Books', 'resources.html#books'],
+    items: [
+      { label: 'Ask Laura', kids: [
+        { label: 'AI Coach (coming soon)', href: 'ask-laura.html' },
+        { label: 'FAQs', href: 'ask-laura.html', kids: [
+          { label: 'Be Seen (Visibility)', href: 'ask-laura.html' },
+          { label: 'Be Trusted (Credibility)', href: 'ask-laura.html' },
+          { label: 'Be Chosen (Preferred)', href: 'ask-laura.html' },
+          { label: 'Community Connections (Local Influence)', href: 'ask-laura.html' },
+          { label: 'Strategy & Leadership (Executive Thinking)', href: 'ask-laura.html' },
+        ] },
+        { label: 'BeLocal', kids: [
+          { label: 'Website Checklist for BeLocal Sponsors', href: 'belocal-checklist.html' },
+          { label: 'Advertising: The Key to Sustainable Business Growth', href: 'https://drive.google.com/file/d/1BlKo7PzZXrSk-no2hq8pWlSnLbcj9zVU/view?usp=drive_link' },
+          { label: '5 Steps to Creating a Great Ad', href: 'https://drive.google.com/file/d/1DEwKfFXPQUboTLJb6rlI6DVk1HB-k8nr/view?usp=drive_link' },
+        ] },
       ] },
-      { head: 'Learn', links: [
-        ['Courses', 'resources.html#courses'],
-        ['Workshops', 'resources.html#workshops'],
-        ['Frameworks', 'resources.html#frameworks'],
+      { label: 'Blog', href: 'blog.html', kids: [
+        { label: 'BeLocal', href: 'blog.html' },
+        { label: 'Georgetown', href: 'blog.html' },
+        { label: 'Local Marketing', href: 'blog.html' },
+        { label: 'AI', href: 'blog.html' },
+        { label: 'Branding', href: 'blog.html' },
+        { label: 'Community Connection', href: 'blog.html' },
+        { label: 'Business Growth', href: 'blog.html' },
+        { label: 'Visibility', href: 'blog.html' },
+        { label: 'Trust Building', href: 'blog.html' },
       ] },
-      { head: 'Free Guides', links: [
-        ['The Ultimate ChatGPT Prompt', 'resources.html#guides'],
-        ['Building Better Websites', 'resources.html#guides'],
-        ['54 Ways to Get Noticed', 'resources.html#guides'],
+      { label: 'Books', href: 'resources.html#books', kids: [
+        { label: 'Rockstar Entrepreneur', href: 'https://www.amazon.com/Rockstar-Entrepreneur-entrepreneurs-change-world/dp/1452837252' },
+        { label: 'The Courage to Plant a Seed', href: 'resources.html#books' },
+        { label: 'The Courage to Find My Voice (coming soon)', href: 'resources.html#books' },
+        { label: 'Be Seen. Be Trusted. Be Chosen. (coming someday)', href: 'resources.html#books' },
       ] },
-      { head: 'Watch & Listen', links: [
-        ['Videos', 'resources.html#videos'],
-        ['Podcasts', 'podcast.html'],
-        ['Strategic Partners', 'resources.html#partners'],
+      { label: 'Courses', href: 'resources.html#courses', kids: [
+        { label: 'Marketing Made Smarter Bootcamp', href: 'https://www.lauracapesterry.com/marketing-made-smarter-bootcamp' },
+      ] },
+      { label: 'Frameworks', href: 'resources.html#frameworks', kids: [
+        { label: 'Building Blocks for Marketing Success', href: 'resources.html#frameworks' },
+        { label: 'The Proven Path to Marketing Success', href: 'resources.html#frameworks' },
+        { label: 'The Trust Funnel', href: 'resources.html#frameworks' },
+        { label: 'Circular Viralocity', href: 'resources.html#frameworks' },
+        { label: 'Return on Impact (ROI)', href: 'resources.html#frameworks' },
+        { label: 'Website Success Framework', href: 'resources.html#frameworks' },
+        { label: 'Great Print Ad Framework', href: 'resources.html#frameworks' },
+      ] },
+      { label: 'Guides', href: 'resources.html#guides', kids: [
+        { label: 'The Ultimate ChatGPT Prompt', href: 'https://drive.google.com/file/d/1VgOIwupLGPjjCxyW5NleRn1l1xDzcG1C/view?usp=drive_link' },
+        { label: 'Building Better Websites: Checklist', href: 'https://drive.google.com/file/d/1rVWqwn3h2nMXmiMCjAl_nrQLUq5_al9r/view?usp=drive_link' },
+        { label: '12 Secrets to Great Ad Design', href: 'https://drive.google.com/file/d/1CBTvm-sDA7-0l5NFOOYaivKdn5dUxUH9/view?usp=drive_link' },
+        { label: '“CATCH” Attention on Social Media', href: 'https://drive.google.com/file/d/1QU1UHXJMALm6WwbShjqHtvS5mcq7ymEO/view?usp=drive_link' },
+        { label: 'Building a Sustainable Business', href: 'https://drive.google.com/file/d/1Z2CMq6s7mlUHX67_EB56SuL1o11SVQ80/view?usp=drive_link' },
+        { label: '54 Ways to Get Noticed', href: 'https://drive.google.com/file/d/1GLEtPE0k2VBz8eNVaWFdyzYtZURvQcGb/view?usp=drive_link' },
+        { label: 'The Voice Blueprint', href: 'https://drive.google.com/file/d/1Qgp2iiPO5O7Ps5ujPaUHCnCkquWpMpH2/view?usp=drive_link' },
+      ] },
+      { label: 'Podcasts', kids: [
+        { label: 'Be Locally Loved Podcast', href: 'podcast.html', kids: [
+          { label: 'Apple', href: 'https://podcasts.apple.com/us/podcast/be-locally-loved/id1877734623' },
+          { label: 'Spotify', href: 'https://open.spotify.com/show/0Udm3hNFpfE5xTQ8pX1j76' },
+          { label: 'YouTube', href: 'https://www.youtube.com/@BeLocallyLoved' },
+        ] },
+        { label: 'The Unbridled Creative Podcast', href: 'https://theunbridledcreative.com/', kids: [
+          { label: 'Apple', href: 'https://podcasts.apple.com/us/podcast/the-unbridled-creative-podcast/id1851005801' },
+          { label: 'Spotify', href: 'https://open.spotify.com/show/46yq7TDKXnGsc5ZSjMgEto' },
+          { label: 'YouTube', href: 'https://www.youtube.com/channel/UCmataK4SiM0uZ44Kxm0N6QA' },
+        ] },
+      ] },
+      { label: 'Strategic Partners', href: 'resources.html#partners', kids: [
+        { label: 'Anchor Media', href: 'resources.html#partners' },
+        { label: 'BeLocal Georgetown', href: 'belocal.html' },
+        { label: 'Grayson Media & Marketing', href: 'resources.html#partners' },
+        { label: 'Hello Georgetown', href: 'resources.html#partners' },
+        { label: 'Let’s Go Locals', href: 'resources.html#partners' },
+        { label: 'Moxie 360 Marketing', href: 'resources.html#partners' },
+        { label: 'Santosha Solutions', href: 'resources.html#partners' },
+        { label: 'Wawai Partners', href: 'resources.html#partners' },
+      ] },
+      { label: 'Videos', href: 'resources.html#videos', kids: [
+        { label: 'BNI Featured Speaker Presentation', href: 'https://www.youtube.com/watch?v=TVNhz8bQdjI' },
+        { label: 'BNI Testimonials', href: 'https://www.youtube.com/watch?v=plaGFgImBPk' },
+        { label: 'Teach ChatGPT to Sound Like You', href: 'https://drive.google.com/file/d/1tjgM5hZQigpMgeipVA6tHj01QsXXhtU-/view?usp=drive_link' },
+      ] },
+      { label: 'Workshops', href: 'resources.html#workshops', kids: [
+        { label: 'The Path to Marketing Success', href: 'https://drive.google.com/file/d/1DYMKOXXS4QfZTUbplC_RkhMJicqBrAvV/view?usp=drive_link' },
+        { label: 'AI in Marketing', href: 'https://drive.google.com/file/d/1sUXsE0bQ-WTi7_Rw5G_H9wtjrkO5mTJ6/view?usp=drive_link' },
+        { label: 'Don’t Wing It - Batch It', href: 'https://drive.google.com/file/d/1pRSlM6GKFX8S1u3Uf3ZR5GODyA_TFsbX/view?usp=drive_link' },
+        { label: 'From Blank Screen to Brilliant Strategy', href: 'https://drive.google.com/file/d/1lQgMYgtdceqeIN4nIM6InzSKPfyBn75x/view?usp=drive_link' },
+        { label: 'Navigating The Trust Recession', href: 'https://drive.google.com/file/d/1QqQMBoFGRjV-sojg4o_WRtm9n_BMZh61/view?usp=drive_link' },
       ] },
     ],
-    feature: {
-      eyebrow: 'Free download',
-      title: 'Building Better Websites: Six Success Tips',
-      cta: 'Get the checklist', href: 'resources.html#guides',
-    },
   },
 ];
 /* Flat list for active-state detection + footer/drawer reuse. */
 const NAV = MEGA.map((m) => [m.label, m.href]);
+
+/* Recursive renderer for nested mega-menu items (desktop). */
+function MegaItem({ node }) {
+  const ext = node.href && node.href.startsWith('http');
+  const hasKids = node.kids && node.kids.length;
+  if (!hasKids) {
+    return <a className="mega-link" href={node.href || '#'} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{node.label}</a>;
+  }
+  const Label = node.href
+    ? <a className="mega-node__label" href={node.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{node.label}</a>
+    : <span className="mega-node__label">{node.label}</span>;
+  return (
+    <div className="mega-node">
+      {Label}
+      <div className="mega-node__kids">
+        {node.kids.map((k, i) => <MegaItem key={k.label + i} node={k} />)}
+      </div>
+    </div>
+  );
+}
+
+/* Recursive renderer for cascading dropdown menus (desktop).
+   Each submenu flips left when it would overflow the viewport's right edge. */
+function DropItem({ node }) {
+  const ext = node.href && node.href.startsWith('http');
+  const hasKids = node.kids && node.kids.length;
+  const [flip, setFlip] = React.useState(false);
+  const flyRef = React.useRef(null);
+  const onEnter = () => {
+    if (!hasKids) return;
+    requestAnimationFrame(() => {
+      const el = flyRef.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      if (!flip && r.right > window.innerWidth - 12) setFlip(true);
+      else if (flip && r.left < 12) setFlip(false);
+    });
+  };
+  const inner = (
+    <React.Fragment>
+      <span>{node.label}</span>
+      {hasKids && <i className="fa-solid fa-chevron-right drop__chev" aria-hidden="true"></i>}
+    </React.Fragment>
+  );
+  return (
+    <li className={`drop__item ${hasKids ? 'has-sub' : ''}`} onMouseEnter={onEnter}>
+      {node.href
+        ? <a className="drop__link" href={node.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{inner}</a>
+        : <span className="drop__link drop__link--parent">{inner}</span>}
+      {hasKids && (
+        <ul ref={flyRef} className={`drop__menu drop__flyout ${flip ? 'drop__flyout--left' : ''}`}>
+          {node.kids.map((k, i) => <DropItem key={k.label + i} node={k} />)}
+        </ul>
+      )}
+    </li>
+  );
+}
+
+/* Recursive renderer for the mobile drawer (indented). */
+function DrawerItem({ node, depth }) {
+  const ext = node.href && node.href.startsWith('http');
+  const hasKids = node.kids && node.kids.length;
+  if (!hasKids) {
+    return <a className="drawer__leaf" href={node.href || '#'} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined} style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</a>;
+  }
+  return (
+    <React.Fragment>
+      {node.href
+        ? <a className="drawer__leaf drawer__leaf--parent" href={node.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined} style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</a>
+        : <span className="drawer__leaf drawer__leaf--parent" style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</span>}
+      {node.kids.map((k, i) => <DrawerItem key={k.label + i} node={k} depth={depth + 1} />)}
+    </React.Fragment>
+  );
+}
 
 /* ---------------- Tweaks ---------------- */
 const TWEAK_DEFAULTS = {
@@ -223,6 +371,7 @@ function Header({ current }) {
   const [open, setOpen] = React.useState(false);      // mobile drawer
   const [mega, setMega] = React.useState(null);        // open mega-menu label
   const [drawerSub, setDrawerSub] = React.useState(null);
+  const [search, setSearch] = React.useState(false);   // search field
   const closeTimer = React.useRef(null);
 
   function openMega(label) {
@@ -237,59 +386,79 @@ function Header({ current }) {
 
   return (
     <header className="site-header" onMouseLeave={scheduleClose}>
-      <div className="site-header__bar">
-        <Logo />
-        <nav className="nav" aria-label="Primary">
-          {MEGA.map((m) => (
-            <div key={m.label} className={`nav__item ${mega === m.label ? 'is-open' : ''}`}
-              onMouseEnter={() => openMega(m.label)}>
-              <a className={`nav__top ${current === m.label ? 'is-active' : ''}`} href={m.href}
-                aria-expanded={mega === m.label} aria-haspopup="true"
-                onFocus={() => openMega(m.label)}>
-                {m.label}<i className="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
-              </a>
-            </div>
-          ))}
-          <span className="nav__social">
-            <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-          </span>
-          <DS.Button href="start-here.html" size="small">Start Here</DS.Button>
-        </nav>
-        <button className="hamburger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
-          <i className={`fa-solid ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
-        </button>
+      {/* Tier 1 — utility / brand bar */}
+      <div className="topbar">
+        <div className="topbar__inner">
+          <span className="topbar__tag">Be seen. Be trusted. Be chosen.</span>
+          <a className="topbar__logo" href="index.html" aria-label="Laura Capes Terry — home">
+            <img src={(window.__resources && window.__resources.logo) || 'assets/logo-horizontal.png'} alt="Laura Capes Terry, MBA" />
+          </a>
+          <div className="topbar__right">
+            <a className="topbar__login" href="#member-login" title="Client portal — coming soon">
+              <i className="fa-regular fa-user"></i> Member Login
+            </a>
+            <span className="topbar__social">
+              <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+            </span>
+          </div>
+        </div>
       </div>
 
-      {/* Desktop mega-menu panel */}
-      <div className={`mega-panel ${active ? 'is-open' : ''}`}
-        onMouseEnter={() => clearTimeout(closeTimer.current)} onMouseLeave={scheduleClose}>
-        {active && (
-          <div className="mega-inner">
-            <div className="mega-cols">
-              {active.columns.map((col) => (
-                <div key={col.head} className="mega-col">
-                  <p className="mega-col__head">{col.head}</p>
-                  <div className="mega-links">
-                    {col.links.map(([l, h]) => (
-                      <a key={l} href={h} target={h.startsWith('http') ? '_blank' : undefined} rel="noopener">{l}</a>
-                    ))}
+      {/* Tier 2 — navigation bar */}
+      <div className="navbar">
+        <div className="navbar__inner">
+          <a className="navbar__mark" href="index.html" aria-label="Laura Capes Terry — home">
+            <img src="assets/favicon-growth-logo.png" alt="" />
+          </a>
+          <a className="navbar__logo-mobile" href="index.html" aria-label="Laura Capes Terry — home">
+            <img src={(window.__resources && window.__resources.logo) || 'assets/logo-horizontal.png'} alt="Laura Capes Terry, MBA" />
+          </a>
+          <nav className="nav" aria-label="Primary">
+            {MEGA.map((m) => (
+                <div key={m.label} className={`nav__item ${mega === m.label ? 'is-open' : ''}`}
+                  onMouseEnter={() => openMega(m.label)} onMouseLeave={scheduleClose}>
+                  <a className={`nav__top ${current === m.label ? 'is-active' : ''}`} href={m.href}
+                    aria-expanded={mega === m.label} aria-haspopup="true"
+                    onFocus={() => openMega(m.label)}>
+                    {m.label}<i className="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
+                  </a>
+                  <div className={`dropdown ${mega === m.label ? 'is-open' : ''}`}
+                    onMouseEnter={() => clearTimeout(closeTimer.current)}>
+                    <a className="drop__all" href={m.href}>All {m.label} →</a>
+                    <ul className="drop__menu drop__root">
+                      {m.items.map((node, i) => (
+                        <DropItem key={node.label + i} node={node} />
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              ))}
-            </div>
-            <a className="mega-feature" href={active.feature.href}
-              target={active.feature.href.startsWith('http') ? '_blank' : undefined} rel="noopener">
-              <div className="mega-feature__eyebrow">{active.feature.eyebrow}</div>
-              <div className="mega-feature__title">{active.feature.title}</div>
-              <span className="mega-feature__cta">{active.feature.cta}<i className="fa-solid fa-arrow-right" style={{ marginLeft: 8 }}></i></span>
-            </a>
+            ))}
+          </nav>
+          <div className="navbar__right">
+            <span className="navbar__start">
+              <DS.Button href="start-here.html" size="small">Start Here</DS.Button>
+            </span>
+            <button className="navbar__search" aria-label="Search" onClick={() => setSearch((s) => !s)}>
+              <i className={`fa-solid ${search ? 'fa-xmark' : 'fa-magnifying-glass'}`}></i>
+            </button>
+            <button className="hamburger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
+              <i className={`fa-solid ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
+            </button>
           </div>
-        )}
+        </div>
+        <div className={`navbar-search ${search ? 'is-open' : ''}`}>
+          <div className="navbar-search__inner">
+            <i className="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search the site…" aria-label="Search the site"
+              onKeyDown={(e) => { if (e.key === 'Escape') setSearch(false); }} />
+          </div>
+        </div>
       </div>
 
       {/* Mobile drawer — nested accordion */}
       <div className={`drawer ${open ? 'is-open' : ''}`}>
+        <a className="drawer__login" href="#member-login"><i className="fa-regular fa-user"></i> Member Login</a>
         {MEGA.map((m) => (
           <div key={m.label} className="drawer__group">
             <button className="drawer__top" aria-expanded={drawerSub === m.label}
@@ -298,9 +467,7 @@ function Header({ current }) {
             </button>
             <div className={`drawer__sub ${drawerSub === m.label ? 'is-open' : ''}`}>
               <a href={m.href} className="drawer__suboverview">All {m.label} →</a>
-              {m.columns.flatMap((c) => c.links).map(([l, h]) => (
-                <a key={l} href={h} target={h.startsWith('http') ? '_blank' : undefined} rel="noopener">{l}</a>
-              ))}
+              {m.items.map((node, i) => <DrawerItem key={node.label + i} node={node} depth={0} />)}
             </div>
           </div>
         ))}
@@ -312,6 +479,7 @@ function Header({ current }) {
 
 /* ---------------- Footer ---------------- */
 function Footer() {
+  const toast = useToast();
   const explore = [
     ['About Laura', 'about.html'], ['How I Help', 'services.html'], ['Client Reviews', 'reviews.html'],
     ['Start Here', 'start-here.html'], ['Contact', 'contact.html'],
@@ -325,40 +493,61 @@ function Footer() {
     ['Be Locally Loved Podcast', 'podcast.html'],
     ['The Unbridled Creative', 'https://theunbridledcreative.com/'],
   ];
+  const legal = [
+    ['Terms', 'contact.html'], ['Privacy', 'contact.html'],
+    ['Cookie Policy', 'contact.html'], ['Support', 'contact.html'],
+  ];
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
-        <div>
+        {/* Left — brand + newsletter */}
+        <div className="footer-lead">
           <Logo />
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.65, color: 'var(--text-body)', margin: '20px 0 16px', maxWidth: 300 }}>
-            Helping local business owners be seen, trusted, and chosen — blending modern tools with timeless wisdom. Georgetown, Texas.
+          <p className="footer-col__head" style={{ marginTop: 24 }}>Join the list</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 18px', maxWidth: 380 }}>
+            Practical, human-first marketing guidance — and the smartest ways to use AI without losing your voice. No spam, ever.
           </p>
-          <div className="footer-social">
+          <form className="footer-form" onSubmit={(e) => { e.preventDefault(); toast('You’re in! Watch your inbox for Laura’s next note.'); }}>
+            <DS.Input placeholder="First name" aria-label="First name" required />
+            <DS.Input placeholder="Email address" type="email" aria-label="Email" required />
+            <DS.Button type="submit" fullWidth>Subscribe</DS.Button>
+          </form>
+          <div className="footer-social" style={{ marginTop: 22 }}>
             <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
             <a href={CALENDLY} target="_blank" rel="noopener" aria-label="Book a call"><i className="fa-solid fa-phone"></i></a>
           </div>
         </div>
-        <div>
-          <p className="footer-col__head">Explore</p>
-          <div className="footer-links">
-            {explore.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
+
+        {/* Right — link columns */}
+        <div className="footer-cols">
+          <div>
+            <p className="footer-col__head">Explore</p>
+            <div className="footer-links">
+              {explore.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
+            </div>
           </div>
-        </div>
-        <div>
-          <p className="footer-col__head">Resources</p>
-          <div className="footer-links">
-            {resources.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
+          <div>
+            <p className="footer-col__head">Resources</p>
+            <div className="footer-links">
+              {resources.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
+            </div>
           </div>
-        </div>
-        <div>
-          <p className="footer-col__head">Brands &amp; Shows</p>
-          <div className="footer-links">
-            {more.map(([l, h]) => <a key={l} href={h} target={h.startsWith('http') ? '_blank' : undefined} rel="noopener">{l}</a>)}
+          <div>
+            <p className="footer-col__head">Brands &amp; Shows</p>
+            <div className="footer-links">
+              {more.map(([l, h]) => <a key={l} href={h} target={h.startsWith('http') ? '_blank' : undefined} rel="noopener">{l}</a>)}
+            </div>
           </div>
         </div>
       </div>
-      <div className="footer-bottom">© 2026 Laura Capes Terry, MBA · Grayson Media LLC · Be seen. Be trusted. Be chosen.</div>
+
+      <div className="footer-bottom">
+        <div className="footer-legal">
+          {legal.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
+        </div>
+        <span className="footer-copy">© 2026 Laura Capes Terry, MBA · Grayson Media LLC</span>
+      </div>
     </footer>
   );
 }
