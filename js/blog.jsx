@@ -104,7 +104,7 @@
                   <Pill>{FEATURED.cat}</Pill>
                   <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>{FEATURED.time}</span>
                 </div>
-                <Button href={postHref(FEATURED)} variant="onDark">Read article</Button>
+                <Button href={postHref(FEATURED)} variant="accent" style={{ background: '#fff' }}>Read article <i className="fa-solid fa-arrow-right"></i></Button>
               </div>
               <a className="blog-hero__media reveal" href={postHref(FEATURED)}>
                 <img src={`assets/${FEATURED.img}`} alt={FEATURED.title} />
@@ -142,7 +142,7 @@
                   <div className="ed-eyebrow" style={{ color: 'var(--lct-sky-500)', margin: 0 }}>Free guide</div>
                   <h3>Building Better Websites: six clarity-first fixes</h3>
                   <p>Plus AI prompts to help you implement them faster — so visitors instantly know who you help and what to do next.</p>
-                  <Button href="resources.html#guides" variant="onDark" fullWidth>Get the free guide</Button>
+                  <Button href="resources.html#guides" variant="accent" style={{ background: '#fff' }} fullWidth>Get the free guide <i className="fa-solid fa-book"></i></Button>
                 </div>
                 <div className="side-picks reveal">
                   <p className="side-picks__head">Top picks</p>

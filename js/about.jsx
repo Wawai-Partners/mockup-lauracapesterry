@@ -8,7 +8,7 @@
   function Bullet({ children }) {
     return (
       <li style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-        <i className="fa-solid fa-check" style={{ color: 'var(--color-primary)', marginTop: 5 }}></i>
+        <i className="fa-solid fa-check" style={{ color: 'var(--color-accent)', marginTop: 5 }}></i>
         <span style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)' }}>{children}</span>
       </li>
     );
@@ -102,7 +102,7 @@
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.65, color: 'rgba(255,255,255,0.85)', fontStyle: 'italic', margin: '0 0 24px' }}>
               Her work isn’t about doing more marketing. It’s about making the right decisions in a noisy, AI-driven world.
             </p>
-            <BookButton variant="onDark">Schedule a Discovery Call</BookButton>
+            <BookButton variant="accent" style={{ background: '#fff' }}>Schedule a Discovery Call <i className="fa-solid fa-calendar-check"></i></BookButton>
           </div>
         </section>
 
@@ -176,7 +176,7 @@
               {experiences.map(([ic, t, b]) => (
                 <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <div style={{ width: 52, height: 52, marginBottom: 16, borderRadius: 12, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 21 }}></i>
+                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', fontSize: 21 }}></i>
                   </div>
                   <h3 className="ed-serif" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>

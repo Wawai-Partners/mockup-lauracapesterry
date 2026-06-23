@@ -5,7 +5,7 @@
   function PlayRow({ n, title, len }) {
     return (
       <div className="reveal" style={{ display: 'flex', alignItems: 'center', gap: 18, padding: '18px 22px', background: 'var(--surface-card)', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-xs)' }}>
-        <div style={{ width: 46, height: 46, flex: 'none', borderRadius: '50%', background: 'var(--color-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16 }}>
+        <div style={{ width: 46, height: 46, flex: 'none', borderRadius: '50%', background: 'var(--surface-tint)', color: 'var(--color-accent)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16 }}>
           <i className="fa-solid fa-play"></i>
         </div>
         <div style={{ flex: 1 }}>
@@ -36,7 +36,7 @@
           </div>
         </div>
         <p className="ep-card__desc">{desc}</p>
-        <Button variant="outline" size="small" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">View Episode</Button>
+        <Button variant="ghost" size="small" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">View Episode</Button>
       </div>
     );
   }
@@ -84,9 +84,9 @@
                 Be Locally Loved spotlights beloved local businesses, community leaders, and creative connectors building stronger communities through trust, connection, and service. At its core, it’s a show about connection.
               </p>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                <Button variant="onDark" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener"><i className="fa-solid fa-rss"></i>&nbsp; Subscribe via RSS</Button>
-                <Button variant="onDark"><i className="fa-brands fa-apple"></i>&nbsp; Apple Podcasts</Button>
-                <Button variant="onDark"><i className="fa-brands fa-spotify"></i>&nbsp; Spotify</Button>
+                <Button variant="accent" style={{ background: '#fff' }} href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">Subscribe via RSS <i className="fa-solid fa-rss"></i></Button>
+                <Button variant="accent" style={{ background: '#fff' }}>Apple Podcasts <i className="fa-brands fa-apple"></i></Button>
+                <Button variant="accent" style={{ background: '#fff' }}>Spotify <i className="fa-brands fa-spotify"></i></Button>
               </div>
             </div>
             <div className="reveal" style={{ alignSelf: 'center' }}>
@@ -110,7 +110,7 @@
               ].map(([ic, t, b]) => (
                 <div key={t} className="reveal" style={{ textAlign: 'center' }}>
                   <div style={{ width: 60, height: 60, margin: '0 auto 18px', borderRadius: 14, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
+                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', fontSize: 24 }}></i>
                   </div>
                   <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
@@ -131,7 +131,7 @@
               ))}
             </div>
             <div style={{ marginTop: 36 }}>
-              <Button variant="outline" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">Subscribe for new episodes</Button>
+              <Button variant="ghost" href="https://app.kajabi.com/podcasts/2148067790/feed" target="_blank" rel="noopener">Subscribe for new episodes</Button>
             </div>
           </window.Container>
         </section>
@@ -141,13 +141,13 @@
           <window.Container>
             <div className="reveal card" style={{ maxWidth: 760, margin: '0 auto', display: 'grid', gridTemplateColumns: '56px 1fr auto', gap: 20, alignItems: 'center', boxShadow: 'var(--shadow-md)' }}>
               <div style={{ width: 56, height: 56, borderRadius: 14, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <i className="fa-solid fa-video" style={{ color: 'var(--color-primary)', fontSize: 22 }}></i>
+                <i className="fa-solid fa-video" style={{ color: 'var(--color-accent)', fontSize: 22 }}></i>
               </div>
               <div>
                 <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 4 }}>Also from Laura: The Unbridled Creative</h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.55, color: 'var(--text-body)', margin: 0 }}>A faith-centered video podcast for entrepreneurs and creatives called to build differently.</p>
               </div>
-              <Button variant="outline" size="small" href="https://theunbridledcreative.com/" target="_blank" rel="noopener">Visit</Button>
+              <Button variant="ghost" size="small" href="https://theunbridledcreative.com/" target="_blank" rel="noopener">Visit</Button>
             </div>
           </window.Container>
         </section>

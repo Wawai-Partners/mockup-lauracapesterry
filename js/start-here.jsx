@@ -174,7 +174,7 @@
                 </form>
               </div>
               <div className="card" style={{ background: 'var(--surface-card)', textAlign: 'center', padding: 40 }}>
-                <i className="fa-solid fa-file-circle-check" style={{ fontSize: 46, color: 'var(--color-primary)', marginBottom: 18 }}></i>
+                <i className="fa-solid fa-file-circle-check" style={{ fontSize: 46, color: 'var(--color-accent)', marginBottom: 18 }}></i>
                 <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 19, color: 'var(--text-heading)', margin: '0 0 8px' }}>6 tips · 2-minute read</p>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--text-body)', margin: 0 }}>The fastest way to spot what’s costing you leads.</p>
               </div>
@@ -187,7 +187,7 @@
           <window.Container>
             <div className="grid grid-2" style={{ gap: 40, alignItems: 'stretch' }}>
               <div className="card reveal" style={{ textAlign: 'center' }}>
-                <i className="fa-solid fa-share-nodes" style={{ fontSize: 30, color: 'var(--color-primary)', marginBottom: 16 }}></i>
+                <i className="fa-solid fa-share-nodes" style={{ fontSize: 30, color: 'var(--color-accent)', marginBottom: 16 }}></i>
                 <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>Follow along</h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 20px' }}>Practical marketing wisdom, AI tips, and Georgetown community stories.</p>
                 <div style={{ display: 'flex', gap: 12, justifyContent: 'center' }}>
@@ -200,7 +200,7 @@
                 <i className="fa-solid fa-mug-hot" style={{ fontSize: 30, color: 'var(--lct-sky-200)', marginBottom: 16 }}></i>
                 <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10, color: '#fff' }}>Rather just talk it through?</h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'rgba(255,255,255,0.9)', margin: '0 0 20px' }}>Book a free discovery call and Laura will meet you at the decision table.</p>
-                <Button href={CALENDLY} target="_blank" rel="noopener" variant="onDark">Chat with Laura</Button>
+                <Button href={CALENDLY} target="_blank" rel="noopener" variant="accent" style={{ background: '#fff' }}>Chat with Laura <i className="fa-solid fa-comment-dots"></i></Button>
               </div>
             </div>
           </window.Container>

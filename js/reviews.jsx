@@ -44,7 +44,7 @@
             <div className="grid grid-3">
               {FEATURED.map(([q, who, org], i) => (
                 <div key={i} className="reveal card" style={{ display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ color: 'var(--color-primary)', marginBottom: 12 }}>
+                  <div style={{ color: 'var(--color-accent)', marginBottom: 12 }}>
                     {[0, 1, 2, 3, 4].map((s) => <i key={s} className="fa-solid fa-star" style={{ fontSize: 14, marginRight: 3 }}></i>)}
                   </div>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.7, color: 'var(--text-body)', fontStyle: 'italic', margin: '0 0 16px', flex: 1 }}>{q}</p>
@@ -83,7 +83,7 @@
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
                 Start with a short, no-pressure conversation about where you are and where you want to go.
               </p>
-              <BookButton size="large" variant="onDark" />
+              <BookButton size="large" variant="accent" style={{ background: '#fff' }}>Work With Laura <i className="fa-solid fa-calendar-check"></i></BookButton>
             </div>
           </window.Container>
         </section>

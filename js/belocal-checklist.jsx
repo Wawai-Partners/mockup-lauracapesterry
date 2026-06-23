@@ -77,7 +77,7 @@
                 <button key={i} className="chk-item" data-on={!!done[i]} onClick={() => toggle(i)} aria-pressed={!!done[i]}>
                   <span className="chk-box"><i className="fa-solid fa-check"></i></span>
                   <span style={{ flex: 1 }}>
-                    <span className="chk-item__title"><i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', marginRight: 10 }}></i>{title}</span>
+                    <span className="chk-item__title"><i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', marginRight: 10 }}></i>{title}</span>
                     <span className="chk-item__body">{body}</span>
                   </span>
                 </button>
@@ -113,7 +113,7 @@
               </p>
               <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Work With Laura</Button>
-                <Button href="resources.html#guides" variant="outline" size="large">More marketing tips</Button>
+                <Button href="resources.html#guides" variant="ghost" size="large">More marketing tips</Button>
               </div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)', marginTop: 32 }}>
                 © 2025 Laura Capes Terry · Grayson Media &amp; Marketing

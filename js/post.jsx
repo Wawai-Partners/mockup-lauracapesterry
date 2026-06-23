@@ -168,7 +168,7 @@
                   Plus AI prompts to help you implement them faster — so visitors instantly know who you help and what to do next.
                 </p>
               </div>
-              <Button href="resources.html#guides" variant="onDark">Get the free guide</Button>
+              <Button href="resources.html#guides" variant="accent" style={{ background: '#fff' }}>Get the free guide <i className="fa-solid fa-book"></i></Button>
             </div>
           </window.Container>
         </section>

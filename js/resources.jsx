@@ -132,7 +132,7 @@
                     <span className="res-tile__meta">{meta}</span>
                     <span className="res-tile__name">{name}</span>
                     <span style={{ marginTop: 6, color: 'var(--color-primary)', fontSize: 13, fontWeight: 700, fontFamily: 'var(--font-body)' }}>
-                      {href === '#' ? 'Coming soon' : <>View<i className="fa-solid fa-arrow-right" style={{ marginLeft: 7, fontSize: 11 }}></i></>}
+                      {href === '#' ? 'Coming soon' : <>View<i className="fa-solid fa-arrow-right" style={{ marginLeft: 7, fontSize: 11, color: 'var(--color-accent)' }}></i></>}
                     </span>
                   </a>
                 ))}

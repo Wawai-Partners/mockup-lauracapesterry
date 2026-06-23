@@ -52,7 +52,7 @@
               ].map(([ic, label, val]) => (
                 <div key={label} style={{ display: 'flex', gap: 16, alignItems: 'center', padding: '4px 4px' }}>
                   <div style={{ width: 46, height: 46, flex: 'none', borderRadius: 12, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 18 }}></i>
+                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', fontSize: 18 }}></i>
                   </div>
                   <div>
                     <div style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-primary)' }}>{label}</div>

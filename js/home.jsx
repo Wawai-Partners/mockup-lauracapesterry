@@ -50,7 +50,7 @@
             Six clarity-first fixes for your homepage — plus AI prompts to help you implement them faster,
             so visitors instantly understand who you help, what you offer, and what to do next.
           </p>
-          <Button href="resources.html#guides" variant="onDark" size="large">Get the free guide</Button>
+          <Button href="resources.html#guides" variant="accent" style={{ background: '#fff' }} size="large">Get the free guide <i className="fa-solid fa-book"></i></Button>
         </div>
       </section>);
 
@@ -71,7 +71,7 @@
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.7, color: 'var(--text-heading)', fontStyle: 'italic', fontWeight: 700, margin: '0 0 24px' }}>
               AI doesn’t replace heart — it amplifies it. And you don’t have to figure it out alone.
             </p>
-            <Button href="about.html" variant="outline" style={{ border: '2px solid var(--color-primary)' }}>Learn more</Button>
+            <Button href="about.html" variant="secondary">Learn more</Button>
           </div>
           <div className="home-intro__photo reveal">
             <img src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA" />
@@ -267,7 +267,7 @@
                   </span>
                 </a>
               )}
-              <div style={{ marginTop: 28 }}><Button variant="outline" href="blog.html">View all</Button></div>
+              <div style={{ marginTop: 28 }}><Button variant="ghost" href="blog.html">View all</Button></div>
             </div>
           </div>
         </div>
