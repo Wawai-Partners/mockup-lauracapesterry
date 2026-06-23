@@ -62,6 +62,7 @@
           <window.Container>
             <window.SectionTitle title="Why local businesses rely on BeLocal"
               sub="BeLocal functions like a yellow brick road for newcomers — guiding them to the best places to go, the best things to do, and the most trusted businesses in their new backyard." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-3" style={{ marginTop: 48 }}>
               {[
                 ['fa-map-location-dot', 'An essential resource for new movers', 'New movers rely on BeLocal because they don’t yet have word-of-mouth connections. It becomes a trusted starting point.'],
@@ -84,6 +85,7 @@
         <section className="bg-card section">
           <window.Container>
             <window.SectionTitle title="Here’s how it works" sub="Getting into BeLocal is simple — and Laura’s team handles the heavy lifting." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-3" style={{ marginTop: 48 }}>
               {[
                 ['Pick your size and position', 'Choose the placement that fits your goals and budget within the guide.'],

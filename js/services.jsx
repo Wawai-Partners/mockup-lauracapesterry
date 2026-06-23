@@ -45,6 +45,7 @@
           <window.Container>
             <window.SectionTitle overline="How Laura Helps" title="Ways to work together"
               sub="Every engagement is built on clarity and leadership — and tailored to where your business is now." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-2" style={{ marginTop: 48 }}>
               <ServiceCard icon="fa-wand-magic-sparkles" tag="Clarity & AI" title="AI Strategy Sessions"
                 body="A private, 90-minute strategic session to bring clarity to your marketing and confidence to your next decisions — especially in an AI-driven landscape. Together you’ll look at what’s working, what’s not, and where AI can actually help, without adding noise or losing your voice."

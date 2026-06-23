@@ -61,6 +61,7 @@
           <window.Container>
             <window.SectionTitle title="In their own words"
               sub="A few more of the many kind words from business owners and leaders Laura has guided over the years." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div style={{ marginTop: 44, columns: '3 280px', columnGap: 24 }}>
               {WALL.map((q, i) => (
                 <div key={i} className="reveal" style={{ breakInside: 'avoid', marginBottom: 24, background: 'var(--surface-tint)', borderRadius: 'var(--radius-lg)', padding: '24px 26px' }}>

@@ -102,6 +102,7 @@
           <window.Container>
             <window.SectionTitle title="A show about connection"
               sub="In a world that’s becoming faster, louder, and more automated, Be Locally Loved slows down to celebrate the people and businesses that make a community feel like home." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-3" style={{ marginTop: 48 }}>
               {[
                 ['fa-store', 'Beloved local businesses', 'The makers, shop owners, and service providers who show up for their neighbors every day.'],

@@ -172,6 +172,7 @@
           <window.Container>
             <window.SectionTitle title="What Clients Experience When They Work with Laura"
               sub="The shift isn’t just better marketing — it’s clarity, confidence, and a renewed love for the business you built." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-3" style={{ marginTop: 48 }}>
               {experiences.map(([ic, t, b]) => (
                 <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
@@ -228,6 +229,7 @@
         <section className="bg-card section">
           <window.Container>
             <window.SectionTitle title="Grounded in Proven Frameworks" />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="about-story reveal" style={{ marginTop: 20, textAlign: 'center' }}>
               <p style={{ ...para }}>Over three decades, Laura Capes Terry has invested deeply in learning from some of the most respected voices in business, marketing, and leadership.</p>
               <p style={{ ...para }}>But more importantly, she has spent years applying what works, discarding what doesn’t, and refining her judgment through real-world experience.</p>
@@ -256,6 +258,7 @@
           <window.Container>
             <window.SectionTitle title="A Career Built on Results, Not Hype"
               sub="Recognition matters—but only when it reflects real impact, real leadership, and real results." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="award-grid" style={{ marginTop: 44 }}>
               {careerAwards.map((a, i) => (
                 <div key={i} className="reveal award-card">
@@ -273,6 +276,7 @@
           <window.Container>
             <window.SectionTitle title="What Clients Say About Working With Laura"
               sub="Laura’s clients consistently describe her as a trusted guide, strategic thinker, and creative partner who brings both heart and clarity to their marketing." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="about-testi" style={{ marginTop: 48 }}>
               <div className="reveal">
                 <p className="ed-serif" style={{ fontSize: 'var(--fs-h2)', lineHeight: 1.25, margin: '0 0 20px' }}>
