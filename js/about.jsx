@@ -15,6 +15,36 @@
   }
   const para = { fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.7, color: 'var(--text-body)', margin: '0 0 16px' };
 
+  function VideoPoster({ src, poster, title }) {
+    const [playing, setPlaying] = React.useState(false);
+    return (
+      <div className="reveal video-frame" style={{ position: 'relative', width: '100%', aspectRatio: '16 / 10', borderRadius: 'var(--radius-lg)', overflow: 'hidden', boxShadow: 'var(--shadow-md)', background: '#000' }}>
+        {playing ? (
+          <iframe
+            src={src + '?autoplay=1'}
+            title={title}
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{ width: '100%', height: '100%', border: 0, display: 'block' }}>
+          </iframe>
+        ) : (
+          <button
+            type="button"
+            className="video-poster"
+            onClick={() => setPlaying(true)}
+            aria-label={`Play video: ${title}`}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', padding: 0, border: 0, cursor: 'pointer', background: '#000' }}>
+            <img src={poster} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            <span className="video-poster__scrim" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(36,82,96,0.05), rgba(36,82,96,0.28))' }}></span>
+            <span className="video-poster__play" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 78, height: 78, borderRadius: '50%', background: 'rgba(255,255,255,0.94)', color: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 28px rgba(36,82,96,0.4)' }}>
+              <i className="fa-solid fa-play" style={{ fontSize: 26, marginLeft: 4 }}></i>
+            </span>
+          </button>
+        )}
+      </div>
+    );
+  }
+
   function AboutPage() {
     const { BookButton } = window;
     const toast = window.useToast();
@@ -79,7 +109,10 @@
         {/* Strategic guidance */}
         <section id="story" className="bg-card section">
           <div className="container split">
-            <img className="reveal img-card" src="assets/laura-office-writing.jpg" alt="Laura at work" style={{ width: '100%' }} />
+            <VideoPoster
+              src="https://drive.google.com/file/d/1Pfl5tSyuBT5ZXJ3YaF5OjBC5e0LB6fOb/preview"
+              poster="assets/strategic-guidance-thumb.png"
+              title="Strategic guidance with Laura Capes Terry" />
             <div className="reveal">
               <h2 className="ed-serif" style={{ fontSize: 'var(--fs-h3)', marginBottom: 16 }}>Strategic guidance, not random tactics</h2>
               <p style={{ ...para, marginBottom: 16 }}>Laura partners with you to:</p>

@@ -253,20 +253,13 @@ function DrawerItem({ node, depth }) {
 
 /* ---------------- Tweaks ---------------- */
 const TWEAK_DEFAULTS = {
-  primaryColor: '#31738f',
-  headingFont: 'Fira Sans',
+  primaryColor: '#2D8FA2',
   corners: 'Soft',
 };
 const COLOR_PRESETS = {
-  '#31738f': ['#31738f', '#2a6377', '#245260'], // Brand teal
-  '#28606f': ['#28606f', '#21505c', '#1a414b'], // Deep teal
-  '#3b6f95': ['#3b6f95', '#335f80', '#294c66'], // Slate blue
-  '#2f7d6e': ['#2f7d6e', '#286b5f', '#20564c'], // Pine
-};
-const FONT_STACKS = {
-  'Fira Sans': "'Fira Sans', 'Helvetica Neue', Arial, sans-serif",
-  'Poppins': "'Poppins', 'Helvetica Neue', Arial, sans-serif",
-  'Libre Franklin': "'Libre Franklin', 'Helvetica Neue', Arial, sans-serif",
+  '#2D8FA2': ['#2D8FA2', '#25788a', '#1e6373'], // Signature teal (brand)
+  '#143B5A': ['#143B5A', '#0f2e47', '#0a2236'], // Deep navy
+  '#1e6373': ['#1e6373', '#185360', '#13434e'], // Deep teal
 };
 const CORNERS = {
   Soft: ['4px', '14px'],
@@ -284,12 +277,10 @@ function loadTweaks() {
 }
 function applyTweaks(t) {
   const r = document.documentElement.style;
-  const c = COLOR_PRESETS[t.primaryColor] || COLOR_PRESETS['#31738f'];
+  const c = COLOR_PRESETS[t.primaryColor] || COLOR_PRESETS['#2D8FA2'];
   r.setProperty('--color-primary', c[0]);
   r.setProperty('--color-primary-hover', c[1]);
   r.setProperty('--color-primary-active', c[2]);
-  r.setProperty('--surface-dark', c[0]);
-  r.setProperty('--font-heading', FONT_STACKS[t.headingFont] || FONT_STACKS['Fira Sans']);
   const cor = CORNERS[t.corners] || CORNERS.Soft;
   r.setProperty('--radius-sm', cor[0]);
   r.setProperty('--radius-lg', cor[1]);
@@ -312,9 +303,6 @@ function SiteTweaks() {
       <TweakColor label="Accent" value={t.primaryColor}
         options={Object.keys(COLOR_PRESETS)}
         onChange={(v) => setTweak('primaryColor', v)} />
-      <TweakRadio label="Heading font" value={t.headingFont}
-        options={Object.keys(FONT_STACKS)}
-        onChange={(v) => setTweak('headingFont', v)} />
       <TweakSection label="Shape" />
       <TweakRadio label="Corners" value={t.corners}
         options={Object.keys(CORNERS)}
