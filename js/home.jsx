@@ -71,7 +71,7 @@
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.7, color: 'var(--text-heading)', fontStyle: 'italic', fontWeight: 700, margin: '0 0 24px' }}>
               AI doesn’t replace heart — it amplifies it. And you don’t have to figure it out alone.
             </p>
-            <Button href="about.html" variant="secondary">Learn more</Button>
+            <Button href="about.html" variant="primary">Learn more</Button>
           </div>
           <div className="home-intro__photo reveal">
             <img src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA" />
