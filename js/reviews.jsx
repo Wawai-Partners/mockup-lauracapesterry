@@ -84,7 +84,7 @@
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
                 Start with a short, no-pressure conversation about where you are and where you want to go.
               </p>
-              <BookButton size="large" variant="accent" style={{ background: '#fff' }}>Work With Laura <i className="fa-solid fa-calendar-check"></i></BookButton>
+              <BookButton size="large" variant="accent" style={{ background: '#fff' }}>Work With Laura <i className="fa-solid fa-heart"></i></BookButton>
             </div>
           </window.Container>
         </section>

@@ -10,7 +10,7 @@
       blurb: 'Short, no-fluff downloads to help you market smarter — most read in under five minutes.',
       tiles: [
         ['The Ultimate ChatGPT Prompt', 'Free · AI', '#'],
-        ['Building Better Websites: Checklist', 'Free · Website', 'start-here.html'],
+        ['Building Better Websites: Checklist', 'Free · Website', 'contact.html'],
         ['12 Secrets to Great Ad Design', 'Free · Advertising', '#'],
         ['“CATCH” Attention on Social Media', 'Free · Social', '#'],
         ['Building a Sustainable Business', 'Free · Growth', '#'],
@@ -118,9 +118,8 @@
             <window.Container>
               <div className="reveal" style={{ maxWidth: 700, marginBottom: 36 }}>
                 <div className="faq-cat__head">
-                  <span className="faq-cat__icon"><i className={`fa-solid ${s.icon}`}></i></span>
+                  <span className="faq-cat__icon"><window.SunIcon icon={s.icon} size={58} /></span>
                   <div>
-                    <div className="eyebrow">{s.eyebrow}</div>
                     <h2 className="h-display" style={{ fontSize: 'var(--fs-h3)', marginTop: 2 }} dangerouslySetInnerHTML={{ __html: s.title }}></h2>
                   </div>
                 </div>
@@ -147,7 +146,7 @@
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
               <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', marginBottom: 14 }}>Not sure which resource is right?</h2>
               <p className="lead" style={{ margin: '0 auto 26px' }}>Tell Laura your biggest marketing challenge and she’ll point you to the right next step.</p>
-              <Button href="start-here.html" size="large">Start Here</Button>
+              <Button href="contact.html" size="large">Start Here</Button>
             </div>
           </window.Container>
         </section>

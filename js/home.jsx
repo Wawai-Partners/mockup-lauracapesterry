@@ -1,80 +1,217 @@
-/* Laura Capes Terry — Home (editorial redesign, June 2026)
-   Structure & visual language adapted from an editorial creator
-   homepage (montage hero · "I'M LAURA" intro · alternating feature
-   cards · podcast band · latest list · success carousel · photo
-   mosaic), rebuilt entirely on the LCT teal / Fira Sans brand. */
+/* Laura Capes Terry — Home (June 2026, "Jenna-energy" redesign)
+   Bold alternating color-block sections, oversized Cormorant display
+   type with Brittany Signature script accents, pill buttons, and
+   full-bleed photography — all on the LCT teal / navy / cream brand.
+   Content mirrors the prior homepage. */
 (function () {
   const { Button, Input } = window.LauraCapesTerryDesignSystem_1d8d61;
   const CALENDLY = 'https://calendly.com/laura-terry/discovery-call';
 
-  /* ---- Montage hero ---- */
-  const MONTAGE = [
-  'assets/laura-candid.jpg',
-  'assets/laura-headshot.jpg',
-  'assets/laura-all-in-with-ai.png',
-  'assets/laura-office-writing.jpg',
-  'assets/belocal-georgetown-cover.jpg'];
+  /* ---- Brand motifs (used sparingly for warmth) ---- */
+  function HeartRule() {
+    return (
+      <div className="motif-rule" aria-hidden="true">
+        <span className="motif-rule__line"></span>
+        <svg viewBox="0 0 24 22" className="motif-rule__heart"><path d="M12 21S2 14.5 2 7.8C2 4.6 4.5 2 7.6 2 9.6 2 11.3 3.1 12 4.6 12.7 3.1 14.4 2 16.4 2 19.5 2 22 4.6 22 7.8 22 14.5 12 21 12 21Z" fill="var(--lct-rose)" /></svg>
+        <span className="motif-rule__line"></span>
+      </div>);
 
+  }
+  function Sunburst() {
+    const rays = [];
+    for (let i = 0; i < 16; i++) {
+      const a = i / 16 * Math.PI * 2;
+      const long = i % 2 === 0;
+      const r1 = 20,r2 = long ? 34 : 28;
+      rays.push(<line key={i} x1={50 + Math.cos(a) * r1} y1={50 + Math.sin(a) * r1}
+      x2={50 + Math.cos(a) * r2} y2={50 + Math.sin(a) * r2}
+      stroke="var(--lct-sand)" strokeWidth="2" strokeLinecap="round" />);
+    }
+    return (
+      <svg viewBox="0 0 100 100" className="motif-sun" aria-hidden="true">
+        <circle cx="50" cy="50" r="12" fill="none" stroke="var(--lct-sand)" strokeWidth="2.4" />
+        {rays}
+      </svg>);
 
+  }
+  function SprigArt({ className }) {
+    return (
+      <svg className={className} viewBox="0 0 80 230" fill="none" aria-hidden="true">
+        <g stroke="#6BBCBC" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
+          {/* central stem */}
+          <path d="M40 228 C40 188 40 120 40 56" />
+          {/* branch fork near the top */}
+          <path d="M40 56 C39 44 33 35 25 28" />
+          <path d="M40 56 C41 44 47 35 55 28" />
+          {/* symmetric oval leaves along the stem */}
+          <ellipse cx="25" cy="196" rx="12" ry="5" transform="rotate(30 25 196)" />
+          <ellipse cx="55" cy="196" rx="12" ry="5" transform="rotate(-30 55 196)" />
+          <ellipse cx="24" cy="166" rx="12" ry="5" transform="rotate(30 24 166)" />
+          <ellipse cx="56" cy="166" rx="12" ry="5" transform="rotate(-30 56 166)" />
+          <ellipse cx="25" cy="136" rx="11" ry="4.6" transform="rotate(30 25 136)" />
+          <ellipse cx="55" cy="136" rx="11" ry="4.6" transform="rotate(-30 55 136)" />
+          <ellipse cx="26" cy="108" rx="10" ry="4.4" transform="rotate(30 26 108)" />
+          <ellipse cx="54" cy="108" rx="10" ry="4.4" transform="rotate(-30 54 108)" />
+          <ellipse cx="27" cy="83" rx="9" ry="4" transform="rotate(32 27 83)" />
+          <ellipse cx="53" cy="83" rx="9" ry="4" transform="rotate(-32 53 83)" />
+          {/* small leaves on the branch fork */}
+          <ellipse cx="20" cy="34" rx="7" ry="3.2" transform="rotate(40 20 34)" />
+          <ellipse cx="60" cy="34" rx="7" ry="3.2" transform="rotate(-40 60 34)" />
+        </g>
+        {/* dot accents around the upper portion */}
+        <g fill="#6BBCBC">
+          <circle cx="40" cy="20" r="2" />
+          <circle cx="17" cy="22" r="1.7" />
+          <circle cx="63" cy="22" r="1.7" />
+        </g>
+      </svg>);
+
+  }
+
+  /* ---- Banner hero ---- */
   function Hero() {
     return (
       <section className="home-hero" data-screen-label="Hero">
-        <div className="home-hero__montage" aria-hidden="true">
-          {MONTAGE.map((src, i) => <img key={i} src={src} alt="" />)}
-        </div>
-        <div className="home-hero__scrim" aria-hidden="true"></div>
-        <div className="home-hero__inner reveal">
-          <p className="home-hero__eyebrow">Strategic marketing guidance · Georgetown, Texas</p>
-          <h1>Be seen. Be trusted.<br />Be <span className="ed-em">chosen</span>.</h1>
-          <p className="home-hero__sub">
-            Helping local business owners build magnetic brands people love and trust —
-            by blending modern tools with timeless wisdom.
-          </p>
-          <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Work With Laura</Button>
-        </div>
-        <a className="home-scrolldown" href="#promo" aria-label="Scroll down"><i className="fa-solid fa-chevron-down"></i></a>
-      </section>);
-
-  }
-
-  /* ---- Promo band ---- */
-  function Promo() {
-    return (
-      <section className="home-promo section--sm" id="promo">
-        <div className="container reveal" style={{ maxWidth: 720 }}>
-          <span className="home-promo__badge"><i className="fa-solid fa-arrow-down-to-line"></i> Free guide</span>
-          <h2 className="ed-serif" style={{ color: '#fff', fontSize: 'var(--fs-h2)', marginBottom: 12 }}>
-            Get more clarity in your marketing, <span className="ed-em" style={{ color: 'var(--lct-sky-500)' }}>this week</span>
-          </h2>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.6, color: 'rgba(255,255,255,0.88)', margin: '0 auto 26px', maxWidth: 560 }}>
-            Six clarity-first fixes for your homepage — plus AI prompts to help you implement them faster,
-            so visitors instantly understand who you help, what you offer, and what to do next.
-          </p>
-          <Button href="resources.html#guides" variant="accent" style={{ background: '#fff' }} size="large">Get the free guide <i className="fa-solid fa-book"></i></Button>
-        </div>
-      </section>);
-
-  }
-
-  /* ---- "I'M LAURA" intro ---- */
-  function Intro() {
-    return (
-      <section className="home-intro" data-screen-label="Meet Laura">
-        <div className="home-intro__grid">
-          <div className="home-intro__copy reveal">
-            <p className="ed-eyebrow">Meet your guide</p>
-            <h2 className="home-intro__lettering">I’m<span className="ed-em">Laura.</span></h2>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.7, color: 'var(--text-body)', margin: '0 0 16px' }}>
-              After 30 years in media, branding, and marketing leadership, I’ve seen too many talented
-              entrepreneurs burn out trying to keep up with constant change.
+        <div className="home-hero__inner">
+          <div className="home-hero__copy reveal" style={{ width: "586px" }}>
+            <div className="home-hero__rule" aria-hidden="true">
+              <span className="home-hero__rule-line"></span>
+              <i className="fa-solid fa-heart"></i>
+              <span className="home-hero__rule-line"></span>
+            </div>
+            <h1>
+              Be <span className="jk-ink-teal">seen</span>.<br />
+              Be <span className="jk-script">trusted</span>.<br />
+              Be <span className="jk-ink-rose">chosen</span>.
+            </h1>
+            <p className="home-hero__sub">
+              Helping local business owners build magnetic brands people love and trust —
+              by blending modern tools with timeless wisdom.
             </p>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.7, color: 'var(--text-heading)', fontStyle: 'italic', fontWeight: 700, margin: '0 0 24px' }}>
-              AI doesn’t replace heart — it amplifies it. And you don’t have to figure it out alone.
+            <p className="home-hero__expertise">
+              Local Marketing &amp; Media Expert <span>|</span> AI Consultant <span>|</span> Podcaster
             </p>
-            <Button href="about.html" variant="primary">Learn more</Button>
+            <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Work With Laura</Button>
           </div>
-          <div className="home-intro__photo reveal">
-            <img src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA" />
+          <div className="home-hero__figure reveal">
+            <img className="home-hero__brush" src="assets/hero-brushstroke.png" alt="" aria-hidden="true" />
+            <svg className="home-hero__sprig" viewBox="0 0 90 150" fill="none" aria-hidden="true">
+              <path d="M45 150 C45 110 45 70 45 24" stroke="var(--lct-teal-500)" strokeWidth="2" strokeLinecap="round" />
+              <g stroke="var(--lct-teal-500)" strokeWidth="1.6" strokeLinecap="round">
+                <path d="M45 116 C58 110 70 112 80 102" />
+                <path d="M45 96 C32 90 20 92 10 82" />
+                <path d="M45 78 C58 72 70 74 80 64" />
+                <path d="M45 60 C32 54 20 56 10 46" />
+              </g>
+              <g fill="var(--lct-teal-300)" opacity="0.85">
+                <ellipse cx="74" cy="100" rx="9" ry="5" transform="rotate(-28 74 100)" />
+                <ellipse cx="16" cy="80" rx="9" ry="5" transform="rotate(28 16 80)" />
+                <ellipse cx="74" cy="62" rx="9" ry="5" transform="rotate(-28 74 62)" />
+                <ellipse cx="16" cy="44" rx="9" ry="5" transform="rotate(28 16 44)" />
+                <ellipse cx="45" cy="20" rx="6" ry="9" transform="rotate(8 45 20)" />
+              </g>
+            </svg>
+            <img className="home-hero__photo" src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA — strategic marketing guidance" style={{ width: "580px", height: "auto" }} />
+          </div>
+        </div>
+      </section>);
+
+  }
+
+  /* ---- Navy phrase band ---- */
+  const PHRASES = ['Clarity in an AI-Driven World', 'Authentic, Human Marketing', 'Confident, Sustainable Growth'];
+  function PhraseBand() {
+    return (
+      <section className="phrase-band" aria-label="Brand themes" style={{ backgroundColor: "rgb(20, 59, 90)" }}>
+        <div className="phrase-band__inner">
+          {PHRASES.map((p, i) =>
+          <React.Fragment key={p}>
+              {i > 0 && <i className="fa-solid fa-heart phrase-band__sep" aria-hidden="true" style={{ color: "rgb(192, 100, 120)" }}></i>}
+              <span className="phrase-band__item">{p}</span>
+            </React.Fragment>
+          )}
+        </div>
+      </section>);
+
+  }
+
+  /* ---- Problem: "AI is changing everything" ---- */
+  const PAINS = [
+  ['You’re on the edge of your expertise', '—unsure which AI tools, trends, and tactics actually support your goals, and which ones just add noise.'],
+  ['You’re out of time', '—juggling too many roles to slow down, think strategically, and create marketing that truly reflects your voice and values.'],
+  ['You’re feeling disconnected', '—craving authentic, human connection in a world that’s becoming faster, louder, and more automated by the day.']];
+
+  function Problem() {
+    return (
+      <section className="jk-levelup" data-screen-label="The problem">
+        <div className="jk-levelup__inner">
+          <div className="jk-levelup__copy reveal">
+            <h2 className="jk-h">AI is changing <span className="jk-ink-rose">everything.</span></h2>
+            <p className="jk-lead-em">And most business owners are drowning in distraction and overwhelm.</p>
+            <p className="jk-p">You know marketing matters, but:</p>
+            <ol className="problem-list">
+              {PAINS.map(([lead, rest], i) =>
+              <li key={i}>
+                  <span className="problem-list__num">{i + 1}</span>
+                  <span className="problem-list__text"><strong>{lead}</strong>{rest}</span>
+                </li>
+              )}
+            </ol>
+            <p className="jk-p" style={{ marginTop: 22 }}>
+              AI was supposed to make things easier. But without clear guidance and experienced marketing
+              leadership, it often does the opposite — amplifying confusion, diluting your message, and
+              pulling your attention in too many directions at once.
+            </p>
+            <p className="jk-levelup__tag">You don’t have to figure it out alone</p>
+            <div><Button href={CALENDLY} target="_blank" rel="noopener" size="large" className="jk-levelup__cta">Work With Laura</Button></div>
+          </div>
+        </div>
+        <div className="jk-levelup__photo reveal">
+          <image-slot id="home-problem-photo" shape="rect" fit="cover"
+          placeholder="Drop a photo — an overwhelmed business owner"
+          src="assets/laura-office-writing.jpg"></image-slot>
+        </div>
+      </section>);
+
+  }
+
+  /* ---- Meet Laura ---- */
+  function MeetLaura() {
+    return (
+      <section className="jk-meet jk-field--linen section" data-screen-label="Meet Laura">
+        <div className="container">
+          <div className="jk-meet__grid">
+            <div className="reveal jk-meet__media">
+              <span className="offset-photo__block" aria-hidden="true"></span>
+              <img src="assets/laura-all-in-with-ai.png" alt="Laura Capes Terry wearing an All in with AI shirt" />
+            </div>
+            <div className="reveal">
+              <h2 className="jk-h jk-h--md">Meet <span className="jk-script jk-script--lg">Laura</span> Capes Terry, MBA</h2>
+              <p className="jk-meet__role">Fractional CMO + Media Consultant</p>
+              <p className="jk-p">
+                After 30 years in media, branding, and marketing leadership, Laura has seen too many talented
+                entrepreneurs burn out trying to keep up with marketing trends and constant change.
+              </p>
+              <p className="jk-p">
+                She believes there’s a better way — one that blends wisdom, faith, and modern tools, guided by
+                experienced marketing leadership.
+              </p>
+              <p className="jk-p">
+                That’s why Laura guides faith-filled entrepreneurs in harnessing AI with wisdom, clarity, and
+                purpose. Her goal is to help you simplify your marketing, strengthen your message, and scale
+                your business with confidence.
+              </p>
+              <p className="jk-p jk-p--em">
+                AI doesn’t replace heart — it amplifies it. And you don’t have to figure it out alone.
+              </p>
+              <p className="jk-p">
+                Whether you need clarity, consistency, or a complete refresh, Laura meets you at the decision
+                table and helps you move forward with confidence — one strategic step at a time.
+              </p>
+              <div style={{ marginTop: 26 }}>
+                <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Schedule a Discovery Call</Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>);
@@ -94,8 +231,7 @@
     return (
       <section className="home-recog section--sm">
         <div className="container">
-          <p className="ed-eyebrow reveal" style={{ textAlign: 'center' }}>Recognized &amp; trusted across Georgetown and beyond</p>
-          <div className="home-recog__row reveal" style={{ marginTop: 26 }}>
+          <div className="home-recog__row reveal">
             {AWARDS.map(([f, alt]) => <img key={f} src={`assets/awards/${f}`} alt={alt} title={alt} />)}
           </div>
         </div>
@@ -103,214 +239,148 @@
 
   }
 
-  /* ---- Newsletter ---- */
-  function Newsletter() {
-    const toast = window.useToast();
+  function HeartSun({ icon }) {
+    const rays = [];
+    for (let i = 0; i < 12; i++) {
+      const a = i / 12 * Math.PI * 2 - Math.PI / 2;
+      const r1 = 30,r2 = i % 2 === 0 ? 44 : 39;
+      rays.push(
+        <line key={i}
+        x1={50 + Math.cos(a) * r1} y1={50 + Math.sin(a) * r1}
+        x2={50 + Math.cos(a) * r2} y2={50 + Math.sin(a) * r2}
+        stroke="var(--lct-sand)" strokeWidth="2.4" strokeLinecap="round" />);
+    }
     return (
-      <section className="bg-card section--sm">
+      <span className="heart-sun">
+        <svg viewBox="0 0 100 100" className="heart-sun__rays" aria-hidden="true">{rays}</svg>
+        <i className={`fa-solid ${icon} heart-sun__glyph`} aria-hidden="true"></i>
+      </span>);
+
+  }
+
+  /* ---- How We Can Work Together ---- */
+  const WAYS = [
+  {
+    icon: 'fa-chart-line', title: 'AI Strategy Sessions',
+    body: 'Private 90-minute consultation to evaluate your marketing strategy and identify what’s working, what’s not, and where AI can support your strategy, save time, and amplify your message.',
+    ideal: 'Ideal for solopreneurs and business owners ready to simplify their marketing and move forward with direction and peace of mind.'
+  },
+  {
+    icon: 'fa-handshake', title: 'Fractional Strategy & Mentorship',
+    body: 'Ongoing strategic partnership for growing businesses ready to scale with clarity and consistency. Includes executive-level guidance, AI integration, and a proven system for sustainable growth — without the full-time executive cost.',
+    ideal: 'Ideal for growing teams who want consistent guidance, accountability, and long-term growth.'
+  },
+  {
+    icon: 'fa-microphone-lines', title: 'Leadership Training & Speaking',
+    body: 'Leadership training for entrepreneurs and teams navigating growth, AI, and constant change — with clarity and confidence. Laura equips leaders with the clarity, discernment, and confidence to lead more responsibly, without losing their voice, values, or human connection.',
+    ideal: 'Ideal for business owners and leadership teams who want to bring authentic human connection and trust back to their marketing in the age of AI.'
+  }];
+
+  function HowWeWork() {
+    return (
+      <section className="jk-work jk-field--linen section" data-screen-label="How we work together">
         <div className="container">
-          <div className="split" style={{ gridTemplateColumns: '0.6fr 1.4fr', alignItems: 'center' }}>
-            <div className="reveal" style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-end', alignSelf: 'flex-end' }}>
-              <img src="assets/laura-belocal.png" alt="Laura Capes Terry holding BeLocal Georgetown" style={{ width: '100%', maxWidth: 320, height: 'auto', objectFit: 'contain', marginBottom: 'calc(var(--section-pad-y-sm) * -1)' }} />
-            </div>
-            <div className="reveal">
-              <p className="ed-eyebrow">The weekly note</p>
-              <h2 className="ed-serif" style={{ fontSize: 'var(--fs-h3)', marginBottom: 10 }}>
-                Learn how to market with clarity and confidence
-              </h2>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 22px', maxWidth: 540 }}>
-                Practical, human-first marketing guidance — and the smartest ways to use AI without losing your voice. No spam, ever.
-              </p>
-              <form className="home-news__form" onSubmit={(e) => {e.preventDefault();toast('You’re in! Watch your inbox for Laura’s next note.');}}>
-                <Input placeholder="First name" aria-label="First name" required />
-                <Input placeholder="Email address" type="email" aria-label="Email" required />
-                <span><Button type="submit">Subscribe</Button></span>
-              </form>
-            </div>
+          <div className="jk-head reveal">
+            <HeartRule />
+            <h2 className="jk-h jk-h--md">How We Can <span className="jk-script" style={{ color: "rgb(20, 59, 90)", fontWeight: "700", fontFamily: "\"Cormorant Garamond\"" }}>Work</span> Together</h2>
+            <p className="jk-head__lead">
+              Every partnership begins with clarity and leadership. Laura helps faith-filled entrepreneurs use
+              <strong> modern marketing and AI with strategy, purpose, and heart</strong> — so you can stop
+              reacting to trends and start leading with focus and confidence.
+            </p>
           </div>
-        </div>
-      </section>);
-
-  }
-
-  /* ---- Feature card ---- */
-  function Feature({ rev, book, eyebrow, title, em, body, cta, href, img, play, badge }) {
-    const cls = `home-feature${rev ? ' home-feature--rev' : ''}${book ? ' home-feature--book' : ''}`;
-    return (
-      <div className={`${cls} reveal`}>
-        <div className="home-feature__media">
-          <img src={img} alt="" />
-          {play && <button className="play-btn" aria-label="Play" onClick={() => {window.location.href = href;}}><i className="fa-solid fa-play"></i></button>}
-          {badge && <div className="home-feature__badge"><b>{badge[0]}</b><span>{badge[1]}</span></div>}
-        </div>
-        <div className="home-feature__body">
-          <p className="ed-eyebrow">{eyebrow}</p>
-          <h3 className="ed-serif" style={{ fontSize: 'var(--fs-h2)', marginBottom: 14 }}>
-            {title} {em && <span className="ed-em" style={{ color: 'var(--color-primary)' }}>{em}</span>}
-          </h3>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.7, color: 'var(--text-body)', margin: '0 0 24px' }}>{body}</p>
-          <Button href={href}>{cta}</Button>
-        </div>
-      </div>);
-
-  }
-
-  function Features() {
-    return (
-      <section className="bg-page section">
-        <div className="container">
-          <Feature
-            rev
-            eyebrow="Fractional CMO &amp; Strategy"
-            title="Take back your time."
-            em="Lead with clarity."
-            body="Executive-level marketing leadership without the full-time cost. Laura helps you simplify your strategy, strengthen your message, and move forward with focus — one intentional step at a time."
-            cta="See how Laura helps"
-            href="services.html"
-            img="assets/laura-office-writing.jpg" />
-          
-          <Feature
-            eyebrow="Be Locally Loved"
-            title="Get inspired by the podcast."
-            body="Real conversations with the local owners, builders, and creatives behind Georgetown’s most-loved businesses — on authentic marketing, faith, and growth that lasts."
-            cta="Listen now"
-            href="podcast.html"
-            img="assets/laura-headshot.jpg"
-            play />
-          
-          <Feature
-            rev book
-            eyebrow="Award-winning local media"
-            title="Be seen in BeLocal Georgetown."
-            body="The community magazine that connects neighbors with the businesses they’ll come to love. Get your story in front of the people who matter most — right here at home."
-            cta="Explore BeLocal"
-            href="belocal.html"
-            img="assets/belocal-georgetown-cover.jpg"
-            badge={['#1', 'Local media']} />
-          
-        </div>
-      </section>);
-
-  }
-
-  /* ---- Podcast band ---- */
-  const PLATFORMS = [
-  ['fa-brands fa-apple', 'Apple Podcasts'],
-  ['fa-brands fa-spotify', 'Spotify'],
-  ['fa-brands fa-youtube', 'YouTube'],
-  ['fa-brands fa-amazon', 'Amazon Music']];
-
-  function Podcast() {
-    return (
-      <section data-screen-label="Podcast">
-        <div className="home-pod__hero">
-          <video src="assets/podcast-hero.mp4" autoPlay loop muted playsInline
-          poster="assets/laura-candid.jpg" aria-label="Laura recording the Be Locally Loved podcast" style={{ height: "700px" }}></video>
-        </div>
-        <div className="home-pod__panel section">
-          <div className="container">
-            <div className="home-pod__grid">
-              <div className="reveal phone-mock">
-                <div className="phone-mock__screen">
-                  <div className="phone-mock__art">
-                    <img src="assets/be-locally-loved-cover.jpg" alt="Be Locally Loved podcast cover" />
-                  </div>
-                  <div className="phone-mock__meta">
-                    <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 15, color: 'var(--text-heading)', margin: '0 0 4px' }}>Be Locally Loved</p>
-                    <p style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)', margin: 0 }}>New episodes weekly</p>
-                  </div>
-                </div>
+          <div className="work-grid">
+            {WAYS.map((w) =>
+            <div key={w.title} className="work-card reveal">
+                <span className="work-card__icon"><HeartSun icon={w.icon} /></span>
+                <h3 className="h-display" style={{ margin: '0 0 12px', fontSize: "28px" }}>{w.title}</h3>
+                <p className="work-card__body">{w.body}</p>
+                <p className="work-card__ideal">{w.ideal}</p>
               </div>
-              <div className="reveal">
-                <p className="ed-eyebrow">The podcast</p>
-                <h2 className="ed-serif" style={{ fontSize: 'var(--fs-h2)', marginBottom: 14 }}>The Be Locally Loved Podcast</h2>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.7, color: 'var(--text-body)', margin: 0, maxWidth: 560 }}>
-                  Laura sits down with the people behind Georgetown’s most-loved businesses to talk honestly
-                  about marketing, faith, and building something that lasts. Subscribe wherever you listen.
-                </p>
-                <div className="platform-row">
-                  {PLATFORMS.map(([ic, name]) =>
-                  <a key={name} className="platform-pill" href="podcast.html"><i className={ic}></i>{name}</a>
-                  )}
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </section>);
 
   }
 
-  /* ---- The Latest ---- */
-  const LATEST = [
-  ['How to use AI in your marketing without losing your voice', 'Article · 6 min'],
-  ['Five signs your homepage is confusing your visitors', 'Article · 5 min'],
-  ['What “be seen, be trusted, be chosen” really means for local brands', 'Podcast · Ep. 24'],
-  ['The one question every business owner should answer first', 'Article · 4 min'],
-  ['How to stop reacting to trends and start leading with focus', 'Podcast · Ep. 23']];
+  /* ---- How to Get Started ---- */
+  const STEPS = [
+  ['Start a Conversation', 'Laura begins by understanding where you are, what you’re working toward, and what’s currently getting in the way.', 'This is a focused, intentional conversation — not a sales pitch.'],
+  ['Identify What Matters Most', 'Together, you’ll surface quick wins, areas of unnecessary complexity, and where AI or modern tools could help — or where they’re adding noise.', 'You’ll leave with clearer priorities and a recommended next step.'],
+  ['Decide the Right Path Forward', 'If it makes sense to go deeper, Laura will outline what that could look like.', 'If not, you’ll still walk away with clarity, direction, and confidence about what to do next.']];
 
-  function Latest() {
+  const STEP_TABS = ['var(--lct-teal-500)', 'var(--lct-rose-500)', 'var(--lct-navy-500)'];
+  function HowToStart() {
     return (
-      <section className="bg-card section">
+      <section className="jk-steps section" data-screen-label="How to get started">
         <div className="container">
-          <div className="home-latest__grid">
-            <img className="home-latest__photo reveal" src="assets/laura-all-in-with-ai.png" alt="Laura Capes Terry" />
-            <div className="reveal">
-              <p className="ed-eyebrow">The latest</p>
-              <h2 className="ed-serif" style={{ fontSize: 'var(--fs-h2)', marginBottom: 18 }}>Fresh thinking, every week</h2>
-              {LATEST.map(([t, m], i) =>
-              <a key={i} className="latest-item" href="blog.html">
-                  <span className="latest-item__play"><i className={`fa-solid ${m.startsWith('Podcast') ? 'fa-play' : 'fa-arrow-right'}`}></i></span>
-                  <span style={{ flex: 1 }}>
-                    <p className="latest-item__title">{t}</p>
-                    <p className="latest-item__meta">{m}</p>
-                  </span>
-                </a>
-              )}
-              <div style={{ marginTop: 28 }}><Button variant="ghost" href="blog.html">View all</Button></div>
-            </div>
+          <div className="jk-head reveal">
+            <HeartRule />
+            <h2 className="jk-h jk-h--md">How to Get <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", color: "rgb(20, 59, 90)", fontWeight: "700" }}>Started</span></h2>
+            <p className="jk-head__lead">
+              Here’s how Laura helps business owners simplify their strategy, save time, and grow with confidence.
+            </p>
+          </div>
+          <div className="folder-stack">
+            {STEPS.map(([t, a, b], i) =>
+            <article key={t} className="folder-card" style={{ '--i': i }}>
+                <div className="folder-card__tab" style={{ background: STEP_TABS[i] }}>
+                  <span className="folder-card__tablabel">How to Get Started</span>
+                </div>
+                <div className="folder-card__body">
+                  <span className="folder-card__num" style={{ color: STEP_TABS[i] }}>{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="folder-card__title">{t}</h3>
+                  <p className="folder-card__p">{a}</p>
+                  <p className="folder-card__p folder-card__p--muted">{b}</p>
+                </div>
+              </article>
+            )}
+          </div>
+          <div className="reveal" style={{ textAlign: 'center', marginTop: 48 }}>
+            <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Work With Laura</Button>
           </div>
         </div>
       </section>);
 
   }
 
-  /* ---- Success carousel ---- */
+  /* ---- What Clients Say ---- */
   const STORIES = [
   ['Since partnering with Laura, she’s been an invaluable guide, helping us identify and implement the right strategies for our business. We only regret not reaching out to her sooner.', 'Wendy Del Rio', 'An Idea Front'],
   ['We had no experience in marketing and no idea where to start. Laura immediately understood our situation and clearly laid out the steps we needed to take. For the first time, we could see a clear path forward.', 'Wesley Heinige', 'Bowen Door'],
   ['From the moment I met Laura, I knew I was in good hands. She’s incredibly knowledgeable, genuinely cares about business owners, and leads with integrity — not pressure.', 'Terry Bingman', 'The AG Company']];
 
-  function Success() {
-    const [i, setI] = React.useState(0);
-    const go = (d) => setI((p) => (p + d + STORIES.length) % STORIES.length);
-    const [q, who, org] = STORIES[i];
+  function ClientsSay() {
     return (
-      <section className="home-success section">
+      <section className="jk-quotes jk-field--sky-soft section" data-screen-label="What clients say">
+        <span className="jk-quotes__leaf jk-quotes__leaf--tl" aria-hidden="true"></span>
+        <span className="jk-quotes__leaf jk-quotes__leaf--br" aria-hidden="true"></span>
         <div className="container">
-          <p className="ed-eyebrow reveal">Client stories</p>
-          <h2 className="ed-serif reveal" style={{ fontSize: 'var(--fs-h2)' }}>
-            Will you be the next <span className="ed-em" style={{ color: 'var(--color-primary)' }}>success story</span>?
-          </h2>
-          <div className="success-card">
-            <p className="success-card__quote">“{q}”</p>
-            <p className="success-card__who">{who}</p>
-            <p className="success-card__org">{org}</p>
+          <div className="jk-head reveal">
+            <HeartRule />
+            <h2 className="jk-h jk-h--md">What Clients <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", color: "rgb(20, 59, 90)", fontWeight: "700" }}>Say</span></h2>
+            <p className="jk-head__lead">Here’s what business owners and leaders say about working with Laura.</p>
+            <a className="link-strong" href="reviews.html">Read testimonials.</a>
           </div>
-          <div className="success-dots">
-            {STORIES.map((_, k) => <span key={k} className={k === i ? 'on' : ''}></span>)}
+          <div className="quotes-grid">
+            {STORIES.map(([q, who, org]) =>
+            <figure key={who} className="quote-card reveal">
+                <i className="fa-solid fa-quote-left quote-card__mark" aria-hidden="true"></i>
+                <blockquote>{q}</blockquote>
+                <figcaption><span>{who}</span>{org}</figcaption>
+              </figure>
+            )}
           </div>
-          <div className="success-nav">
-            <button onClick={() => go(-1)} aria-label="Previous"><i className="fa-solid fa-arrow-left"></i></button>
-            <button onClick={() => go(1)} aria-label="Next"><i className="fa-solid fa-arrow-right"></i></button>
+          <div className="reveal" style={{ textAlign: 'center', marginTop: 48 }}>
+            <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Start a Conversation</Button>
           </div>
-          <div style={{ marginTop: 30 }}><Button href="reviews.html">Read more reviews</Button></div>
         </div>
       </section>);
 
   }
 
-  /* ---- Photo mosaic (photo-guide layout) ---- */
+  /* ---- Photo mosaic ---- */
   function Mosaic() {
     return (
       <section data-screen-label="Moments">
@@ -332,24 +402,77 @@
 
   }
 
-  /* ---- Closing CTA ---- */
-  function ClosingCTA() {
+  /* ---- Website guide band ---- */
+  const GUIDE_GETS = ['Who you help', 'What you offer', 'And what to do next'];
+  function WebsiteGuide() {
     const toast = window.useToast();
     return (
-      <section className="bg-page section" id="contact">
+      <section className="guide-band" data-screen-label="Website guide">
+        <div className="container">
+          <div className="guide-grid">
+            <div className="guide-form-card reveal">
+              <p className="guide-form-card__tag">Free Guide</p>
+              <h3 className="h-display" style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>
+                Does your website clearly explain what you do — and what to do next?
+              </h3>
+              <p className="guide-form-card__desc">
+                Download this clarity-first guide to identify what’s working, what’s confusing, and how to make
+                simple homepage improvements that actually help visitors take action.
+              </p>
+              <form onSubmit={(e) => {e.preventDefault();toast('On its way! Check your inbox for the Website Clarity Guide.');}}
+              style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                <Input placeholder="Name" aria-label="Name" required />
+                <Input placeholder="Email" type="email" aria-label="Email" required />
+                <Input placeholder="Company Name" aria-label="Company name" />
+                <Input placeholder="Website" aria-label="Website" />
+                <Button type="submit" fullWidth>Get the Website Clarity Guide</Button>
+              </form>
+              <p className="guide-form-card__fine">We won’t send spam. Unsubscribe at any time.</p>
+            </div>
+            <div className="guide-copy reveal">
+              <h2 className="jk-h jk-h--md jk-on-dark" style={{ margin: '0 0 10px' }}>Building Better Websites</h2>
+              <p className="guide-copy__sub">Six clarity-first website fixes — plus AI prompts to help you implement them faster.</p>
+              <p className="guide-copy__p">
+                If your website feels “almost right” but not quite effective, it’s often a clarity issue — not a design problem.
+              </p>
+              <p className="guide-copy__p">
+                This free guide walks you through six simple, high-impact fixes focused on your homepage above the
+                fold so visitors can quickly understand:
+              </p>
+              <ul className="guide-copy__list">
+                {GUIDE_GETS.map((g) => <li key={g}><i className="fa-solid fa-heart"></i>{g}</li>)}
+              </ul>
+              <p className="guide-copy__p">
+                You’ll also find optional AI prompts you can use as a thinking partner to help you evaluate and
+                improve your site faster — without losing your voice or overcomplicating the process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>);
+
+  }
+
+  /* ---- Start a conversation ---- */
+  function StartConversation() {
+    const toast = window.useToast();
+    return (
+      <section className="jk-contact jk-field--cream section" id="contact" data-screen-label="Start a conversation">
         <div className="container">
           <div className="card reveal" style={{ maxWidth: 640, margin: '0 auto', boxShadow: 'var(--shadow-md)', padding: 40 }}>
-            <p className="ed-eyebrow" style={{ textAlign: 'center' }}>Start here</p>
-            <h2 className="ed-serif" style={{ fontSize: 'var(--fs-h2)', textAlign: 'center', margin: '0 0 12px' }}>Let’s start a conversation</h2>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', textAlign: 'center', margin: '0 0 26px' }}>
-              A short, intentional conversation to understand your goals, find quick wins, and recommend a smart next step.
+            <Sunburst />
+            <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", fontWeight: "700", color: "rgb(20, 59, 90)" }}>Conversation</span></h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', textAlign: 'center', margin: '0 auto 26px', maxWidth: 480 }}>
+              This is a short, intentional conversation to understand your goals, identify low-hanging
+              opportunities, and recommend a smart next step.
             </p>
             <form onSubmit={(e) => {e.preventDefault();toast('Thanks! Laura will reach out shortly.');}} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <Input placeholder="Name" aria-label="Name" required />
               <Input placeholder="Email" type="email" aria-label="Email" required />
-              <Input placeholder="Company name" aria-label="Company name" />
-              <Input placeholder="What’s feeling most unclear in your marketing right now?" aria-label="Message" />
-              <div style={{ textAlign: 'center', marginTop: 6 }}><Button type="submit">Start a conversation</Button></div>
+              <Input placeholder="Company Name" aria-label="Company name" />
+              <Input placeholder="Phone Number" type="tel" aria-label="Phone number" />
+              <Input placeholder="What’s feeling most unclear in your marketing now?" aria-label="Message" />
+              <div style={{ textAlign: 'center', marginTop: 6 }}><Button type="submit" size="large">Start a Conversation</Button></div>
             </form>
           </div>
         </div>
@@ -359,18 +482,18 @@
 
   function HomePage() {
     return (
-      <div>
+      <div className="home-jk">
         <Hero />
-        <Promo />
-        <Intro />
+        <PhraseBand />
+        <Problem />
+        <MeetLaura />
         <Recognition />
-        <Newsletter />
-        <Features />
-        <Podcast />
-        <Latest />
-        <Success />
         <Mosaic />
-        <ClosingCTA />
+        <HowWeWork />
+        <HowToStart />
+        <ClientsSay />
+        <WebsiteGuide />
+        <StartConversation />
       </div>);
 
   }

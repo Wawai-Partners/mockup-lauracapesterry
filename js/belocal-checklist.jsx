@@ -38,7 +38,6 @@
         <section className="bg-dark section" data-screen-label="Checklist hero">
           <window.Container>
             <div className="reveal" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center', color: '#fff' }}>
-              <p className="ed-eyebrow ed-eyebrow--light" style={{ color: 'var(--lct-sky-500)' }}>For BeLocal Sponsors</p>
               <h1 className="ed-serif" style={{ fontSize: 'var(--fs-h1)', color: '#fff', margin: '0 0 16px' }}>
                 Websites: the key to turning curiosity into <span className="ed-em" style={{ color: 'var(--lct-sky-500)' }}>action</span>
               </h1>
@@ -113,7 +112,7 @@
               </p>
               <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Work With Laura</Button>
-                <Button href="resources.html#guides" variant="ghost" size="large">More marketing tips</Button>
+                <Button href="resources.html#guides" variant="accent" size="large">More marketing tips</Button>
               </div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)', marginTop: 32 }}>
                 © 2025 Laura Capes Terry · Grayson Media &amp; Marketing

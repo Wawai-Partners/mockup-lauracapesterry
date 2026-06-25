@@ -16,7 +16,7 @@
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 auto 28px', maxWidth: 560 }}>
                 New homeowners are actively choosing who to work with. BeLocal helps make sure your name is one of the first they see.
               </p>
-              <Button variant="accent" style={{ background: '#fff' }} size="large" href="#fit">See if we’re a fit <i className="fa-solid fa-clipboard-check"></i></Button>
+              <Button variant="accent" style={{ background: '#fff' }} size="large" href="#fit">See if we’re a fit <i className="fa-solid fa-heart"></i></Button>
             </div>
           </div>
         </section>
@@ -48,7 +48,7 @@
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {['Trusted introductions to new residents at the perfect moment', 'A premium print + digital presence among the area’s best businesses', 'Credibility by association with a curated local guide'].map((t) => (
                   <li key={t} style={{ display: 'flex', gap: 12 }}>
-                    <i className="fa-solid fa-check" style={{ color: 'var(--color-accent)', marginTop: 4 }}></i>
+                    <i className="fa-solid fa-heart" style={{ color: 'var(--color-accent)', marginTop: 4 }}></i>
                     <span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-body)' }}>{t}</span>
                   </li>
                 ))}
@@ -70,10 +70,8 @@
                 ['fa-infinity', 'Long shelf life + digital reach', 'BeLocal combines the staying power of print with the reach of digital — extending visibility well beyond a single touchpoint.'],
               ].map(([ic, t, b]) => (
                 <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
-                  <div style={{ width: 52, height: 52, marginBottom: 16, borderRadius: 12, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', fontSize: 21 }}></i>
-                  </div>
-                  <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{t}</h3>
+                  <window.SunIcon icon={ic} size={68} />
+                  <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10, marginTop: 14 }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               ))}
@@ -107,7 +105,6 @@
           <div className="container split">
             <img className="reveal img-card" src="assets/laura-headshot.jpg" alt="Laura Capes Terry" style={{ width: '100%' }} />
             <div className="reveal">
-              <div className="eyebrow" style={{ marginBottom: 12 }}>Meet the Publisher</div>
               <h2 className="h-display" style={{ fontSize: 'var(--fs-h3)', marginBottom: 8 }}>Laura Capes Terry, MBA</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 16px' }}>
                 Laura is a StoryBrand Certified Guide, award-winning strategic marketer, and the publisher of BeLocal Georgetown. With over 30 years of marketing experience, she has helped hundreds of businesses be seen, trusted, and chosen.
@@ -115,7 +112,7 @@
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 24px' }}>
                 BeLocal isn’t a magazine — it’s a proactive, community-building system that welcomes new residents and strengthens the local businesses they’ll come to love.
               </p>
-              <Button variant="ghost" href="about.html">More about Laura</Button>
+              <Button variant="accent" href="about.html">More about Laura</Button>
             </div>
           </div>
         </section>

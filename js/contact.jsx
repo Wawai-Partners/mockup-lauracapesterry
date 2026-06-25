@@ -26,7 +26,7 @@
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 24px' }}>
                 Tell Laura a little about your business and what’s feeling unclear right now. She’ll personally follow up.
               </p>
-              <form onSubmit={(e) => { e.preventDefault(); toast('Thanks! Laura will reach out shortly.'); }} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <form onSubmit={(e) => {e.preventDefault();toast('Thanks! Laura will reach out shortly.');}} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                   <Input placeholder="First name" aria-label="First name" required />
                   <Input placeholder="Last name" aria-label="Last name" required />
@@ -46,11 +46,11 @@
                 <Button href={CALENDLY} target="_blank" rel="noopener" fullWidth>Schedule a Discovery Call</Button>
               </div>
               {[
-                ['fa-location-dot', 'Based in', 'Georgetown, Texas'],
-                ['fa-envelope', 'Email', 'hello@lauracapesterry.com'],
-                ['fa-clock', 'Response time', 'Usually within one business day'],
-              ].map(([ic, label, val]) => (
-                <div key={label} style={{ display: 'flex', gap: 16, alignItems: 'center', padding: '4px 4px' }}>
+              ['fa-location-dot', 'Based in', 'Georgetown, Texas'],
+              ['fa-envelope', 'Email', 'hello@lauracapesterry.com'],
+              ['fa-clock', 'Response time', 'Usually within one business day']].
+              map(([ic, label, val]) =>
+              <div key={label} style={{ display: 'flex', gap: 16, alignItems: 'center', padding: '4px 4px' }}>
                   <div style={{ width: 46, height: 46, flex: 'none', borderRadius: 12, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', fontSize: 18 }}></i>
                   </div>
@@ -59,7 +59,7 @@
                     <div style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'var(--text-heading)', marginTop: 2 }}>{val}</div>
                   </div>
                 </div>
-              ))}
+              )}
               <div style={{ display: 'flex', gap: 10, paddingLeft: 4 }}>
                 <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" className="contact-soc" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" className="contact-soc" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
@@ -74,21 +74,21 @@
             <window.SectionTitle title="What happens next" sub="Working with Laura always starts the same calm, intentional way." />
             <div className="grid grid-3" style={{ marginTop: 48 }}>
               {[
-                ['1', 'We talk', 'Laura listens to understand where you are, what you’re working toward, and what’s getting in the way.'],
-                ['2', 'We find what matters', 'Together you’ll surface quick wins, sources of overwhelm, and where AI or modern tools could help.'],
-                ['3', 'You get a clear next step', 'Whether or not you work together, you’ll leave with direction and confidence about what to do next.'],
-              ].map(([n, t, b]) => (
-                <div key={n} className="reveal" style={{ textAlign: 'center' }}>
+              ['1', 'We talk', 'Laura listens to understand where you are, what you’re working toward, and what’s getting in the way.'],
+              ['2', 'We find what matters', 'Together you’ll surface quick wins, sources of overwhelm, and where AI or modern tools could help.'],
+              ['3', 'You get a clear next step', 'Whether or not you work together, you’ll leave with direction and confidence about what to do next.']].
+              map(([n, t, b]) =>
+              <div key={n} className="reveal" style={{ textAlign: 'center' }}>
                   <div style={{ width: 54, height: 54, margin: '0 auto 18px', borderRadius: '50%', background: 'var(--surface-tint-strong)', color: 'var(--color-primary)', fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 22, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{n}</div>
-                  <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{t}</h3>
+                  <h3 className="h-display" style={{ marginBottom: 10, fontSize: "28px" }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
-              ))}
+              )}
             </div>
           </window.Container>
         </section>
-      </div>
-    );
+      </div>);
+
   }
   window.__pages = window.__pages || {};
   window.__pages.contact = ContactPage;
