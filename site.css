@@ -6,7 +6,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -90,8 +90,7 @@ a { color: inherit; }
 /* ---------- Header (single-tier, white) ---------- */
 .site-header { position: sticky; top: 0; z-index: 60; box-shadow: 0 2px 14px rgba(15, 50, 64, 0.08); }
 
-.navbar { background: var(--surface-card); border-bottom: 1px solid var(--border-subtle); }
-.navbar__inner {
+.navbar { background: var(--surface-card); border-bottom: 1px solid var(--border-subtle); }.navbar__inner {
   max-width: var(--container-max); margin: 0 auto;
   padding: 14px var(--container-gutter);
   display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
@@ -474,6 +473,7 @@ a.mega-node__label:hover { color: var(--color-primary); }
   .nav { display: none; }
   .hamburger { display: block; }
   .navbar__social { display: none; }
+  .navbar__cta { display: none; }
   .navbar__logo img { height: 44px; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .footer-main { gap: 36px; }
@@ -607,7 +607,12 @@ a.mega-node__label:hover { color: var(--color-primary); }
   .home-hero__copy { max-width: 620px; margin: 0 auto; align-self: auto; padding-bottom: 0; }
   .home-hero__rule, .home-hero__sub { margin-left: auto; margin-right: auto; }
   .home-hero__figure { min-height: 340px; order: -1; align-self: auto; }
-  .home-hero__photo { max-width: 420px; height: auto !important; width: auto !important; }
+  .home-hero__photo { max-width: 320px !important; height: auto !important; width: auto !important; }
+  .phrase-band__inner { margin: 0px 7px 0px 7px !important; }
+  .jk-levelup__photo { position: static; width: auto; height: 320px; margin-top: 36px; display: none; }
+  .jk-meet__grid { display: flex !important; grid-template-columns: 0.85fr 1.15fr; gap: clamp(36px, 5vw, 76px); align-items: start; flex-direction: column; }
+  .jk-meet__media { position: relative !important; top: 104px; align-self: start; justify-content: center; }
+  .guide-grid { padding: 40px 0 !important; }
 }
 
 /* ---- 2. Promo band ---- */
@@ -879,7 +884,7 @@ a:hover { text-decoration: none; }
 
 /* Meet Laura */
 .jk-meet__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(36px, 5vw, 76px); align-items: start; }
-.jk-meet__media { position: sticky; top: 104px; align-self: start; display: flex; justify-content: center; }
+.jk-meet__media { position: relative; top: 0; align-self: start; display: flex; justify-content: center; }
 .jk-meet__media img {
   position: relative; z-index: 2; width: 100%; max-width: 420px; height: auto; display: block;
   border-radius: var(--radius-sm); box-shadow: 0 18px 40px rgba(20,59,90,0.2);
@@ -1405,6 +1410,21 @@ a:hover { text-decoration: none; }
 }
 .about-hero__cred img { height: 66px; width: auto; display: block; }
 
+@media (max-width: 760px) {
+  .about-hero__inner {
+    height: 580px !important; min-height: 0; padding: 0 var(--container-gutter);
+    flex-direction: column; align-items: center; justify-content: flex-end;
+  }
+  .about-hero__name { position: relative; top: auto; transform: none; margin: 18px 0 -6px; font-size: clamp(56px, 19vw, 104px); }
+  .about-hero__photo { flex: 1 1 auto; min-height: 0; height: auto; width: auto; max-width: 100%; object-fit: contain; object-position: bottom center; margin: 0 auto; }
+  /* Side tags + in-hero credentials belong to the desktop overlay only */
+  .about-hero__tag, .about-hero__cred { display: none; }
+}
+@media (max-width: 420px) {
+  .about-hero__inner { height: 480px; }
+  .about-hero__name { font-size: clamp(44px, 18vw, 84px); }
+}
+
 .about-strip { position: relative; z-index: 1; background: var(--surface-dark); }
 .about-seal {
   position: absolute; z-index: 5; top: 0; left: 50%; transform: translate(-50%, -50%);
@@ -1637,7 +1657,8 @@ i.fa-heart { color: var(--lct-rose); }
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;
   margin-top: 40px;
 }
-.blog-pager__nums { display: flex; gap: 8px; }
+.blog-pager__nums { display: flex; gap: 8px; align-items: center; }
+.blog-pager__gap { font-family: var(--font-subhead); font-weight: 600; font-size: 14px; color: var(--text-muted); min-width: 24px; text-align: center; }
 .blog-pager__edge, .blog-pager__num {
   font-family: var(--font-subhead); font-weight: 600; font-size: 14px; cursor: pointer;
   border: 1px solid var(--border-hairline); background: var(--surface-card); color: var(--text-heading);
