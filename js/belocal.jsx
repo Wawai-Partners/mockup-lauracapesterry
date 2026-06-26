@@ -48,7 +48,7 @@
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
                 {['Trusted introductions to new residents at the perfect moment', 'A premium print + digital presence among the area’s best businesses', 'Credibility by association with a curated local guide'].map((t) => (
                   <li key={t} style={{ display: 'flex', gap: 12 }}>
-                    <i className="fa-solid fa-heart" style={{ color: 'var(--color-accent)', marginTop: 4 }}></i>
+                    <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 4 }}></i>
                     <span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-body)' }}>{t}</span>
                   </li>
                 ))}

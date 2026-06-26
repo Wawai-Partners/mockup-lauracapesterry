@@ -21,7 +21,7 @@
             <div className="reveal" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>Resources · Books</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Go deeper — Laura’s reading list and <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>authored works</span>
+                Go deeper — Laura’s reading list and <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>authored works</span>
               </h1>
               <p className="lead">Stories and strategies for entrepreneurs building brands with courage and heart.</p>
             </div>
@@ -37,7 +37,7 @@
                 <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <img src={img} alt={`${t} — book cover`} style={{ width: '100%', borderRadius: 8, boxShadow: 'var(--shadow-md)', marginBottom: 18, display: 'block', aspectRatio: '2 / 3', objectFit: 'cover' }} />
                   <span style={{ display: 'inline-block', fontFamily: 'var(--font-subhead)', fontSize: 11.5, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: 8 }}>{status}</span>
-                  <h3 className="ed-serif" style={{ fontSize: '25px', marginBottom: 10 }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ fontSize: '21px', marginBottom: 10 }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 16px' }}>{b}</p>
                   <Button href={href} variant="accent" size="small">{label}</Button>
                 </div>
@@ -55,7 +55,7 @@
                 <img src="assets/books/rockstar-entrepreneur.jpg" alt="Rockstar Entrepreneur — book cover" style={{ width: '100%', maxWidth: 320, borderRadius: 8, boxShadow: 'var(--shadow-md)', display: 'block', margin: '0 auto' }} />
               </div>
               <div className="reveal" style={{ alignSelf: 'center' }}>
-                <h3 className="ed-serif" style={{ fontSize: '30px', marginBottom: 14 }}>For entrepreneurs who want to do good</h3>
+                <h3 className="ed-serif" style={{ fontSize: '25px', marginBottom: 14 }}>For entrepreneurs who want to do good</h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.7, color: 'var(--text-body)', margin: '0 0 24px' }}>
                   A book for entrepreneurs who believe business can be a force for positive change — and who want to build something they’re proud of while making a real difference in the world.
                 </p>

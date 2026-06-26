@@ -1,15 +1,13 @@
 /* ============================================================
    Laura Capes Terry — Typography tokens
-   Headlines:          Cormorant Garamond SemiBold (elegant serif)
-   Subheads & Nav:     Montserrat SemiBold
-   Body:               Montserrat Regular
-   Accent Script:      Brittany Signature (used sparingly)
+   Single brand typeface: Noto Sans (variable, roman + italic).
+   Used across headlines, subheads, body, and accent text.
    ============================================================ */
 :root {
-  --font-heading: 'Cormorant Garamond', 'Hoefler Text', Georgia, serif;
-  --font-subhead: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  --font-body:    'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  --font-script:  'Brittany Signature', 'Segoe Script', cursive;
+  --font-heading: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-subhead: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-script:  'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
 
   /* Weights */
   --fw-light:    300; /* @kind font */
@@ -18,11 +16,11 @@
   --fw-semibold: 600; /* @kind font */
   --fw-bold:     700; /* @kind font */
 
-  /* Type scale (desktop) — serif headlines run large & editorial */
-  --fs-display:  68px;   /* hero H1 */
-  --fs-h1:       54px;
-  --fs-h2:       40px;
-  --fs-h3:       30px;
+  /* Type scale (desktop) — bold sans headlines, slightly tighter than serif */
+  --fs-display:  60px;   /* hero H1 */
+  --fs-h1:       46px;
+  --fs-h2:       30px;
+  --fs-h3:       23px;
   --fs-h4:       20px;   /* subhead — Montserrat */
   --fs-lead:     20px;   /* intro paragraphs */
   --fs-body:     17px;

@@ -22,7 +22,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>About · Giving Back</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Business is better when it serves more than the <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>bottom line</span>
+                Business is better when it serves more than the <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>bottom line</span>
               </h1>
               <p className="lead">Laura believes the best businesses are rooted in community — giving back, showing up, and investing in the people and places that make Georgetown, Texas, such a special place to live and do business.</p>
             </div>
@@ -42,7 +42,7 @@
                     <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
                   </span>
                   <div>
-                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '24px' }}>{t}</h3>
+                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '20px' }}>{t}</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                   </div>
                 </div>

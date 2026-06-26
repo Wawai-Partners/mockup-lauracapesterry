@@ -94,23 +94,7 @@
             <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Work With Laura</Button>
           </div>
           <div className="home-hero__figure reveal">
-            <img className="home-hero__brush" src="assets/hero-brushstroke.png" alt="" aria-hidden="true" />
-            <svg className="home-hero__sprig" viewBox="0 0 90 150" fill="none" aria-hidden="true">
-              <path d="M45 150 C45 110 45 70 45 24" stroke="var(--lct-teal-500)" strokeWidth="2" strokeLinecap="round" />
-              <g stroke="var(--lct-teal-500)" strokeWidth="1.6" strokeLinecap="round">
-                <path d="M45 116 C58 110 70 112 80 102" />
-                <path d="M45 96 C32 90 20 92 10 82" />
-                <path d="M45 78 C58 72 70 74 80 64" />
-                <path d="M45 60 C32 54 20 56 10 46" />
-              </g>
-              <g fill="var(--lct-teal-300)" opacity="0.85">
-                <ellipse cx="74" cy="100" rx="9" ry="5" transform="rotate(-28 74 100)" />
-                <ellipse cx="16" cy="80" rx="9" ry="5" transform="rotate(28 16 80)" />
-                <ellipse cx="74" cy="62" rx="9" ry="5" transform="rotate(-28 74 62)" />
-                <ellipse cx="16" cy="44" rx="9" ry="5" transform="rotate(28 16 44)" />
-                <ellipse cx="45" cy="20" rx="6" ry="9" transform="rotate(8 45 20)" />
-              </g>
-            </svg>
+            <img className="home-hero__brush" src="assets/hero-brushstroke-cool.png" alt="" aria-hidden="true" />
             <img className="home-hero__photo" src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA — strategic marketing guidance" style={{ width: "580px", height: "auto" }} />
           </div>
         </div>
@@ -122,8 +106,8 @@
   const PHRASES = ['Clarity in an AI-Driven World', 'Authentic, Human Marketing', 'Confident, Sustainable Growth'];
   function PhraseBand() {
     return (
-      <section className="phrase-band" aria-label="Brand themes" style={{ backgroundColor: "rgb(20, 59, 90)" }}>
-        <div className="phrase-band__inner">
+      <section className="phrase-band" aria-label="Brand themes" style={{ backgroundColor: "var(--lct-navy)" }}>
+        <div className="phrase-band__inner" style={{ margin: "0px 7px 0px 73px", padding: "22px 20px" }}>
           {PHRASES.map((p, i) =>
           <React.Fragment key={p}>
               {i > 0 && <i className="fa-solid fa-heart phrase-band__sep" aria-hidden="true" style={{ color: "rgb(192, 100, 120)" }}></i>}
@@ -240,20 +224,9 @@
   }
 
   function HeartSun({ icon }) {
-    const rays = [];
-    for (let i = 0; i < 12; i++) {
-      const a = i / 12 * Math.PI * 2 - Math.PI / 2;
-      const r1 = 30,r2 = i % 2 === 0 ? 44 : 39;
-      rays.push(
-        <line key={i}
-        x1={50 + Math.cos(a) * r1} y1={50 + Math.sin(a) * r1}
-        x2={50 + Math.cos(a) * r2} y2={50 + Math.sin(a) * r2}
-        stroke="var(--lct-sand)" strokeWidth="2.4" strokeLinecap="round" />);
-    }
     return (
-      <span className="heart-sun">
-        <svg viewBox="0 0 100 100" className="heart-sun__rays" aria-hidden="true">{rays}</svg>
-        <i className={`fa-solid ${icon} heart-sun__glyph`} aria-hidden="true"></i>
+      <span className="heart-sun" style={{ display: 'inline-flex', width: 64, height: 64, borderRadius: '50%', background: 'var(--surface-tint)', alignItems: 'center', justifyContent: 'center' }}>
+        <i className={`fa-solid ${icon}`} style={{ color: 'var(--color-primary)', fontSize: 28 }} aria-hidden="true"></i>
       </span>);
 
   }
@@ -282,7 +255,7 @@
         <div className="container">
           <div className="jk-head reveal">
             <HeartRule />
-            <h2 className="jk-h jk-h--md">How We Can <span className="jk-script" style={{ color: "rgb(20, 59, 90)", fontWeight: "700", fontFamily: "\"Cormorant Garamond\"" }}>Work</span> Together</h2>
+            <h2 className="jk-h jk-h--md">How We Can <span className="jk-script" style={{ color: "var(--lct-navy)", fontWeight: "700", fontFamily: 'var(--font-heading)' }}>Work</span> Together</h2>
             <p className="jk-head__lead">
               Every partnership begins with clarity and leadership. Laura helps faith-filled entrepreneurs use
               <strong> modern marketing and AI with strategy, purpose, and heart</strong> — so you can stop
@@ -293,7 +266,7 @@
             {WAYS.map((w) =>
             <div key={w.title} className="work-card reveal">
                 <span className="work-card__icon"><HeartSun icon={w.icon} /></span>
-                <h3 className="h-display" style={{ margin: '0 0 12px', fontSize: "28px" }}>{w.title}</h3>
+                <h3 className="h-display" style={{ margin: '0 0 12px', fontSize: "23px" }}>{w.title}</h3>
                 <p className="work-card__body">{w.body}</p>
                 <p className="work-card__ideal">{w.ideal}</p>
               </div>
@@ -310,14 +283,14 @@
   ['Identify What Matters Most', 'Together, you’ll surface quick wins, areas of unnecessary complexity, and where AI or modern tools could help — or where they’re adding noise.', 'You’ll leave with clearer priorities and a recommended next step.'],
   ['Decide the Right Path Forward', 'If it makes sense to go deeper, Laura will outline what that could look like.', 'If not, you’ll still walk away with clarity, direction, and confidence about what to do next.']];
 
-  const STEP_TABS = ['var(--lct-teal-500)', 'var(--lct-rose-500)', 'var(--lct-navy-500)'];
+  const STEP_TABS = ['var(--lct-teal-500)', 'var(--lct-sky-500)', 'var(--lct-navy-500)'];
   function HowToStart() {
     return (
       <section className="jk-steps section" data-screen-label="How to get started">
         <div className="container">
           <div className="jk-head reveal">
             <HeartRule />
-            <h2 className="jk-h jk-h--md">How to Get <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", color: "rgb(20, 59, 90)", fontWeight: "700" }}>Started</span></h2>
+            <h2 className="jk-h jk-h--md">How to Get <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', color: "var(--lct-navy)", fontWeight: "700" }}>Started</span></h2>
             <p className="jk-head__lead">
               Here’s how Laura helps business owners simplify their strategy, save time, and grow with confidence.
             </p>
@@ -359,7 +332,7 @@
         <div className="container">
           <div className="jk-head reveal">
             <HeartRule />
-            <h2 className="jk-h jk-h--md">What Clients <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", color: "rgb(20, 59, 90)", fontWeight: "700" }}>Say</span></h2>
+            <h2 className="jk-h jk-h--md">What Clients <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', color: "var(--lct-navy)", fontWeight: "700" }}>Say</span></h2>
             <p className="jk-head__lead">Here’s what business owners and leaders say about working with Laura.</p>
             <a className="link-strong" href="reviews.html">Read testimonials.</a>
           </div>
@@ -431,7 +404,7 @@
             </div>
             <div className="guide-copy reveal">
               <h2 className="jk-h jk-h--md jk-on-dark" style={{ margin: '0 0 10px' }}>Building Better Websites</h2>
-              <p className="guide-copy__sub">Six clarity-first website fixes — plus AI prompts to help you implement them faster.</p>
+              <p className="guide-copy__sub" style={{ color: "rgb(255, 255, 255)" }}>Six clarity-first website fixes — plus AI prompts to help you implement them faster.</p>
               <p className="guide-copy__p">
                 If your website feels “almost right” but not quite effective, it’s often a clarity issue — not a design problem.
               </p>
@@ -440,7 +413,7 @@
                 fold so visitors can quickly understand:
               </p>
               <ul className="guide-copy__list">
-                {GUIDE_GETS.map((g) => <li key={g}><i className="fa-solid fa-heart"></i>{g}</li>)}
+                {GUIDE_GETS.map((g) => <li key={g}><i className="fa-regular fa-circle-check" style={{ color: "rgb(255, 255, 255)" }}></i>{g}</li>)}
               </ul>
               <p className="guide-copy__p">
                 You’ll also find optional AI prompts you can use as a thinking partner to help you evaluate and
@@ -461,7 +434,7 @@
         <div className="container">
           <div className="card reveal" style={{ maxWidth: 640, margin: '0 auto', boxShadow: 'var(--shadow-md)', padding: 40 }}>
             <Sunburst />
-            <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", fontWeight: "700", color: "rgb(20, 59, 90)" }}>Conversation</span></h2>
+            <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: "700", color: "var(--lct-navy)" }}>Conversation</span></h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', textAlign: 'center', margin: '0 auto 26px', maxWidth: 480 }}>
               This is a short, intentional conversation to understand your goals, identify low-hanging
               opportunities, and recommend a smart next step.

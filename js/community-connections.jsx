@@ -22,7 +22,7 @@
             <div className="reveal" style={{ maxWidth: 880, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>How I Help · Community Connections</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                The most powerful marketing isn't an ad — it's a <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>relationship</span>
+                The most powerful marketing isn't an ad — it's a <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>relationship</span>
               </h1>
               <p className="lead">Laura helps Georgetown business owners plug into the right networks, build genuine relationships, and become trusted names in their community — the kind of business people recommend at dinner tables, not just on Google.</p>
               <div style={{ marginTop: 28 }}><BookButton size="large">Let's Talk Community <i className="fa-solid fa-heart"></i></BookButton></div>
@@ -37,7 +37,7 @@
               <img className="reveal img-card" src="assets/laura-candid.jpg" alt="Laura connecting with the Georgetown community" style={{ width: '100%' }} />
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>BeLocal Georgetown</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '44px' }}>More than a media company — a community hub</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '36px' }}>More than a media company — a community hub</h2>
                 <p style={{ ...para }}>BeLocal Georgetown connects business owners with residents, with each other, and with the events and moments that matter most in Georgetown.</p>
                 <p style={{ ...para, margin: 0 }}>As a BeLocal sponsor, you're not just buying an ad — you're joining a community of businesses that care about Georgetown.</p>
                 <div style={{ marginTop: 28 }}><Button href="belocal.html" variant="accent">Explore BeLocal →</Button></div>
@@ -52,13 +52,13 @@
             <div className="split">
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>BNI GTX</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '40px' }}>Business by referral</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '33px' }}>Business by referral</h2>
                 <p style={{ ...para }}>BNI (Business Network International) is the world's largest and most successful business networking organization. BNI GTX is Georgetown's premier chapter.</p>
                 <p style={{ ...para }}>Laura is an active BNI member and can help you evaluate whether BNI is the right fit for your business — and how to get the most out of membership if you join.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
                   {bni.map((t) =>
                   <li key={t} style={{ display: 'flex', gap: 12 }}>
-                      <i className="fa-solid fa-heart" style={{ color: 'var(--color-accent)', marginTop: 5 }}></i>
+                      <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 5 }}></i>
                       <span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-body)' }}>{t}</span>
                     </li>
                   )}
@@ -66,7 +66,7 @@
               </div>
               <div className="reveal card bg-tint" style={{ border: 'none', textAlign: 'center', alignSelf: 'center', padding: 48 }}>
                 <window.SunIcon icon="fa-people-arrows" size={92} />
-                <div className="h-display" style={{ fontSize: 30, marginTop: 18 }}>Georgetown's premier chapter</div>
+                <div className="h-display" style={{ fontSize: 25, marginTop: 18 }}>Georgetown's premier chapter</div>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: '10px 0 0' }}>A proven referral system, built on real relationships.</p>
               </div>
             </div>
@@ -86,7 +86,7 @@
               map(([ic, t, b]) =>
               <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <window.SunIcon icon={ic} size={72} />
-                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: '28px' }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: '23px' }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               )}

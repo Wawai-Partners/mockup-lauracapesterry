@@ -8,7 +8,7 @@
   function Bullet({ children }) {
     return (
       <li style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-        <i className="fa-solid fa-heart" style={{ color: 'var(--color-accent)', marginTop: 5 }}></i>
+        <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 5 }}></i>
         <span style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)' }}>{children}</span>
       </li>);
 
@@ -132,7 +132,7 @@
               poster="assets/strategic-guidance-thumb.png"
               title="Strategic guidance with Laura Capes Terry" />
             <div className="reveal">
-              <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "36px" }}>Strategic guidance, not random tactics</h2>
+              <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "30px" }}>Strategic guidance, not random tactics</h2>
               <p style={{ ...para, marginBottom: 16 }}>Laura partners with you to:</p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 18px', display: 'flex', flexDirection: 'column', gap: 12 }}>
                 <Bullet>Clarify your message so people understand you quickly</Bullet>
@@ -152,7 +152,7 @@
           <window.Container>
             <div className="about-two">
               <div className="reveal">
-                <h2 className="ed-serif" style={{ marginBottom: 14, fontSize: "36px" }}>A steady guide when things feel unclear</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 14, fontSize: "30px" }}>A steady guide when things feel unclear</h2>
                 <p style={{ ...para }}>Clients work with Laura because she brings calm to complexity.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 18px', display: 'flex', flexDirection: 'column', gap: 12 }}>
                   <Bullet>She listens first.</Bullet>
@@ -162,7 +162,7 @@
                 <p style={{ ...para, margin: 0 }}>Whether you’re navigating growth, change, or uncertainty, Laura helps you move forward with clarity and confidence, one smart step at a time.</p>
               </div>
               <div className="reveal">
-                <h2 className="ed-serif" style={{ marginBottom: 14, fontSize: "36px" }}>Built from real-world experience</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 14, fontSize: "30px" }}>Built from real-world experience</h2>
                 <p style={{ ...para }}>Laura doesn’t teach theory. She leads from experience.</p>
                 <p style={{ ...para }}>Every strategy she recommends has been tested and refined inside her own businesses—from publishing <strong>BeLocal Georgetown</strong>, to leading her fractional CMO practice at <strong>Grayson Media &amp; Marketing</strong>, to hosting <strong>The Unbridled Creative</strong> podcast.</p>
                 <p style={{ ...para, margin: 0 }}>She understands what it’s like to make decisions with limited time, real budgets, and real people depending on the outcome—because she’s doing the work herself.</p>
@@ -195,7 +195,7 @@
               {experiences.map(([ic, t, b]) =>
               <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <window.SunIcon icon={ic} size={68} />
-                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: "28px" }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: "23px" }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               )}
@@ -212,7 +212,7 @@
                 <img src="assets/laura-belocal.png" alt="Laura Capes Terry holding BeLocal Georgetown" />
               </div>
               <div className="reveal">
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "52px" }}>Why Businesses Trust Laura</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "43px" }}>Why Businesses Trust Laura</h2>
                 <p style={{ ...para }}>Businesses trust Laura because she brings calm, seasoned leadership to moments that feel noisy, overwhelming, or high-stakes—when clarity matters most.</p>
                 <p style={{ ...para }}>With over 30 years of real-world experience in marketing, branding, and business growth, Laura Capes Terry brings executive-level perspective—not just ideas—to every engagement. She helps business owners see clearly, make confident decisions, and move forward with intention instead of reacting to trends or pressure.</p>
                 <p style={{ ...para }}>Laura’s background spans corporate leadership, local business ownership, community publishing, and award-winning marketing innovation. That combination gives her a rare ability to bridge strategy and creativity while staying grounded in what actually works in the real world.</p>
@@ -262,7 +262,7 @@
               )}
             </div>
             <div className="reveal" style={{ textAlign: 'center', marginTop: 48, maxWidth: 820, marginLeft: 'auto', marginRight: 'auto' }}>
-              <h3 className="ed-serif" style={{ marginBottom: 12, fontSize: "28px" }}>Additional Training &amp; Certifications</h3>
+              <h3 className="ed-serif" style={{ marginBottom: 12, fontSize: "23px" }}>Additional Training &amp; Certifications</h3>
               <p style={{ ...para, margin: 0 }}>Laura is committed to ongoing learning and thoughtful application. Her continued education includes advanced programs with Tony Robbins and Dean Graziosi, strategic marketing certifications through The FG Society, The AI Advantage, The AI Business Summit, and foundational business training such as Keith Cunningham’s 4-Day MBA.</p>
             </div>
           </window.Container>

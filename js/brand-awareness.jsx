@@ -30,7 +30,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>How I Help · Brand Awareness</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                If people don't know you exist, they can't <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>choose you</span>
+                If people don't know you exist, they can't <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>choose you</span>
               </h1>
               <p className="lead">Laura helps local Georgetown businesses build consistent, compelling visibility across print, digital, mobile, social, and events — so your ideal customers see you everywhere they look.</p>
               <div style={{ marginTop: 28 }}><BookButton size="large">Explore Brand Awareness Options <i className="fa-solid fa-heart"></i></BookButton></div>
@@ -44,7 +44,7 @@
             <div className="split">
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>BeLocal Georgetown</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '44px' }}>Laura's award-winning local media company</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '36px' }}>Laura's award-winning local media company</h2>
                 <p style={{ ...para }}>BeLocal Georgetown is a trusted resource that Georgetown residents and newcomers turn to for discovering the best local businesses.</p>
                 <p style={{ ...para, margin: 0 }}>Being featured in BeLocal means your business is introduced to a highly engaged local audience that's actively looking for trusted recommendations — not just scrolling past ads.</p>
                 <div style={{ marginTop: 28 }}><Button href="belocal.html" variant="accent">How BeLocal works →</Button></div>
@@ -64,7 +64,7 @@
               {channels.map(([ic, t, b]) =>
               <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <window.SunIcon icon={ic} size={68} />
-                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: '26px' }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: '21px' }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               )}
@@ -78,12 +78,12 @@
             <div className="split">
               <div className="reveal card bg-card" style={{ textAlign: 'center', padding: 48 }}>
                 <window.SunIcon icon="fa-map-location-dot" size={88} />
-                <div className="h-display" style={{ fontSize: 28, marginTop: 18 }}>Let's Go Locals</div>
+                <div className="h-display" style={{ fontSize: 23, marginTop: 18 }}>Let's Go Locals</div>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--text-muted)', margin: '8px 0 0' }}>Directory &amp; Stories</p>
               </div>
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>Directory &amp; Stories</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '40px' }}>Discovered, supported, and recommended — local first</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '33px' }}>Discovered, supported, and recommended — local first</h2>
                 <p style={{ ...para }}>Let's Go Locals is a curated directory of Georgetown's best local businesses — designed to help residents and visitors discover, support, and recommend local over national chains.</p>
                 <p style={{ ...para, margin: 0 }}>Being listed places your business in a community-first platform that celebrates what makes Georgetown unique.</p>
               </div>
@@ -97,12 +97,12 @@
             <div className="split">
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>Social Media Marketing</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '40px' }}>Strategic, consistent, and authentically you</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '33px' }}>Strategic, consistent, and authentically you</h2>
                 <p style={{ ...para }}>Social media works best when it builds real relationships — not just follower counts. From content strategy to platform guidance to AI-powered batch creation, Laura helps you show up consistently without burning out.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
                   {social.map((t) =>
                   <li key={t} style={{ display: 'flex', gap: 12 }}>
-                      <i className="fa-solid fa-heart" style={{ color: 'var(--color-accent)', marginTop: 5 }}></i>
+                      <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 5 }}></i>
                       <span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-body)' }}>{t}</span>
                     </li>
                   )}

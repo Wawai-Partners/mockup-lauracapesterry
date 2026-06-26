@@ -17,7 +17,7 @@
             <div className="reveal" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>Resources · Workshops</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Hands-on learning that actually changes how you <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>market</span>
+                Hands-on learning that actually changes how you <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>market</span>
               </h1>
               <p className="lead">Laura’s workshops are practical, engaging, and built for real business owners — not academics. Walk in with a challenge. Walk out with tools you can use today.</p>
             </div>
@@ -35,7 +35,7 @@
                     <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
                   </span>
                   <div>
-                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '25px' }}>{t}</h3>
+                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '21px' }}>{t}</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 12px' }}>{b}</p>
                     <span style={{ display: 'inline-block', fontFamily: 'var(--font-subhead)', fontSize: 12.5, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--color-primary)', background: 'var(--surface-tint)', borderRadius: 999, padding: '6px 14px' }}>{fmt}</span>
                   </div>

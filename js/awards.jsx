@@ -53,7 +53,7 @@
             <div className="reveal" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>Awards & Certifications</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Recognized for excellence in local marketing, media, and business <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>leadership</span>
+                Recognized for excellence in local marketing, media, and business <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>leadership</span>
               </h1>
               <p className="lead">Laura's work has been honored locally and nationally — but what matters most is the real-world results she delivers for the business owners she serves.</p>
             </div>
@@ -80,7 +80,7 @@
               </div>
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>Awards</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '44px' }}>BeLocal Georgetown — an award-winning local media company</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '36px' }}>BeLocal Georgetown — an award-winning local media company</h2>
                 <p style={{ ...para }}>BeLocal Georgetown has received multiple awards for excellence in local media, community impact, and advertising quality — recognized by the National Association of Local Media and regional business organizations.</p>
                 <p style={{ ...para, margin: 0 }}>Most recently, BeLocal Georgetown received the <strong>Texas Downtown Association President's Award</strong> and has been named one of <strong>Georgetown's Best</strong> three years running.</p>
                 <div style={{ marginTop: 28 }}><Button href="belocal.html" variant="accent">Why Laura publishes BeLocal →</Button></div>
@@ -99,7 +99,7 @@
               {certs.map(([ic, t, b]) =>
               <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <window.SunIcon icon={ic} size={68} />
-                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: '26px' }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ marginBottom: 10, marginTop: 14, fontSize: '21px' }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               )}

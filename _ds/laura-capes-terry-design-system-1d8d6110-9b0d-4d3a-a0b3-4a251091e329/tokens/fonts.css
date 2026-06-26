@@ -1,49 +1,21 @@
 /* ============================================================
    Laura Capes Terry — Webfonts (self-hosted)
-   Brand typefaces:
-     • Cormorant Garamond — elegant display serif (headlines)
-     • Montserrat          — clean geometric sans (subheads, nav, body)
-     • Brittany Signature  — handwritten accent script
+   Single brand typeface: Noto Sans (variable wght, roman + italic).
    Paths are relative to this file (tokens/), pointing at ../assets/fonts.
    ============================================================ */
 
-/* — Cormorant Garamond (variable weight 300–700) — */
+/* — Noto Sans (variable weight 100–900) — */
 @font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('../assets/fonts/CormorantGaramond-Variable.ttf') format('truetype');
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  src: url('../assets/fonts/CormorantGaramond-Italic-Variable.ttf') format('truetype');
-  font-weight: 300 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* — Montserrat (variable weight 100–900) — */
-@font-face {
-  font-family: 'Montserrat';
-  src: url('../assets/fonts/Montserrat-Variable.ttf') format('truetype');
+  font-family: 'Noto Sans';
+  src: url('../assets/fonts/NotoSans-Variable.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../assets/fonts/Montserrat-Italic-Variable.ttf') format('truetype');
+  font-family: 'Noto Sans';
+  src: url('../assets/fonts/NotoSans-Italic-Variable.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
-  font-display: swap;
-}
-
-/* — Brittany Signature (accent script) — */
-@font-face {
-  font-family: 'Brittany Signature';
-  src: url('../assets/fonts/BrittanySignature.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
   font-display: swap;
 }

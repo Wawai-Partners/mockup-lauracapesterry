@@ -20,8 +20,8 @@
           <img src={cover} alt={`${title} cover`} style={{ width: '100%', height: '100%', objectFit: coverFit || 'cover', background: '#fff', display: 'block' }} />}
         </div>
         <div style={{ padding: 28, display: 'flex', flexDirection: 'column', flex: 1 }}>
-          <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--lct-rose)', margin: '0 0 6px' }}>{host}</p>
-          <h3 className="ed-serif" style={{ fontSize: '26px', marginBottom: 10 }}>{title}</h3>
+          <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: '0 0 6px' }}>{host}</p>
+          <h3 className="ed-serif" style={{ fontSize: '21px', marginBottom: 10 }}>{title}</h3>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 20px' }}>{desc}</p>
           <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12, fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)', margin: '0 0 12px' }}>Listen on</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 22 }}>
@@ -44,7 +44,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>How I Help · Education &amp; Inspiration</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Learning that leaves you <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>inspired</span>
+                Learning that leaves you <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>inspired</span>
               </h1>
               <p className="lead">Laura believes the best marketing comes from clarity, courage, and connection. Through her podcasts, she shares the conversations, stories, and ideas that help local business owners grow — and remember why they started.</p>
             </div>

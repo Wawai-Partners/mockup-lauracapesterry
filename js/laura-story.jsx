@@ -12,7 +12,7 @@
           <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 13, fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: '0 0 10px' }}>
             Chapter {no} · {kicker}
           </p>
-          <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '34px', lineHeight: 1.15 }}>{title}</h2>
+          <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '28px', lineHeight: 1.15 }}>{title}</h2>
           {children}
         </div>
         {!rev ?
@@ -37,7 +37,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>About · Laura&rsquo;s Story</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                A story about courage, clarity, and a deep love for <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>local business</span>
+                A story about courage, clarity, and a deep love for <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>local business</span>
               </h1>
               <p className="lead">Thirty years of marketing taught Laura one thing above all: tools change, but trust never goes out of style. This is how a corporate marketer became Georgetown&rsquo;s steady guide for faith-filled entrepreneurs.</p>
             </div>
@@ -97,8 +97,8 @@
             <div className="grid grid-2" style={{ marginTop: 48 }}>
               {milestones.map(([t, b], i) =>
               <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
-                  <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 22, color: 'var(--lct-rose)' }}>{String(i + 1).padStart(2, '0')}</span>
-                  <h3 className="ed-serif" style={{ marginBottom: 8, marginTop: 6, fontSize: '24px' }}>{t}</h3>
+                  <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 22, color: 'var(--color-primary)' }}>{String(i + 1).padStart(2, '0')}</span>
+                  <h3 className="ed-serif" style={{ marginBottom: 8, marginTop: 6, fontSize: '20px' }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               )}

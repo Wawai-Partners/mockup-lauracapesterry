@@ -54,7 +54,7 @@
             <div className="reveal" style={{ maxWidth: 880, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>How I Help · Marketing Strategy & Leadership</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Stop reacting to trends. Start leading with <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>strategy</span>
+                Stop reacting to trends. Start leading with <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>strategy</span>
               </h1>
               <p className="lead">Laura provides the marketing leadership, strategic clarity, and expert guidance that growing businesses need — without the cost of a full-time CMO.</p>
               <div style={{ marginTop: 28 }}><BookButton size="large">Book a Discovery Call <i className="fa-solid fa-heart"></i></BookButton></div>
@@ -72,14 +72,14 @@
               {services.map((s) => (
                 <div key={s.title} className="reveal card" style={{ textAlign: 'left', display: 'flex', flexDirection: 'column' }}>
                   <window.SunIcon icon={s.icon} size={64} />
-                  <h3 className="ed-serif" style={{ fontSize: '28px', marginTop: 14, marginBottom: 12 }}>{s.title}</h3>
+                  <h3 className="ed-serif" style={{ fontSize: '23px', marginTop: 14, marginBottom: 12 }}>{s.title}</h3>
                   <p style={para}>{s.what}</p>
                   <p style={whoStyle}><strong style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-subhead)', fontSize: 12, letterSpacing: '0.08em', textTransform: 'uppercase' }}>Who it's for · </strong>{s.who}</p>
                   {s.list ? (
                     <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 20px', display: 'flex', flexDirection: 'column', gap: 9 }}>
                       {s.list.map((t) => (
                         <li key={t} style={{ display: 'flex', gap: 11 }}>
-                          <i className="fa-solid fa-heart" style={{ color: 'var(--color-accent)', marginTop: 4, fontSize: 12 }}></i>
+                          <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 4, fontSize: 12 }}></i>
                           <span style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-body)' }}>{t}</span>
                         </li>
                       ))}
@@ -102,7 +102,7 @@
             <div className="split" style={{ alignItems: 'center' }}>
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>Public Speaking</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '40px' }}>Energy and expertise on every stage</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '33px' }}>Energy and expertise on every stage</h2>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.7, color: 'var(--text-body)', margin: '0 0 24px' }}>
                   Laura brings energy, expertise, and real-world experience to every stage she steps on — speaking on local marketing, AI in business, brand building, and leadership in ways that are practical, inspiring, and immediately actionable.
                 </p>

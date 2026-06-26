@@ -1,51 +1,54 @@
 /* ============================================================
    Laura Capes Terry — Color tokens
-   Brand palette: a confident Deep Navy + Signature Teal anchor,
-   lifted by Sky Blue, warmed by Cream / Linen / Golden Sand, and
-   accented with Rose Berry. Text is near-black charcoal, headlines navy.
+   Brand Snapshot palette: Deep Navy + Signature Teal anchor,
+   lifted by Soft Aqua, headlines in Charcoal, cool Light Gray /
+   White neutrals, accented with Rose Berry (heart motif).
    ============================================================ */
 :root {
-  /* — Core brand hues (from the brand sheet) — */
-  --lct-navy:     #143B5A;   /* Deep Navy — wordmark, headlines, dark fields */
-  --lct-teal:     #2D8FA2;   /* Signature Teal — primary action */
-  --lct-sky:      #8CC7D6;   /* Sky Blue — soft accent / tints */
-  --lct-charcoal: #1A1A1A;   /* Charcoal / Near Black — body text */
+  /* — Core brand hues (from the Brand Snapshot) — */
+  --lct-navy:     #1F4A6B;   /* Deep Navy — wordmark, dark fields */
+  --lct-teal:     #3D7E9A;   /* Signature Teal — primary action, emphasis */
+  --lct-sky:      #66A8C7;   /* Soft Aqua — soft accent / tints */
+  --lct-charcoal: #3A3A3A;   /* Charcoal — primary headlines */
   --lct-offwhite: #F7F8F9;   /* Off-White — page background */
-  --lct-cream:    #F7F1E7;   /* Warm Cream — warm sections */
-  --lct-linen:    #EDE4D6;   /* Soft Linen — warm surface / borders */
-  --lct-rose:     #C06478;   /* Rose Berry — accent, heart motif */
-  --lct-sand:     #E6D6B3;   /* Golden Sand — warm highlight / rule */
+  --lct-gray:     #E9E9E9;   /* Light Gray — cool surface / borders */
+  --lct-rose:     #C06478;   /* Rose Berry — accent, heart motif (kept) */
+
+  /* — Backwards-compatible warm-neutral aliases, now cool — */
+  --lct-cream:    #F0F2F4;   /* was warm cream → cool light field */
+  --lct-linen:    #E9E9E9;   /* was soft linen → light gray surface */
+  --lct-sand:     var(--lct-sky);   /* was golden sand → Soft Aqua (brand) */
 
   /* — Navy scale (states) — */
-  --lct-navy-700: #0a2236;
-  --lct-navy-600: #0f2e47;
-  --lct-navy-500: var(--lct-navy);   /* #143B5A */
-  --lct-navy-400: #2c5675;
+  --lct-navy-700: #143247;
+  --lct-navy-600: #19405b;
+  --lct-navy-500: var(--lct-navy);   /* #1F4A6B */
+  --lct-navy-400: #386488;
 
   /* — Teal scale (states) — */
-  --lct-teal-700: #1e6373;
-  --lct-teal-600: #25788a;   /* hover */
-  --lct-teal-500: var(--lct-teal);   /* #2D8FA2 primary */
-  --lct-teal-400: #5aa9b9;
-  --lct-teal-300: var(--lct-sky);    /* #8CC7D6 */
+  --lct-teal-700: #2c5d72;
+  --lct-teal-600: #356d85;   /* hover */
+  --lct-teal-500: var(--lct-teal);   /* #3D7E9A primary */
+  --lct-teal-400: #6ba3bb;
+  --lct-teal-300: var(--lct-sky);    /* #66A8C7 */
 
-  /* — Sky tints — */
-  --lct-sky-500: var(--lct-sky);     /* #8CC7D6 */
-  --lct-sky-200: #cfe7ee;            /* soft tint surface */
-  --lct-sky-100: #e9f3f6;            /* faintest tint band */
+  /* — Aqua tints — */
+  --lct-sky-500: var(--lct-sky);     /* #66A8C7 */
+  --lct-sky-200: #cfe7f1;            /* soft tint surface */
+  --lct-sky-100: #eaf4f9;            /* faintest tint band */
 
   /* — Rose tints — */
   --lct-rose-500: var(--lct-rose);   /* #C06478 */
   --lct-rose-100: #f6e6ea;           /* soft rose tint (accent button hover) */
 
-  /* — Warm neutrals & lines — */
+  /* — Cool neutrals & lines — */
   --lct-white:   #ffffff;            /* cards / panels */
-  --lct-border:  #e6e0d6;            /* hairline borders (warm) */
-  --lct-border-strong: #d8cfbf;
+  --lct-border:  #e1e4e8;            /* hairline borders (cool) */
+  --lct-border-strong: #d2d7dd;
 
   /* — Ink / text — */
-  --lct-ink-900: var(--lct-charcoal);/* darkest text #1A1A1A */
-  --lct-ink-700: #3a3d40;            /* body copy */
+  --lct-ink-900: var(--lct-charcoal);/* darkest text / headlines #3A3A3A */
+  --lct-ink-700: #4a4d50;            /* body copy */
   --lct-ink-500: #7c7d79;            /* muted / captions */
 
   /* — Functional — */
@@ -62,8 +65,8 @@
   --color-secondary-hover:  var(--lct-navy-600);
   --color-secondary-active: var(--lct-navy-700);
 
-  --color-accent:        var(--lct-rose-500);     /* Accent — Rose Berry */
-  --color-accent-soft:   var(--lct-rose-100);
+  --color-accent:        var(--lct-teal-500);     /* Accent — brand teal (rose retired except hearts) */
+  --color-accent-soft:   var(--lct-sky-200);
 
   --surface-page:        var(--lct-offwhite);
   --surface-card:        var(--lct-white);
@@ -73,7 +76,7 @@
   --surface-tint-strong: var(--lct-sky-200);
   --surface-dark:        var(--lct-navy-500);
 
-  --text-heading:  var(--lct-navy-500);   /* headlines are navy */
+  --text-heading:  var(--lct-charcoal);   /* headlines are charcoal */
   --text-body:     var(--lct-ink-700);
   --text-muted:    var(--lct-ink-500);
   --text-on-dark:  var(--lct-white);

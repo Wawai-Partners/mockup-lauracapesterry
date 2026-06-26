@@ -43,7 +43,7 @@
             <div className="reveal" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 16 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>Start Here</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                What's your biggest marketing <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>challenge</span> right now?
+                What's your biggest marketing <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>challenge</span> right now?
               </h1>
               <p className="lead">Tell Laura what you're working on — and she'll point you toward exactly the right resource, service, or conversation for where you are today.</p>
               <p style={{ fontFamily: 'var(--font-body)', fontStyle: 'italic', fontSize: 15, color: 'var(--text-muted)', margin: '12px 0 0' }}>This isn't a sales form. It's a compass.</p>
@@ -94,7 +94,7 @@
                     <span style={{ display: 'inline-flex', width: 56, height: 56, borderRadius: '50%', background: 'var(--surface-tint)', alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
                       <i className="fa-solid fa-compass" style={{ color: 'var(--color-primary)', fontSize: 26 }}></i>
                     </span>
-                    <h3 className="ed-serif" style={{ fontSize: '30px', marginBottom: 6 }}>Your best next steps</h3>
+                    <h3 className="ed-serif" style={{ fontSize: '25px', marginBottom: 6 }}>Your best next steps</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--text-muted)', margin: 0 }}>Based on what you selected, start with these:</p>
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>

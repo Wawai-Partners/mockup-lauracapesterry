@@ -34,7 +34,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>About · Speaking &amp; Writing</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Ideas worth sharing — on the page and from the <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>stage</span>
+                Ideas worth sharing — on the page and from the <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>stage</span>
               </h1>
               <p className="lead">Laura speaks and writes for the overwhelmed local entrepreneur — bringing calm, clarity, and practical wisdom to marketing in a fast-moving, AI-driven world.</p>
             </div>
@@ -47,7 +47,7 @@
             <div className="split" style={{ alignItems: 'center' }}>
               <img className="reveal" src="assets/laura-candid.jpg" alt="Laura Capes Terry speaking" style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', display: 'block' }} />
               <div className="reveal">
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '34px', lineHeight: 1.15 }}>A speaker who leads from experience</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '28px', lineHeight: 1.15 }}>A speaker who leads from experience</h2>
                 <p style={{ ...para }}>Laura doesn&rsquo;t teach theory — she leads from experience. As a featured BNI speaker, workshop facilitator, and podcast host, she meets audiences where they are: stretched thin, surrounded by noise, and ready for a steadier way forward.</p>
                 <p style={{ ...para, margin: '0 0 24px' }}>Every talk blends modern tools with timeless wisdom, leaving business owners with clarity they can act on — not just inspiration that fades by Monday.</p>
                 <Button href="contact.html">Invite Laura to Speak</Button>
@@ -69,7 +69,7 @@
                     <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
                   </span>
                   <div>
-                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '24px' }}>{t}</h3>
+                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '20px' }}>{t}</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@
               <a key={t} href={href} target="_blank" rel="noopener" style={{ display: 'flex', gap: 20, alignItems: 'flex-start', padding: '22px 4px', borderTop: i === 0 ? '1px solid var(--border-subtle)' : 'none', borderBottom: '1px solid var(--border-subtle)', textDecoration: 'none', color: 'inherit' }}>
                   <i className="fa-solid fa-play" style={{ color: 'var(--color-primary)', fontSize: 16, marginTop: 6, flex: 'none' }}></i>
                   <div style={{ flex: 1 }}>
-                    <h3 className="ed-serif" style={{ marginBottom: 4, fontSize: '22px' }}>{t}</h3>
+                    <h3 className="ed-serif" style={{ marginBottom: 4, fontSize: '18px' }}>{t}</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                   </div>
                   <i className="fa-solid fa-arrow-right" style={{ color: 'var(--color-primary)', fontSize: 14, marginTop: 8, flex: 'none' }}></i>
@@ -111,8 +111,8 @@
                 return (
                   <a key={t} className="reveal card" href={href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined} style={{ textAlign: 'center', textDecoration: 'none', color: 'inherit', padding: 20 }}>
                     <img src={`assets/${img}`} alt={t} style={{ width: '100%', maxWidth: 180, margin: '0 auto 16px', borderRadius: 'var(--radius-sm)', boxShadow: 'var(--shadow-sm)', display: 'block' }} />
-                    <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--lct-rose)', margin: '0 0 6px' }}>{tag}</p>
-                    <h3 className="ed-serif" style={{ fontSize: '20px', margin: 0, lineHeight: 1.25 }}>{t}</h3>
+                    <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: '0 0 6px' }}>{tag}</p>
+                    <h3 className="ed-serif" style={{ fontSize: '16px', margin: 0, lineHeight: 1.25 }}>{t}</h3>
                   </a>);
 
               })}

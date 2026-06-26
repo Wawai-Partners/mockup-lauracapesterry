@@ -13,7 +13,7 @@
   function Check({ children }) {
     return (
       <li style={{ display: 'flex', gap: 12, alignItems: 'flex-start', marginBottom: 14 }}>
-        <i className="fa-solid fa-check" style={{ color: 'var(--color-primary)', marginTop: 4, fontSize: 15, flex: 'none' }}></i>
+        <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 4, fontSize: 15, flex: 'none' }}></i>
         <span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, lineHeight: 1.6, color: 'var(--text-body)' }}>{children}</span>
       </li>);
   }
@@ -148,7 +148,7 @@
             <div className="split">
               <img className="reveal img-card" src="assets/bootcamp/owner-laptop.jpg" alt="Local business owner at a laptop" style={{ width: '100%' }} />
               <div className="reveal">
-                <h2 className="ed-serif" style={{ fontSize: '40px', marginBottom: 18 }}>Stop burning time and money on marketing that doesn't work</h2>
+                <h2 className="ed-serif" style={{ fontSize: '33px', marginBottom: 18 }}>Stop burning time and money on marketing that doesn't work</h2>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 18px' }}>
                   <Check>Are you frustrated with marketing your local business?</Check>
                   <Check>Are you unsure about how to best reach your ideal clients?</Check>
@@ -166,7 +166,7 @@
           <window.Container>
             <div className="split">
               <div className="reveal">
-                <h2 className="ed-serif" style={{ fontSize: '38px', marginBottom: 18, lineHeight: 1.2 }}>
+                <h2 className="ed-serif" style={{ fontSize: '31px', marginBottom: 18, lineHeight: 1.2 }}>
                   If you're a local business owner looking to grow without a big staff or budget, you already know you need to work smarter — not harder.
                 </h2>
                 <p style={{ ...para }}>If you're reading this, then you've survived 2020 and are already ahead of the game. You've pivoted. You've innovated. You've gotten scrappy when you had to. The important thing is you've survived and you're ready to thrive.</p>
@@ -186,9 +186,9 @@
               <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
                 {OUTCOMES.map(([t, b], i) =>
                   <div key={i} style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-                    <i className="fa-solid fa-check" style={{ color: 'var(--color-primary)', fontSize: 18, marginTop: 5, flex: 'none' }}></i>
+                    <i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', fontSize: 18, marginTop: 5, flex: 'none' }}></i>
                     <div>
-                      <h3 className="ed-serif" style={{ fontSize: 21, marginBottom: 6, lineHeight: 1.35 }}>{t}</h3>
+                      <h3 className="ed-serif" style={{ fontSize: 17, marginBottom: 6, lineHeight: 1.35 }}>{t}</h3>
                       <p style={{ ...para, margin: 0, fontSize: 15 }}>{b}</p>
                     </div>
                   </div>)}
@@ -203,7 +203,7 @@
             <div className="split" style={{ alignItems: 'center' }}>
               <img className="reveal img-card" src="assets/bootcamp/laura-storybrand.jpg" alt="Laura Capes Terry, StoryBrand Certified Guide" style={{ width: '100%' }} />
               <div className="reveal">
-                <h2 className="ed-serif" style={{ fontSize: '34px', marginBottom: 18 }}>“I learned what to place emphasis on…”</h2>
+                <h2 className="ed-serif" style={{ fontSize: '28px', marginBottom: 18 }}>“I learned what to place emphasis on…”</h2>
                 <p style={{ ...para }}>“This BootCamp laid a fantastic foundation on a number of topics, but I think the most important thing I learned was what to place the most emphasis on. I've been too focused on getting new members and not enough on making sure that current members were getting the maximum value out of their experience.”</p>
                 <p style={{ fontFamily: 'var(--font-subhead)', fontWeight: 700, color: 'var(--lct-navy)', margin: 0 }}>Justin Kessel</p>
                 <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-muted)', margin: 0 }}>Owner of Networking in Action, Austin, Texas</p>
@@ -222,7 +222,7 @@
               {TESTIMONIALS.map(([name, role, quote]) =>
                 <div key={name} className="reveal card" style={{ textAlign: 'center' }}>
                   <i className="fa-solid fa-quote-right" style={{ color: 'var(--color-primary)', fontSize: 26, marginBottom: 14 }}></i>
-                  <h3 className="ed-serif" style={{ fontSize: 20, marginBottom: 2 }}>{name}</h3>
+                  <h3 className="ed-serif" style={{ fontSize: 16, marginBottom: 2 }}>{name}</h3>
                   <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 13, fontWeight: 700, letterSpacing: '0.04em', color: 'var(--color-primary)', margin: '0 0 14px' }}>{role}</p>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>“{quote}”</p>
                 </div>)}
@@ -240,7 +240,7 @@
               {MODULES.map(([n, t, b, hi]) =>
                 <div key={n} className="reveal card" style={{ textAlign: 'left' }}>
                   <span style={{ display: 'inline-block', fontFamily: 'var(--font-subhead)', fontSize: 12, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--color-primary)', marginBottom: 8 }}>{n}</span>
-                  <h3 className="ed-serif" style={{ fontSize: 25, marginBottom: 10 }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ fontSize: 21, marginBottom: 10 }}>{t}</h3>
                   <p style={{ ...para, fontSize: 15 }}>{b}</p>
                   <p style={{ fontFamily: 'var(--font-subhead)', fontWeight: 700, fontSize: 13.5, color: 'var(--lct-navy)', margin: '0 0 12px' }}>Module Highlights:</p>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
@@ -261,8 +261,8 @@
               {BONUSES.map(([ic, t, val, items]) =>
                 <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <window.SunIcon icon={ic} size={62} />
-                  <h3 className="ed-serif" style={{ fontSize: 22, margin: '14px 0 4px', lineHeight: 1.3 }}>{t}</h3>
-                  <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 13, fontWeight: 700, color: 'var(--color-accent)', margin: '0 0 16px' }}>{val}</p>
+                  <h3 className="ed-serif" style={{ fontSize: 18, margin: '14px 0 4px', lineHeight: 1.3 }}>{t}</h3>
+                  <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 13, fontWeight: 700, color: 'var(--color-primary)', margin: '0 0 16px' }}>{val}</p>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                     {items.map((h, i) => <Check key={i}>{h}</Check>)}
                   </ul>
@@ -279,12 +279,12 @@
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', textAlign: 'left' }}>
                 {RECAP.map(([t, v]) =>
                   <li key={t} style={{ display: 'flex', justifyContent: 'space-between', gap: 16, padding: '14px 0', borderBottom: '1px solid var(--surface-tint)' }}>
-                    <span style={{ display: 'flex', gap: 12 }}><i className="fa-solid fa-check" style={{ color: 'var(--color-primary)', marginTop: 4 }}></i><span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, color: 'var(--text-body)' }}>{t}</span></span>
+                    <span style={{ display: 'flex', gap: 12 }}><i className="fa-regular fa-circle-check" style={{ color: 'var(--color-primary)', marginTop: 4 }}></i><span style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, color: 'var(--text-body)' }}>{t}</span></span>
                     <span style={{ fontFamily: 'var(--font-subhead)', fontWeight: 700, color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>Valued at {v}</span>
                   </li>)}
               </ul>
-              <p className="ed-serif" style={{ fontSize: 24, color: 'var(--lct-navy)', margin: '0 0 4px' }}>The entire program is valued at over $10,000.</p>
-              <p className="h-display" style={{ fontSize: 40, color: 'var(--color-primary)', margin: '0 0 24px' }}>Enroll now for only $97</p>
+              <p className="ed-serif" style={{ fontSize: 20, color: 'var(--lct-navy)', margin: '0 0 4px' }}>The entire program is valued at over $10,000.</p>
+              <p className="h-display" style={{ fontSize: 33, color: 'var(--color-primary)', margin: '0 0 24px' }}>Enroll now for only $97</p>
               <EnrollBtn size="large" />
             </div>
           </window.Container>
@@ -298,7 +298,7 @@
                 <img src="assets/bootcamp/satisfaction-guarantee.png" alt="Satisfaction guarantee" style={{ width: '100%', maxWidth: 300 }} />
               </div>
               <div className="reveal">
-                <h2 className="ed-serif" style={{ fontSize: '36px', marginBottom: 16 }}>Risk-Free Guarantee</h2>
+                <h2 className="ed-serif" style={{ fontSize: '30px', marginBottom: 16 }}>Risk-Free Guarantee</h2>
                 <p style={{ ...para }}>If after moving through the first module you are not completely satisfied with the scope and goals for the course, then you can email me for your money back. All I ask is that you show me you've done the work up to that point.</p>
                 <p style={{ ...para }}>By the end of the first module, you should be clear about the gap between where you are and where you want to go with your marketing — and you should feel ready to walk the path to transformation.</p>
                 <p style={{ ...para, margin: 0, fontStyle: 'italic', color: 'var(--text-muted)', fontSize: 14.5 }}>Note: If you've already moved into Module 2 where I introduce The Building Blocks for Marketing Success, you will not be eligible for a refund. But I am confident you'll love this course and that it will transform the way you market your business.</p>
@@ -339,9 +339,9 @@
       <section className="bg-page section" data-screen-label="Pricing">
         <window.Container>
           <div className="reveal card" style={{ maxWidth: 640, margin: '0 auto', padding: '48px 52px', textAlign: 'center' }}>
-            <h2 className="ed-serif" style={{ fontSize: 28, color: 'var(--color-primary)', marginBottom: 8, lineHeight: 1.3 }}>Marketing Plans Made Smarter — a Bootcamp for Local Business Owners</h2>
-            <p className="h-display" style={{ fontSize: 52, margin: '8px 0 2px' }}>Only $97</p>
-            <p style={{ fontFamily: 'var(--font-subhead)', fontWeight: 700, color: 'var(--color-accent)', letterSpacing: '0.06em', margin: '0 0 28px' }}>Valued at $10,000+</p>
+            <h2 className="ed-serif" style={{ fontSize: 23, color: 'var(--color-primary)', marginBottom: 8, lineHeight: 1.3 }}>Marketing Plans Made Smarter — a Bootcamp for Local Business Owners</h2>
+            <p className="h-display" style={{ fontSize: 43, margin: '8px 0 2px' }}>Only $97</p>
+            <p style={{ fontFamily: 'var(--font-subhead)', fontWeight: 700, color: 'var(--color-primary)', letterSpacing: '0.06em', margin: '0 0 28px' }}>Valued at $10,000+</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', textAlign: 'left' }}>
               <Check>Avoid throwing thousands of dollars in the trash can by making poor marketing decisions</Check>
               <Check>No need to hire a highly-paid marketing consultant to help you write a smarter marketing plan</Check>

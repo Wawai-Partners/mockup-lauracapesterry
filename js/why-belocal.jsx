@@ -19,7 +19,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>About · Why Laura Publishes BeLocal</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Because the best businesses deserve to be <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>found</span>
+                Because the best businesses deserve to be <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>found</span>
               </h1>
               <p className="lead">BeLocal Georgetown is more than a publication — it&rsquo;s Laura&rsquo;s answer to a real problem: trusted local businesses getting lost as the community grows. Here&rsquo;s why she publishes it.</p>
             </div>
@@ -32,7 +32,7 @@
             <div className="split" style={{ alignItems: 'center' }}>
               <img className="reveal" src="assets/laura-belocal.png" alt="Laura Capes Terry holding BeLocal Georgetown" style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', display: 'block' }} />
               <div className="reveal">
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '34px', lineHeight: 1.15 }}>A specific problem, solved with heart</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '28px', lineHeight: 1.15 }}>A specific problem, solved with heart</h2>
                 <p style={{ ...para }}>As Georgetown grew, Laura watched new families arrive every week — and watched trusted, community-rooted businesses struggle to reach them. The newcomers wanted to belong. The businesses wanted to be found. Something was missing in the middle.</p>
                 <p style={{ ...para }}>So Laura became the publisher of <strong>BeLocal Georgetown</strong>: a way to combine the power of print, the reach of digital, and the trust of community endorsement into lasting first impressions that turn into lasting relationships.</p>
                 <p style={{ ...para, margin: 0 }}>It&rsquo;s the same belief that drives all of her work — that good businesses, made visible to the right people at the right moment, change a community for the better.</p>
@@ -66,7 +66,7 @@
                     <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
                   </span>
                   <div>
-                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '24px' }}>{t}</h3>
+                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '20px' }}>{t}</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                   </div>
                 </div>
@@ -81,7 +81,7 @@
             <div className="split" style={{ alignItems: 'center' }}>
               <div className="reveal">
                 <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 13, fontWeight: 600, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: '0 0 12px' }}>Recognized work</p>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '34px', lineHeight: 1.15 }}>Honored by the Texas Downtown Association</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '28px', lineHeight: 1.15 }}>Honored by the Texas Downtown Association</h2>
                 <p style={{ ...para, margin: 0 }}>BeLocal Georgetown received the Texas Downtown Association President&rsquo;s Award — recognition that a community-first approach to local media doesn&rsquo;t just feel good; it strengthens the businesses and downtown it serves.</p>
               </div>
               <div className="reveal" style={{ display: 'flex', gap: 28, justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>

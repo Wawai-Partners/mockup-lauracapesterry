@@ -84,8 +84,8 @@ function Button({
     },
     accent: {
       background: 'transparent',
-      color: 'var(--color-accent)',
-      borderColor: 'var(--color-accent)'
+      color: 'var(--lct-teal-700)',
+      borderColor: 'var(--lct-teal-600)'
     },
     ghost: {
       background: 'transparent',

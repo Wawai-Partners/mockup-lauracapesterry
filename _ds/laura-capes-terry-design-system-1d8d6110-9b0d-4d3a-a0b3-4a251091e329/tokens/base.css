@@ -16,11 +16,11 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Headlines — Cormorant Garamond SemiBold, navy */
+/* Headlines — Montserrat Bold, charcoal */
 h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--text-heading);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   line-height: var(--lh-tight);
   margin: 0 0 0.3em;
   letter-spacing: var(--ls-tight);

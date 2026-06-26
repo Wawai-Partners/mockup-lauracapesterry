@@ -26,7 +26,7 @@
             <div className="reveal" style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>About · In the Media</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Recognized for marketing that earns <span className="jk-script" style={{ fontFamily: '"Cormorant Garamond"', fontWeight: 700, color: 'var(--lct-rose)' }}>trust</span>
+                Recognized for marketing that earns <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>trust</span>
               </h1>
               <p className="lead">From national magazine covers to local awards, podcast mics to keynote stages — Laura&rsquo;s work has been recognized for one consistent thing: clear, human marketing that delivers real results.</p>
             </div>
@@ -60,8 +60,8 @@
                     <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
                   </span>
                   <div>
-                    <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12.5, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--lct-rose)', margin: '0 0 4px' }}>{tag}</p>
-                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '24px' }}>{t}</h3>
+                    <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12.5, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: '0 0 4px' }}>{tag}</p>
+                    <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '20px' }}>{t}</h3>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                   </div>
                 </div>
@@ -85,8 +85,8 @@
                       <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
                     </span>
                     <div>
-                      <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12.5, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--lct-rose)', margin: '0 0 4px' }}>{tag}</p>
-                      <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '24px' }}>{t}</h3>
+                      <p style={{ fontFamily: 'var(--font-subhead)', fontSize: 12.5, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-primary)', margin: '0 0 4px' }}>{tag}</p>
+                      <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '20px' }}>{t}</h3>
                       <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 10px' }} dangerouslySetInnerHTML={{ __html: b }}></p>
                       <span style={{ fontFamily: 'var(--font-subhead)', fontWeight: 600, fontSize: 14, color: 'var(--color-primary)' }}>Watch &amp; listen <i className="fa-solid fa-arrow-right" style={{ fontSize: 12 }}></i></span>
                     </div>

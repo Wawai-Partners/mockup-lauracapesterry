@@ -77,7 +77,7 @@
               <img src="assets/be-locally-loved-cover.jpg" alt="Be Locally Loved podcast cover" />
             </div>
             <div className="reveal">
-              <h2 className="jk-h jk-h--md jk-on-dark" style={{ color: "rgb(20, 59, 90)" }}>Be Locally <span className="jk-script jk-script--sky" style={{ color: "rgb(192, 100, 120)" }}>Loved</span></h2>
+              <h2 className="jk-h jk-h--md jk-on-dark" style={{ color: "var(--lct-navy)" }}>Be Locally <span className="jk-script jk-script--sky" style={{ color: "var(--color-primary)" }}>Loved</span></h2>
               <p className="pod-intro__host" style={{ color: "rgb(58, 61, 64)" }}>Hosted by: Laura Capes Terry</p>
               <p className="pod-intro__lead" style={{ color: "rgb(58, 61, 64)" }}>
                 Hosted by Laura Capes Terry, Be Locally Loved spotlights beloved local businesses, community
@@ -86,9 +86,9 @@
               </p>
               <button type="button" className="pod-readmore" onClick={() => setModalOpen(true)}>Read More</button>
               <div className="pod-intro__btns">
-                <a className="pod-icon" href={FEED} target="_blank" rel="noopener" aria-label="Apple Podcasts"><i className="fa-brands fa-apple" style={{ color: "rgb(20, 59, 90)" }}></i></a>
-                <a className="pod-icon" href={FEED} target="_blank" rel="noopener" aria-label="Spotify"><i className="fa-brands fa-spotify" style={{ color: "rgb(20, 59, 90)" }}></i></a>
-                <a className="pod-icon" href={FEED} target="_blank" rel="noopener" aria-label="Subscribe via RSS"><i className="fa-solid fa-rss" style={{ color: "rgb(20, 59, 90)" }}></i></a>
+                <a className="pod-icon" href={FEED} target="_blank" rel="noopener" aria-label="Apple Podcasts"><i className="fa-brands fa-apple" style={{ color: "var(--lct-navy)" }}></i></a>
+                <a className="pod-icon" href={FEED} target="_blank" rel="noopener" aria-label="Spotify"><i className="fa-brands fa-spotify" style={{ color: "var(--lct-navy)" }}></i></a>
+                <a className="pod-icon" href={FEED} target="_blank" rel="noopener" aria-label="Subscribe via RSS"><i className="fa-solid fa-rss" style={{ color: "var(--lct-navy)" }}></i></a>
               </div>
             </div>
           </div>

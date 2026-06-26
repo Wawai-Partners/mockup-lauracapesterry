@@ -45,7 +45,7 @@
                           <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 23 }}></i>
                         </span>}
                     <div>
-                      <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '24px' }}>{t}{href ? <i className="fa-solid fa-arrow-right" style={{ marginLeft: 10, fontSize: 13, color: 'var(--color-accent)' }}></i> : null}</h3>
+                      <h3 className="ed-serif" style={{ marginBottom: 8, fontSize: '20px' }}>{t}{href ? <i className="fa-solid fa-arrow-right" style={{ marginLeft: 10, fontSize: 13, color: 'var(--color-accent)' }}></i> : null}</h3>
                       <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                     </div>
                   </React.Fragment>);

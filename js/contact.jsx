@@ -80,7 +80,7 @@
               map(([n, t, b]) =>
               <div key={n} className="reveal" style={{ textAlign: 'center' }}>
                   <div style={{ width: 54, height: 54, margin: '0 auto 18px', borderRadius: '50%', background: 'var(--surface-tint-strong)', color: 'var(--color-primary)', fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 22, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{n}</div>
-                  <h3 className="h-display" style={{ marginBottom: 10, fontSize: "28px" }}>{t}</h3>
+                  <h3 className="h-display" style={{ marginBottom: 10, fontSize: "23px" }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               )}

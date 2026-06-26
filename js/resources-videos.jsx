@@ -36,7 +36,7 @@
                       <i className="fa-solid fa-play" style={{ color: 'var(--color-primary)', fontSize: 20, marginLeft: 4 }}></i>
                     </span>
                   </div>
-                  <h3 className="ed-serif" style={{ fontSize: '24px', marginBottom: 8 }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ fontSize: '20px', marginBottom: 8 }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                   <span style={{ marginTop: 14, color: 'var(--color-primary)', fontSize: 13, fontWeight: 700, fontFamily: 'var(--font-body)' }}>{label}<i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: 7, fontSize: 11, color: 'var(--color-accent)' }}></i></span>
                 </a>

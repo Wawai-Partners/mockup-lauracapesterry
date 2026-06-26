@@ -57,7 +57,7 @@
             <div className="split" style={{ alignItems: 'center' }}>
               <div className="reveal">
                 <Pill style={{ marginBottom: 14 }}>Foundational framework</Pill>
-                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '40px' }}>Building Blocks for Marketing Success</h2>
+                <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '33px' }}>Building Blocks for Marketing Success</h2>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.7, color: 'var(--text-body)', margin: '0 0 16px' }}>
                   A foundational overview of the core elements every local business needs in place for their marketing to work. If any block is missing or weak, the whole structure suffers.
                 </p>
@@ -80,7 +80,7 @@
               {others.map(([ic, t, b]) => (
                 <div key={t} className="reveal card" style={{ textAlign: 'left' }}>
                   <window.SunIcon icon={ic} size={64} />
-                  <h3 className="ed-serif" style={{ fontSize: '23px', marginTop: 14, marginBottom: 10 }}>{t}</h3>
+                  <h3 className="ed-serif" style={{ fontSize: '19px', marginTop: 14, marginBottom: 10 }}>{t}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
                 </div>
               ))}

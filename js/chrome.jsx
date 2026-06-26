@@ -41,12 +41,10 @@ const MEGA = [
   href: 'resources.html',
   items: [
   { label: 'Ask Laura', href: 'ask-laura.html' },
-  { label: 'Blog', href: 'blog.html' },
   { label: 'Books', href: 'resources-books.html' },
   { label: 'Courses', href: 'bootcamp.html' },
   { label: 'Frameworks', href: 'resources-frameworks.html' },
   { label: 'Guides', href: 'resources-guides.html' },
-  { label: 'Podcasts', href: 'podcast.html' },
   { label: 'Strategic Partners', href: 'strategic-partners.html' },
   { label: 'Videos', href: 'resources-videos.html' },
   { label: 'Workshops', href: 'resources-workshops.html' }]
@@ -147,13 +145,13 @@ function DrawerItem({ node, depth }) {
 
 /* ---------------- Tweaks ---------------- */
 const TWEAK_DEFAULTS = {
-  primaryColor: '#2D8FA2',
+  primaryColor: '#3D7E9A',
   corners: 'Soft'
 };
 const COLOR_PRESETS = {
-  '#2D8FA2': ['#2D8FA2', '#25788a', '#1e6373'], // Signature teal (brand)
-  '#143B5A': ['#143B5A', '#0f2e47', '#0a2236'], // Deep navy
-  '#1e6373': ['#1e6373', '#185360', '#13434e'] // Deep teal
+  '#3D7E9A': ['#3D7E9A', '#356d85', '#2c5d72'], // Signature teal (brand)
+  '#1F4A6B': ['#1F4A6B', '#19405b', '#143247'], // Deep navy
+  '#2c5d72': ['#2c5d72', '#185360', '#13434e'] // Deep teal
 };
 const CORNERS = {
   Soft: ['4px', '14px'],
@@ -171,7 +169,7 @@ function loadTweaks() {
 }
 function applyTweaks(t) {
   const r = document.documentElement.style;
-  const c = COLOR_PRESETS[t.primaryColor] || COLOR_PRESETS['#2D8FA2'];
+  const c = COLOR_PRESETS[t.primaryColor] || COLOR_PRESETS['#3D7E9A'];
   r.setProperty('--color-primary', c[0]);
   r.setProperty('--color-primary-hover', c[1]);
   r.setProperty('--color-primary-active', c[2]);
@@ -219,7 +217,7 @@ function Section({ children, bg = 'page', sm = false, style, id }) {
 function SectionTitle({ overline, title, sub, script, align = 'center', max = 780 }) {
   return (
     <div style={{ textAlign: align, maxWidth: align === 'center' ? max : 'none', margin: align === 'center' ? '0 auto' : 0 }}>
-      <h2 className="h-display jk-h--md">{title}{script ? <> <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", fontWeight: "700", color: "var(--lct-rose)" }}>{script}</span></> : null}</h2>
+      <h2 className="h-display jk-h--md">{title}{script ? <> <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: "700", color: "var(--color-primary)" }}>{script}</span></> : null}</h2>
       {sub && <p className="jk-head__lead" style={{ margin: align === 'center' ? '14px auto 0' : '14px 0 0' }}>{sub}</p>}
     </div>);
 
@@ -255,21 +253,11 @@ function Sunburst() {
 }
 window.Sunburst = Sunburst;
 
-/* Teal icon inside sand sunburst rays — shared card/section icon */
+/* Teal fill glyph inside a soft tint circle — shared card/section icon */
 function SunIcon({ icon, size = 76 }) {
-  const rays = [];
-  for (let i = 0; i < 12; i++) {
-    const a = (i / 12) * Math.PI * 2 - Math.PI / 2;
-    const r1 = 30, r2 = i % 2 === 0 ? 44 : 39;
-    rays.push(React.createElement('line', {
-      key: i, x1: 50 + Math.cos(a) * r1, y1: 50 + Math.sin(a) * r1,
-      x2: 50 + Math.cos(a) * r2, y2: 50 + Math.sin(a) * r2,
-      stroke: 'var(--lct-sand)', strokeWidth: 2.4, strokeLinecap: 'round' }));
-  }
   return (
-    <span className="sun-icon" style={{ width: size, height: size, fontSize: size }}>
-      <svg viewBox="0 0 100 100" className="sun-icon__rays" aria-hidden="true">{rays}</svg>
-      <i className={`fa-solid ${icon} sun-icon__glyph`} aria-hidden="true"></i>
+    <span className="sun-icon" style={{ display: 'inline-flex', width: size, height: size, borderRadius: '50%', background: 'var(--surface-tint)', alignItems: 'center', justifyContent: 'center' }}>
+      <i className={`fa-solid ${icon}`} style={{ color: 'var(--color-primary)', fontSize: Math.round(size * 0.44) }} aria-hidden="true"></i>
     </span>);
 
 }
@@ -283,7 +271,7 @@ function StartConversation({ sub, id = 'contact' }) {
       <div className="container">
         <div className="card reveal" style={{ maxWidth: 640, margin: '0 auto', padding: 40 }}>
           <Sunburst />
-          <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: "\"Cormorant Garamond\"", color: "rgb(20, 59, 90)", fontWeight: "700" }}>Conversation</span></h2>
+          <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', color: "var(--lct-navy)", fontWeight: "700" }}>Conversation</span></h2>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', textAlign: 'center', margin: '0 auto 26px', maxWidth: 480 }}>
             {sub || 'This is a short, intentional conversation to understand your goals, identify low-hanging opportunities, and recommend a smart next step.'}
           </p>
@@ -415,7 +403,7 @@ function Footer() {
   const IG_URL = 'https://www.instagram.com/lauracapesterrymba/';
   const shortLinks = [
   ['Home', 'index.html'], ['About', 'about.html'], ['How I Help', 'services.html'],
-  ['Podcast', 'podcast.html'], ['Blog', 'blog.html'], ['Resources', 'resources.html']];
+  ['Podcast', 'podcast.html'], ['Blog', 'blog.html'], ['Resources', 'resources.html'], ['Start Here', 'start-here.html']];
 
   const igPhotos = [
   'pool-portrait.png', 'gala.png', 'award-couple.png', 'belocal-group.png',
@@ -444,7 +432,7 @@ function Footer() {
       <div className="footer-main">
         <div className="footer-col footer-col--links">
           <div className="footer-arch">
-            <h3 className="footer-head">Short Links</h3>
+            <h3 className="footer-head" style={{ fontSize: "20px" }}>Short Links</h3>
             <nav className="footer-shortlinks" aria-label="Footer">
               {shortLinks.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
             </nav>
@@ -456,7 +444,7 @@ function Footer() {
           <a className="footer-logo" href="index.html" aria-label="Laura Capes Terry — home">
             <img src={window.__resources && window.__resources.logo || 'assets/logo-horizontal.png'} alt="Laura Capes Terry, MBA" />
           </a>
-          <p className="footer-connect">Let’s stay connected</p>
+          <p className="footer-connect" style={{ fontSize: "20px" }}>Let’s stay connected</p>
           <div className="footer-social footer-social--lg">
             <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
             <a href={IG_URL} target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
@@ -466,7 +454,7 @@ function Footer() {
         </div>
 
         <div className="footer-col footer-col--news">
-          <h3 className="footer-head">Join the Newsletter</h3>
+          <h3 className="footer-head" style={{ fontSize: "20px" }}>Join the Newsletter</h3>
           <p className="footer-news__desc">
             Practical, human-first marketing guidance — and the smartest ways to use AI without losing your voice. No spam, ever.
           </p>
