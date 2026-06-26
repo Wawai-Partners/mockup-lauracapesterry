@@ -107,7 +107,7 @@
   function PhraseBand() {
     return (
       <section className="phrase-band" aria-label="Brand themes" style={{ backgroundColor: "var(--lct-navy)" }}>
-        <div className="phrase-band__inner" style={{ margin: "0px 7px 0px 73px", padding: "22px 20px" }}>
+        <div className="phrase-band__inner" style={{  padding: "22px 20px" }}>
           {PHRASES.map((p, i) =>
           <React.Fragment key={p}>
               {i > 0 && <i className="fa-solid fa-heart phrase-band__sep" aria-hidden="true" style={{ color: "rgb(192, 100, 120)" }}></i>}
