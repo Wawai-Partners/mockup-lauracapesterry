@@ -12,7 +12,8 @@
       ['fa-hand-holding-heart', 'N2 Gives — Fighting Human Trafficking', 'Through her work with The N2 Company, Laura participates in N2 Gives — a national initiative that donates a portion of revenue to organizations fighting human trafficking. Every partnership matters.'],
       ['fa-handshake', 'BNI GTX — Business by Referral', 'Laura is an active member of BNI GTX, a premier business networking organization that helps members grow through structured referral-based relationships.'],
       ['fa-music', 'East View High School Patriots Band', 'Laura supports the next generation of Georgetown leaders by investing in youth arts and education — including the East View High School Patriots Band.'],
-      ['fa-landmark', 'The Williamson Museum', 'Laura serves on the Board of Directors for The Williamson Museum, helping preserve and celebrate the history and heritage of Williamson County.']];
+      ['fa-landmark', 'The Williamson Museum', 'Laura serves on the Board of Directors for The Williamson Museum, helping preserve and celebrate the history and heritage of Williamson County.'],
+      ['fa-child-reaching', 'CASA of Williamson County', 'Alongside her BNI group, Laura supports CASA of Williamson County — whose trained volunteer advocates stand up for children in foster care, making sure every child has a voice and a chance to thrive.']];
 
 
     return (
