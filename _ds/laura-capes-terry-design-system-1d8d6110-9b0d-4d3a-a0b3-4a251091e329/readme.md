@@ -62,9 +62,9 @@ Explore that repo for the original page HTML, copy, and imagery if you want to d
 
 ## VISUAL FOUNDATIONS
 
-**Color.** The palette pairs a confident **Deep Navy (`#1F4A6B`, `--lct-navy`)** with a **Signature Teal (`#3D7E9A`, `--lct-teal-500`)**. Navy carries the wordmark, the secondary button, and dark fields; teal is the primary action color and links. **Sky Blue (`#8CC7D6`)** and its faint tints (`#e9f3f6`, `#cfe7ee`) provide gentle banded backgrounds. A single warm accent, **Rose Berry (`#C06478`, `--lct-rose`)**, powers the accent button and the heart motif. Neutrals are **warm**: an off-white page (`#F7F8F9`), warm cream (`#F7F1E7`), soft linen (`#EDE4D6`), and golden sand (`#E6D6B3`) for warm highlights and rules. Text is **near-black charcoal (`#1A1A1A`)**, never pure black; muted body sits around `#3A3D40`. Avoid purple gradients entirely — off-brand.
+**Color.** The palette is anchored by a single confident **teal — `#31738f`** (`--lct-teal-500`), used for primary buttons, links, eyebrows, accents, and dark feature sections. It scales darker (`#2a6377`, `#245260`) for hovers and large fields. A **soft sky blue (`#aaced8`)** and its faint tints (`#e9f1f4`, `#d6e7ec`) provide gentle banded backgrounds. Neutrals are **warm**: a cream page (`#f2f2f0`) and white cards (`#ffffff`). Text is **near-black, never pure black** — headings `#343434`, body `#575757`. There is no second brand hue; the teal does all the heavy lifting. Avoid purple/blue gradients entirely — they are off-brand.
 
-**Type.** Self-hosted in `assets/fonts/`: **Montserrat** is the brand sans — **Bold** for modern, confident headlines (in charcoal `#3A3A3A`), SemiBold for subheads/navigation (lightly tracked), and Regular for body (1.65 line-height). **Brittany Signature** is a handwritten accent script used sparingly for warm personal touches in rose. Eyebrows are Montserrated) and body copy (Regular, 1.65 line-height), and **Brittany Signature** as an accent script used sparingly for warm personal touches (sign-offs, single-word emphasis) in rose. Eyebrows are Montserrat **SemiBold, uppercase, 0.16em tracking, teal**.
+**Type.** Two Google fonts: **Fira Sans** (headings — geometric, friendly, confident; usually 700) and **Open Sans** (body — humanist, highly legible). Body copy runs at a generous **1.65 line-height**; headings are tight (1.1) with a slight negative tracking (`-0.01em`). Eyebrows are Open Sans **bold, uppercase, 0.14em tracking, teal**. These are the real brand typefaces (the live site requests both from Google Fonts) — not substitutions.
 
 **Spacing & layout.** Roomy and unhurried. Sections breathe with **~90px vertical padding** on desktop; content sits in a **1260px max-width** container with 40px gutters. Two-column splits (text + image) are the workhorse layout. Generous whitespace signals calm and premium care.
 
@@ -72,7 +72,7 @@ Explore that repo for the original page HTML, copy, and imagery if you want to d
 
 **Imagery.** Warm, bright, **natural-light** professional photography of Laura — in her office, on stage, candid in local Georgetown spots. Teal/blue wardrobe accents tie portraits to the palette. Images use soft **14px rounded corners** and a gentle shadow; a signature treatment offsets a portrait over a solid teal block behind it. Color grade is warm and optimistic.
 
-**Borders, cards & shadows.** Cards are white with a **1px warm hairline border (`#e6e0d6`)**, **14px radius**, and a **soft, low, navy-tinted shadow** (`0 8px 24px rgba(20,59,90,.10)`). Nothing is harsh or high-contrast. Buttons and inputs use a smaller **4px radius**. Pills/labels are fully rounded.
+**Borders, cards & shadows.** Cards are white with a **1px warm hairline border (`#e3e3df`)**, **14px radius**, and a **soft, low, teal-tinted shadow** (`0 8px 24px rgba(36,82,96,.10)`). Nothing is harsh or high-contrast. Buttons and inputs use a smaller **4px radius** (matching the live site). Pills/labels are fully rounded.
 
 **Animation.** Restrained and gentle. Cards lift ~4px with a softened shadow on hover; buttons darken (teal-500 → teal-600) and nudge **1px down** on press. Transitions are short (140–240ms) on an ease-out curve (`cubic-bezier(0.25,0.46,0.45,0.94)`). No bounces, no parallax, no looping decorative motion.
 
@@ -101,12 +101,12 @@ The brand is **photography-led and nearly icon-free** — it leans on portraits,
 
 **Root**
 - `styles.css` — the single entry point consumers link. `@import`s everything below.
-- `tokens/` — `fonts.css` (self-hosted @font-face), `colors.css`, `typography.css`, `spacing.css`, `base.css`.
-- `assets/` — brand photography, the growth-mark logo, theme pill graphics, and `fonts/` (Cormorant Garamond, Montserrat, Brittany Signature).
+- `tokens/` — `fonts.css` (Google Fonts), `colors.css`, `typography.css`, `spacing.css`, `base.css`.
+- `assets/` — brand photography, the growth-mark logo, and theme pill graphics.
 - `SKILL.md` — Agent-Skills-compatible entry for using this system in Claude Code.
 
 **Components** (`components/…`) — React primitives, mounted from the compiled bundle as `window.LauraCapesTerryDesignSystem_1d8d61.<Name>`:
-- `buttons/Button` — brand CTA (primary teal · secondary navy · accent rose outline · ghost · onDark; 3 sizes).
+- `buttons/Button` — primary CTA (solid · outline · ghost · onDark; 3 sizes).
 - `content/Pill` — rounded teal label / eyebrow tag.
 - `content/SectionHeading` — overline + heading + lead block.
 - `content/FeatureCard` — soft card with optional image, hover lift (light · tint · dark).
@@ -114,7 +114,7 @@ The brand is **photography-led and nearly icon-free** — it leans on portraits,
 
 **UI kit** (`ui_kits/website/`) — `index.html` is an interactive recreation of Laura's marketing site (Home · Services · Blog) composed from the components above.
 
-**Specimen cards** (`guidelines/*.html`) — small swatches/specimens that populate the Design System tab: Colors (brand core, warm neutrals, accent & ink), Type (headings, subheads & body, overline, accent script), Spacing (scale, radii & shadows), Brand (logo, tagline, elements, photography).
+**Specimen cards** (`guidelines/*.html`) — small swatches/specimens that populate the Design System tab: Colors (teal, sky & neutrals, ink), Type (headings, body, overline), Spacing (scale, radii & shadows), Brand (logo, tagline, photography).
 
 ---
 

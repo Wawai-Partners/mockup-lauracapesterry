@@ -1,154 +1,106 @@
-/* Laura Capes Terry — Blog index. Lists the real posts from
-   window.LCT_BLOG (js/blog-data.js): featured hero + filterable list
-   with a category sidebar that mirrors the live site. */
+/* Laura Capes Terry — Blog */
 (function () {
   const { Button, Pill, Input } = window.LauraCapesTerryDesignSystem_1d8d61;
-  const { useState } = React;
 
-  const ALL = (window.LCT_BLOG || []).slice().sort((a, b) => b.sort - a.sort);
-
-  // Category list mirroring the live Kajabi blog sidebar.
-  const CATEGORIES = [
-    '#2021review', '#2022', '#Ad-Design', '#Belocal', '#Belocalgeorgetown', '#Bootcamp',
-    '#Georgetownchamber', '#Graysonmediagirls', '#Gtxnewcomers', '#Hellogeorgetown',
-    '#Inspiration', '#Lauracapesterry', '#Lauracapesterrymba', '#Marketingmadesmarter',
-    '#Marketingplansmadesmarter', '#Onlinecourse', '#Podcastepisode', '#Storybrand',
-    '#Storybrandlivestream', '#Storybrandmarketingworkshop', '#Theunbridledcreative',
-    '#Vipcoaching', '#Whenopportunityknocks', 'Austin Hidden Gems', 'Grayson Media & Marketing',
-    'Laura Capes Terry', 'Voyage Austin'];
-
-  const postHref = (p) => `post.html?p=${p.slug}`;
-  const PER_PAGE = 5;
+  const POSTS = [
+    ['Clarity', 'Does your homepage answer the three questions every visitor asks?', 'If your website feels “almost right” but not quite effective, it’s usually a clarity issue — not a design problem. Here’s the simple above-the-fold test.', 'laura-office-writing.jpg', '6 min read'],
+    ['AI', 'All in with AI — without losing your voice', 'AI doesn’t replace heart — it amplifies it. A grounded framework for using modern tools with wisdom, clarity, and purpose.', 'laura-all-in-with-ai.png', '8 min read'],
+    ['Local Marketing', 'Be the business new neighbors trust first', 'New movers choose their go-to businesses in their first few months. Here’s how to make a great first impression before they choose someone else.', 'belocal-georgetown-cover.jpg', '5 min read'],
+  ];
+  const MORE = [
+    ['Branding', 'Magnetic brands are built on trust, not noise'],
+    ['Strategy', 'Stop reacting to trends. Start leading with focus.'],
+    ['Mindset', 'You don’t have to figure it out alone'],
+    ['AI', 'Five AI prompts that sharpen your message'],
+    ['Local Marketing', 'Why word-of-mouth still wins in a digital world'],
+    ['Clarity', 'The one-sentence test for your marketing message'],
+  ];
 
   function BlogPage() {
-    const [cat, setCatState] = useState('All Categories');
-    const [page, setPage] = useState(1);
-    const featured = ALL[0];
-    const setCat = (c) => { setCatState(c); setPage(1); };
-
-    const matches = (p) => cat === 'All Categories' || (p.tags || []).indexOf(cat) !== -1;
-    const list = ALL.filter((p) => p !== featured).filter(matches);
-    const featuredShown = matches(featured);
-
-    const totalPages = Math.max(1, Math.ceil(list.length / PER_PAGE));
-    const current = Math.min(page, totalPages);
-    const paged = list.slice((current - 1) * PER_PAGE, current * PER_PAGE);
-    const goTo = (n) => {
-      setPage(n);
-      const el = document.querySelector('.blog-main');
-      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
-    };
-
+    const toast = window.useToast();
+    const [feat, ...rest] = POSTS;
     return (
-      <div data-screen-label="Blog">
-        {/* Featured hero */}
-        <section className="blog-hero section" data-screen-label="Blog hero">
+      <div>
+        {/* Hero */}
+        <section className="bg-tint section--sm">
           <window.Container>
-            <div className="blog-hero__grid">
-              <div className="reveal">
-                <div className="bmeta" style={{ marginBottom: 16 }}>
-                  <Pill>{featured.cat}</Pill>
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>{featured.date} · {featured.read}</span>
-                </div>
-                <h1 className="ed-serif" style={{ fontSize: 'var(--fs-h1)', color: '#fff', margin: '0 0 16px' }}>{featured.title}</h1>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.65, color: 'rgba(255,255,255,0.9)', margin: '0 0 24px', maxWidth: 540 }}>{featured.dek}</p>
-                <Button href={postHref(featured)} variant="accent" style={{ background: '#fff' }}>Read article <i className="fa-solid fa-heart"></i></Button>
-              </div>
-              <a className="blog-hero__media reveal" href={postHref(featured)}>
-                <img src={`assets/${featured.img}`} alt={featured.title} />
-              </a>
+            <div className="reveal" style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
+              <Pill variant="soft" style={{ marginBottom: 16 }}>The Blog</Pill>
+              <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 14 }}>Clarity for the overwhelmed entrepreneur</h1>
+              <p className="lead">Practical, grounded guidance on marketing, AI, and building a brand people trust — blending modern tools with timeless wisdom.</p>
             </div>
           </window.Container>
         </section>
 
-        {/* List + sidebar */}
+        {/* Featured */}
         <section className="bg-page section">
           <window.Container>
-            <div className="blog-main">
-              <div>
-                <window.SectionTitle align="left" title={cat === 'All Categories' ? 'All articles' : cat} />
-                <div className="recent-list" style={{ marginTop: 28 }}>
-                  {paged.length ? paged.map((p, i) => (
-                    <a key={i} className="recent-row reveal" href={postHref(p)}>
-                      <div className="recent-row__media"><img src={`assets/${p.img}`} alt={p.title} /></div>
-                      <div className="recent-row__body">
-                        <div className="bmeta">
-                          <Pill variant="soft">{p.cat}</Pill>
-                          <span className="bmeta__time">{p.date}</span>
-                          <span className="bmeta__time">{p.read}</span>
-                        </div>
-                        <h3 className="ed-serif" style={{ fontSize: 'var(--fs-h4)', margin: '0 0 10px' }}>{p.title}</h3>
-                        <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 12px' }}>{p.dek}</p>
-                        <div className="post-tags" style={{ marginBottom: 0 }}>
-                          {(p.tags || []).slice(0, 4).map((t) => <span key={t} className="post-tag">{t}</span>)}
-                        </div>
-                      </div>
-                    </a>
-                  )) : (
-                    <p style={{ fontFamily: 'var(--font-body)', color: 'var(--text-muted)', padding: '24px 0' }}>
-                      No articles in this category yet{featuredShown ? ' — see the featured article above.' : '.'} <a href="#" onClick={(e) => { e.preventDefault(); setCat('All Categories'); }} style={{ color: 'var(--color-primary)', fontWeight: 700 }}>View all articles →</a>
-                    </p>
-                  )}
+            <a className="reveal card" href="#" onClick={(e) => e.preventDefault()} style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 0, overflow: 'hidden', padding: 0, textDecoration: 'none' }}>
+              <div style={{ minHeight: 320, background: `var(--surface-tint) url(assets/${feat[3]}) no-repeat center/cover` }}></div>
+              <div style={{ padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 14 }}>
+                  <Pill variant="soft">{feat[0]}</Pill>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)' }}>{feat[4]}</span>
                 </div>
-
-                {totalPages > 1 ? (
-                  <nav className="blog-pager" aria-label="Blog pagination">
-                    <button type="button" className="blog-pager__edge" onClick={() => goTo(current - 1)} disabled={current === 1} aria-label="Previous page">
-                      <i className="fa-solid fa-arrow-left"></i> Prev
-                    </button>
-                    <div className="blog-pager__nums">
-                      {(() => {
-                        // Windowed page list with ellipsis: 1 … (cur-1) cur (cur+1) … last
-                        const pages = [];
-                        const push = (n) => pages.push(n);
-                        const window = 1; // neighbors on each side of current
-                        for (let n = 1; n <= totalPages; n++) {
-                          if (n === 1 || n === totalPages || (n >= current - window && n <= current + window)) {
-                            push(n);
-                          } else if (pages[pages.length - 1] !== '…') {
-                            push('…');
-                          }
-                        }
-                        return pages.map((n, i) =>
-                          n === '…' ? (
-                            <span key={`gap-${i}`} className="blog-pager__gap" aria-hidden="true">…</span>
-                          ) : (
-                            <button key={n} type="button" className={`blog-pager__num ${n === current ? 'is-active' : ''}`} onClick={() => goTo(n)} aria-current={n === current ? 'page' : undefined}>{n}</button>
-                          )
-                        );
-                      })()}
-                    </div>
-                    <button type="button" className="blog-pager__edge" onClick={() => goTo(current + 1)} disabled={current === totalPages} aria-label="Next page">
-                      Next <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </nav>
-                ) : null}
+                <h2 className="h-display" style={{ fontSize: 'var(--fs-h3)', marginBottom: 12 }}>{feat[1]}</h2>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 18px' }}>{feat[2]}</p>
+                <span className="accent" style={{ fontFamily: 'var(--font-body)', fontWeight: 700 }}>Read article →</span>
               </div>
+            </a>
+          </window.Container>
+        </section>
 
-              <aside className="blog-side">
-                <div className="side-card reveal" style={{ background: 'var(--surface-tint)' }}>
-                  <h3 style={{ color: 'var(--text-heading)' }}>Building Better Websites: six clarity-first fixes</h3>
-                  <p style={{ color: 'var(--text-body)' }}>Plus AI prompts to help you implement them faster — so visitors instantly know who you help and what to do next.</p>
-                  <Button href="resources-guides.html" fullWidth>Get the free guide <i className="fa-solid fa-heart"></i></Button>
-                </div>
-
-                <div className="blog-cats reveal">
-                  <p className="blog-cats__head">Categories</p>
-                  <button type="button" className={`blog-cat ${cat === 'All Categories' ? 'is-active' : ''}`} onClick={() => setCat('All Categories')}>All Categories</button>
-                  {CATEGORIES.map((c) => (
-                    <button key={c} type="button" className={`blog-cat ${cat === c ? 'is-active' : ''}`} onClick={() => setCat(c)}>{c}</button>
-                  ))}
-                </div>
-
-                <div className="blog-follow reveal">
-                  <p className="blog-cats__head">Follow Us</p>
-                  <div className="blog-follow__row">
-                    <a href="https://www.facebook.com/lauracapesterrymba" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
+        {/* Recent grid */}
+        <section className="bg-card section">
+          <window.Container>
+            <window.SectionTitle align="left" title="Recent articles" />
+            <div className="grid grid-3" style={{ marginTop: 36 }}>
+              {rest.concat([['AI', 'A simple weekly rhythm for marketing that sticks', 'Consistency beats intensity. Build a repeatable system you can actually sustain — even when you’re stretched thin.', 'laura-candid.jpg', '4 min read']]).map((p, i) => (
+                <a key={i} className="reveal card" href="#" onClick={(e) => e.preventDefault()} style={{ padding: 0, overflow: 'hidden', textDecoration: 'none', display: 'flex', flexDirection: 'column' }}>
+                  <div style={{ height: 180, background: `var(--surface-tint) url(assets/${p[3]}) no-repeat center/cover` }}></div>
+                  <div style={{ padding: 24, display: 'flex', flexDirection: 'column', flex: 1 }}>
+                    <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 12 }}>
+                      <Pill variant="soft">{p[0]}</Pill>
+                      <span style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, color: 'var(--text-muted)' }}>{p[4]}</span>
+                    </div>
+                    <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 10 }}>{p[1]}</h3>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 14px', flex: 1 }}>{p[2]}</p>
+                    <span className="accent" style={{ fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 14 }}>Read more →</span>
                   </div>
-                </div>
-              </aside>
+                </a>
+              ))}
+            </div>
+          </window.Container>
+        </section>
+
+        {/* More titles */}
+        <section className="bg-page section">
+          <window.Container>
+            <window.SectionTitle align="left" title="More from the blog" />
+            <div style={{ marginTop: 32, display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 860 }}>
+              {MORE.map(([cat, title], i) => (
+                <a key={i} href="#" onClick={(e) => e.preventDefault()} className="reveal" style={{ display: 'flex', alignItems: 'center', gap: 20, padding: '20px 4px', borderBottom: '1px solid var(--border-subtle)', textDecoration: 'none' }}>
+                  <Pill variant="soft" style={{ flex: 'none' }}>{cat}</Pill>
+                  <span className="h-display" style={{ fontSize: 18, flex: 1 }}>{title}</span>
+                  <i className="fa-solid fa-arrow-right" style={{ color: 'var(--color-primary)' }}></i>
+                </a>
+              ))}
+            </div>
+          </window.Container>
+        </section>
+
+        {/* Newsletter */}
+        <section className="bg-dark section">
+          <window.Container>
+            <div className="reveal" style={{ maxWidth: 620, margin: '0 auto', textAlign: 'center', color: '#fff' }}>
+              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 12 }}>Get clarity in your inbox</h2>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 26px' }}>
+                Occasional, practical notes on marketing, AI, and building a brand people trust. No spam — unsubscribe anytime.
+              </p>
+              <form onSubmit={(e) => { e.preventDefault(); toast('Thanks for subscribing!'); }} style={{ display: 'flex', gap: 12, maxWidth: 460, margin: '0 auto', flexWrap: 'wrap' }}>
+                <div style={{ flex: '1 1 220px' }}><Input placeholder="Your email" type="email" aria-label="Email" required /></div>
+                <Button type="submit" variant="onDark">Subscribe</Button>
+              </form>
             </div>
           </window.Container>
         </section>

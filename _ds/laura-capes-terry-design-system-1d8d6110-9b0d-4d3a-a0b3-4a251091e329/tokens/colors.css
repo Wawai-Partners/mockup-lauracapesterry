@@ -1,82 +1,51 @@
 /* ============================================================
    Laura Capes Terry — Color tokens
-   Brand Snapshot palette: Deep Navy + Signature Teal anchor,
-   lifted by Soft Aqua, headlines in Charcoal, cool Light Gray /
-   White neutrals, accented with Rose Berry (heart motif).
+   Derived from the live brand site (Kajabi "Encore" theme).
+   Primary teal #31738f anchors the palette; warm cream + soft
+   sky blue support it. Text is near-black, never pure black.
    ============================================================ */
 :root {
-  /* — Core brand hues (from the Brand Snapshot) — */
-  --lct-navy:     #1F4A6B;   /* Deep Navy — wordmark, dark fields */
-  --lct-teal:     #3D7E9A;   /* Signature Teal — primary action, emphasis */
-  --lct-sky:      #66A8C7;   /* Soft Aqua — soft accent / tints */
-  --lct-charcoal: #3A3A3A;   /* Charcoal — primary headlines */
-  --lct-offwhite: #F7F8F9;   /* Off-White — page background */
-  --lct-gray:     #E9E9E9;   /* Light Gray — cool surface / borders */
-  --lct-rose:     #C06478;   /* Rose Berry — accent, heart motif (kept) */
+  /* — Brand teal scale — */
+  --lct-teal-700: #245260;   /* deepest — large fields, footers */
+  --lct-teal-600: #2a6377;   /* slanted hero panel / hover */
+  --lct-teal-500: #31738f;   /* PRIMARY brand teal */
+  --lct-teal-400: #4d8aa3;   /* lighter teal, links on dark */
+  --lct-teal-300: #7badc0;   /* muted teal */
 
-  /* — Backwards-compatible warm-neutral aliases, now cool — */
-  --lct-cream:    #F0F2F4;   /* was warm cream → cool light field */
-  --lct-linen:    #E9E9E9;   /* was soft linen → light gray surface */
-  --lct-sand:     var(--lct-sky);   /* was golden sand → Soft Aqua (brand) */
+  /* — Soft sky blue (accent / tints) — */
+  --lct-sky-500: #aaced8;    /* accent sky blue */
+  --lct-sky-200: #d6e7ec;    /* soft tint surface */
+  --lct-sky-100: #e9f1f4;    /* faintest tint band (≈ sky @33% on white) */
 
-  /* — Navy scale (states) — */
-  --lct-navy-700: #143247;
-  --lct-navy-600: #19405b;
-  --lct-navy-500: var(--lct-navy);   /* #1F4A6B */
-  --lct-navy-400: #386488;
-
-  /* — Teal scale (states) — */
-  --lct-teal-700: #2c5d72;
-  --lct-teal-600: #356d85;   /* hover */
-  --lct-teal-500: var(--lct-teal);   /* #3D7E9A primary */
-  --lct-teal-400: #6ba3bb;
-  --lct-teal-300: var(--lct-sky);    /* #66A8C7 */
-
-  /* — Aqua tints — */
-  --lct-sky-500: var(--lct-sky);     /* #66A8C7 */
-  --lct-sky-200: #cfe7f1;            /* soft tint surface */
-  --lct-sky-100: #eaf4f9;            /* faintest tint band */
-
-  /* — Rose tints — */
-  --lct-rose-500: var(--lct-rose);   /* #C06478 */
-  --lct-rose-100: #f6e6ea;           /* soft rose tint (accent button hover) */
-
-  /* — Cool neutrals & lines — */
-  --lct-white:   #ffffff;            /* cards / panels */
-  --lct-border:  #e1e4e8;            /* hairline borders (cool) */
-  --lct-border-strong: #d2d7dd;
+  /* — Warm neutrals — */
+  --lct-cream:   #f2f2f0;    /* page background */
+  --lct-white:   #ffffff;    /* cards / panels */
+  --lct-border:  #e3e3df;    /* hairline borders */
+  --lct-border-strong: #cfcfca;
 
   /* — Ink / text — */
-  --lct-ink-900: var(--lct-charcoal);/* darkest text / headlines #3A3A3A */
-  --lct-ink-700: #4a4d50;            /* body copy */
-  --lct-ink-500: #7c7d79;            /* muted / captions */
+  --lct-ink-900: #343434;    /* headings */
+  --lct-ink-700: #575757;    /* body copy */
+  --lct-ink-500: #8a8a86;    /* muted / captions */
 
   /* — Functional — */
-  --lct-success: #3f8a66;
-  --lct-warning: #c08a2e;
-  --lct-error:   var(--lct-rose);
+  --lct-success: #4e8a6b;
+  --lct-warning: #c9852f;
+  --lct-error:   #b3503f;
 
   /* ---------- Semantic aliases ---------- */
-  --color-primary:        var(--lct-teal-500);   /* Primary button — teal */
+  --color-primary:        var(--lct-teal-500);
   --color-primary-hover:  var(--lct-teal-600);
   --color-primary-active: var(--lct-teal-700);
+  --color-accent:         var(--lct-sky-500);
 
-  --color-secondary:        var(--lct-navy-500);  /* Secondary button — navy */
-  --color-secondary-hover:  var(--lct-navy-600);
-  --color-secondary-active: var(--lct-navy-700);
-
-  --color-accent:        var(--lct-teal-500);     /* Accent — brand teal (rose retired except hearts) */
-  --color-accent-soft:   var(--lct-sky-200);
-
-  --surface-page:        var(--lct-offwhite);
-  --surface-card:        var(--lct-white);
-  --surface-cream:       var(--lct-cream);
-  --surface-linen:       var(--lct-linen);
-  --surface-tint:        var(--lct-sky-100);
+  --surface-page:    var(--lct-cream);
+  --surface-card:    var(--lct-white);
+  --surface-tint:    var(--lct-sky-100);
   --surface-tint-strong: var(--lct-sky-200);
-  --surface-dark:        var(--lct-navy-500);
+  --surface-dark:    var(--lct-teal-500);
 
-  --text-heading:  var(--lct-charcoal);   /* headlines are charcoal */
+  --text-heading:  var(--lct-ink-900);
   --text-body:     var(--lct-ink-700);
   --text-muted:    var(--lct-ink-500);
   --text-on-dark:  var(--lct-white);

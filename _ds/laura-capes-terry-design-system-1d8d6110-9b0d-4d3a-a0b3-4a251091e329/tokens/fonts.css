@@ -1,21 +1,5 @@
-/* ============================================================
-   Laura Capes Terry — Webfonts (self-hosted)
-   Single brand typeface: Noto Sans (variable wght, roman + italic).
-   Paths are relative to this file (tokens/), pointing at ../assets/fonts.
-   ============================================================ */
-
-/* — Noto Sans (variable weight 100–900) — */
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../assets/fonts/NotoSans-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../assets/fonts/NotoSans-Italic-Variable.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
+/* Laura Capes Terry — Webfonts
+   The brand uses two Google Fonts: Fira Sans (headings) and Open Sans (body),
+   matching the live Kajabi site's Google Fonts request. These are the real
+   brand typefaces, not substitutions. */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
