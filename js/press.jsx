@@ -97,6 +97,29 @@
           </window.Container>
         </section>
 
+        {/* Where Laura teaches */}
+        <section className="bg-page section" data-screen-label="Where Laura teaches">
+          <window.Container>
+            <window.SectionTitle title="Where Laura" script="teaches"
+            sub="Laura teaches marketing, media, branding, and AI for these organizations." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
+            <div className="grid grid-3" style={{ marginTop: 48 }}>
+              {[
+                ['fa-building', 'Georgetown Chamber of Commerce'],
+                ['fa-store', 'Downtown Georgetown Association'],
+                ['fa-people-group', 'Professional Women of Williamson County']
+              ].map(([ic, name]) =>
+              <div key={name} className="reveal card" style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+                  <span style={{ flex: 'none', width: 56, height: 56, borderRadius: '50%', background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-primary)', fontSize: 24 }}></i>
+                  </span>
+                  <h3 className="ed-serif" style={{ margin: 0, fontSize: '19px', lineHeight: 1.35 }}>{name}</h3>
+                </div>
+              )}
+            </div>
+          </window.Container>
+        </section>
+
         {/* Media inquiry */}
         <section className="bg-dark section" data-screen-label="Media inquiry">
           <window.Container>

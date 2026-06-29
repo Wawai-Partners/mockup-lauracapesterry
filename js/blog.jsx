@@ -97,9 +97,26 @@
                       <i className="fa-solid fa-arrow-left"></i> Prev
                     </button>
                     <div className="blog-pager__nums">
-                      {Array.from({ length: totalPages }, (_, idx) => idx + 1).map((n) => (
-                        <button key={n} type="button" className={`blog-pager__num ${n === current ? 'is-active' : ''}`} onClick={() => goTo(n)} aria-current={n === current ? 'page' : undefined}>{n}</button>
-                      ))}
+                      {(() => {
+                        // Windowed page list with ellipsis: 1 … (cur-1) cur (cur+1) … last
+                        const pages = [];
+                        const push = (n) => pages.push(n);
+                        const window = 1; // neighbors on each side of current
+                        for (let n = 1; n <= totalPages; n++) {
+                          if (n === 1 || n === totalPages || (n >= current - window && n <= current + window)) {
+                            push(n);
+                          } else if (pages[pages.length - 1] !== '…') {
+                            push('…');
+                          }
+                        }
+                        return pages.map((n, i) =>
+                          n === '…' ? (
+                            <span key={`gap-${i}`} className="blog-pager__gap" aria-hidden="true">…</span>
+                          ) : (
+                            <button key={n} type="button" className={`blog-pager__num ${n === current ? 'is-active' : ''}`} onClick={() => goTo(n)} aria-current={n === current ? 'page' : undefined}>{n}</button>
+                          )
+                        );
+                      })()}
                     </div>
                     <button type="button" className="blog-pager__edge" onClick={() => goTo(current + 1)} disabled={current === totalPages} aria-label="Next page">
                       Next <i className="fa-solid fa-arrow-right"></i>

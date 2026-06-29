@@ -13,7 +13,7 @@
 
     const talks = [
     ['The Path to Marketing Success', 'A clear, step-by-step walk-through of the proven path from scattered tactics to steady, strategic growth.', 'https://drive.google.com/file/d/1DYMKOXXS4QfZTUbplC_RkhMJicqBrAvV/view?usp=drive_link'],
-    ['AI in Marketing', 'How to harness AI with wisdom and purpose — amplifying your voice instead of replacing it.', 'https://drive.google.com/file/d/1sUXsE0bQ-WTi7_Rw5G_H9wtjrkO5mTJ6/view?usp=drive_link'],
+    ['AI in Marketing', 'How to harness AI with wisdom and purpose — amplifying the human voice instead of replacing it.', 'https://drive.google.com/file/d/1sUXsE0bQ-WTi7_Rw5G_H9wtjrkO5mTJ6/view?usp=drive_link'],
     ['Don\u2019t Wing It — Batch It', 'A practical workshop on building simple, repeatable content rhythms that fit real life.', 'https://drive.google.com/file/d/1pRSlM6GKFX8S1u3Uf3ZR5GODyA_TFsbX/view?usp=drive_link'],
     ['From Blank Screen to Brilliant Strategy', 'Turning the intimidating blank page into a confident, clear marketing plan.', 'https://drive.google.com/file/d/1lQgMYgtdceqeIN4nIM6InzSKPfyBn75x/view?usp=drive_link'],
     ['Navigating the Trust Recession', 'Why trust is the scarcest resource in marketing today — and how to earn it back.', 'https://drive.google.com/file/d/1QqQMBoFGRjV-sojg4o_WRtm9n_BMZh61/view?usp=drive_link']];
@@ -45,7 +45,7 @@
         <section className="bg-card section" data-screen-label="Invite Laura">
           <window.Container>
             <div className="split" style={{ alignItems: 'center' }}>
-              <img className="reveal" src="assets/laura-candid.jpg" alt="Laura Capes Terry speaking" style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', display: 'block' }} />
+              <img className="reveal" src="assets/laura-speaking-socialproof.jpg" alt="Laura Capes Terry speaking" style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', display: 'block' }} />
               <div className="reveal">
                 <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '28px', lineHeight: 1.15 }}>A speaker who leads from experience</h2>
                 <p style={{ ...para }}>Laura doesn&rsquo;t teach theory — she leads from experience. As a featured BNI speaker, workshop facilitator, and podcast host, she meets audiences where they are: stretched thin, surrounded by noise, and ready for a steadier way forward.</p>
@@ -60,7 +60,7 @@
         <section className="bg-page section" data-screen-label="Speaking topics">
           <window.Container>
             <window.SectionTitle title="Signature" script="topics"
-            sub="Keynotes and workshops Laura tailors to your audience of local business owners and entrepreneurs." />
+            sub="Keynotes and workshops Laura tailors to an audience of local business owners and entrepreneurs." />
             <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-2" style={{ marginTop: 48 }}>
               {topics.map(([ic, t, b]) =>
@@ -82,7 +82,7 @@
         <section className="bg-card section" data-screen-label="Talks & workshops">
           <window.Container>
             <window.SectionTitle title="Recent talks &amp;" script="workshops"
-            sub="A sampling of sessions Laura has delivered — available to watch or bring to your group." />
+            sub="A sampling of sessions Laura has delivered — available to watch or bring to a group." />
             <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="reveal" style={{ maxWidth: 860, margin: '40px auto 0', display: 'flex', flexDirection: 'column', gap: 0 }}>
               {talks.map(([t, b, href], i) =>
@@ -123,7 +123,7 @@
           </window.Container>
         </section>
 
-        <window.StartConversation sub="Looking for a speaker who brings clarity and heart to your audience? Let&rsquo;s talk." />
+        <window.StartConversation sub="Looking for a speaker who brings clarity and heart to an audience? Let&rsquo;s talk." />
       </div>);
 
   }

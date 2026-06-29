@@ -96,7 +96,7 @@
         <section className="bg-dark section" data-screen-label="CTA">
           <window.Container>
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
-              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Want your business on the map?</h2>
+              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Want a business on the map?</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
                 Learn how BeLocal Georgetown connects beloved local businesses with the people moving in next door.
               </p>

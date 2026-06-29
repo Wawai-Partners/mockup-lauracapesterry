@@ -90,31 +90,31 @@
           <div className="about-hero__inner" style={{ height: "860px", fontSize: "11px" }}>
             <div className="about-hero__vecs" aria-hidden="true">
               {[1, 2, 3, 4, 5, 6, 7].map((n) =>
-              <i key={`h${n}`} className={`fa-solid fa-heart about-hero__heart about-hero__heart--${n}`}></i>
-              )}
+                <i key={`h${n}`} className={`fa-solid fa-heart about-hero__heart about-hero__heart--${n}`}></i>
+                )}
             </div>
             <div className="about-hero__name" aria-hidden="true">Laura Capes<br />Terry</div>
-            <img className="about-hero__photo reveal" src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA" />
+            <img className="about-hero__photo reveal" src="assets/laura-about-hero.png" alt="Laura Capes Terry, MBA" />
             <p className="about-hero__tag about-hero__tag--l">Be seen.<br />Be <span className="about-hero__tag-em">trusted</span>.</p>
-            <p className="about-hero__tag about-hero__tag--r">Be <span className="about-hero__tag-em">chosen</span> —<br />without losing your heart.</p>
+            <p className="about-hero__tag about-hero__tag--r">Be <span className="about-hero__tag-em">chosen</span> —<br />without losing the heart.</p>
           </div>
         </section>
         <section className="about-strip">
           <div className="about-seal" aria-hidden="true">
             <svg className="about-seal__ring" viewBox="0 0 120 120">
               <defs><path id="about-seal-curve" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
-              <text><textPath href="#about-seal-curve" startOffset="0">NICE TO MEET YOU · I’M LAURA · NICE TO MEET YOU · I’M LAURA · </textPath></text>
+              <text><textPath href="#about-seal-curve" startOffset="0">MEET LAURA CAPES TERRY · MEET LAURA CAPES TERRY · </textPath></text>
             </svg>
             <span className="about-seal__mono">L</span>
           </div>
           <div className="about-strip__inner reveal">
-            <h2 className="about-strip__statement">About <span className="jk-script jk-script--lg">Laura</span> Capes Terry, MBA</h2>
+            <h2 className="about-strip__statement">About <span className="jk-script jk-script--lg" style={{ color: "rgb(102, 168, 199)" }}>Laura</span> Capes Terry, MBA</h2>
             <p className="about-strip__role">Fractional CMO + AI Consultant</p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.65, color: 'rgba(255,255,255,0.85)', margin: '0 0 12px' }}>
               Laura Capes Terry provides strategic marketing leadership for entrepreneurs and local business owners who want clarity, confidence, and a smarter way to grow.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.65, color: 'rgba(255,255,255,0.85)', margin: '0 0 12px' }}>
-              If your marketing feels scattered, overwhelming, or reactive, Laura helps you slow things down, focus on what actually matters, and make confident growth decisions—without chasing every new trend or tool.
+              If a business’s marketing feels scattered, overwhelming, or reactive, Laura helps owners slow things down, focus on what actually matters, and make confident growth decisions—without chasing every new trend or tool.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.65, color: 'rgba(255,255,255,0.85)', fontStyle: 'italic', margin: '0 0 24px' }}>
               Her work isn’t about doing more marketing. It’s about making the right decisions in a noisy, AI-driven world.
@@ -133,15 +133,15 @@
               title="Strategic guidance with Laura Capes Terry" />
             <div className="reveal">
               <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "30px" }}>Strategic guidance, not random tactics</h2>
-              <p style={{ ...para, marginBottom: 16 }}>Laura partners with you to:</p>
+              <p style={{ ...para, marginBottom: 16 }}>Laura partners with business owners to:</p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 18px', display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <Bullet>Clarify your message so people understand you quickly</Bullet>
+                <Bullet>Clarify their message so people understand them quickly</Bullet>
                 <Bullet>Prioritize marketing efforts that actually move the needle</Bullet>
                 <Bullet>Use AI intentionally, not impulsively</Bullet>
                 <Bullet>Identify low-hanging opportunities already within reach</Bullet>
                 <Bullet>Build momentum without burning out</Bullet>
               </ul>
-              <p style={{ ...para, margin: '0 0 24px' }}>This is leadership-level guidance designed to support your goals, your resources, and your stage of business.</p>
+              <p style={{ ...para, margin: '0 0 24px' }}>This is leadership-level guidance designed to support their goals, their resources, and their stage of business.</p>
               <BookButton>Work With Laura</BookButton>
             </div>
           </div>
@@ -157,9 +157,9 @@
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 18px', display: 'flex', flexDirection: 'column', gap: 12 }}>
                   <Bullet>She listens first.</Bullet>
                   <Bullet>She tells the truth.</Bullet>
-                  <Bullet>She helps you see what’s actually working—and what’s quietly getting in the way.</Bullet>
+                  <Bullet>She helps them see what’s actually working—and what’s quietly getting in the way.</Bullet>
                 </ul>
-                <p style={{ ...para, margin: 0 }}>Whether you’re navigating growth, change, or uncertainty, Laura helps you move forward with clarity and confidence, one smart step at a time.</p>
+                <p style={{ ...para, margin: 0 }}>Whether a business is navigating growth, change, or uncertainty, Laura helps owners move forward with clarity and confidence, one smart step at a time.</p>
               </div>
               <div className="reveal">
                 <h2 className="ed-serif" style={{ marginBottom: 14, fontSize: "30px" }}>Built from real-world experience</h2>
@@ -189,7 +189,7 @@
         <section className="bg-page section">
           <window.Container>
             <window.SectionTitle title="What Clients Experience When They Work with" script="Laura"
-            sub="The shift isn’t just better marketing — it’s clarity, confidence, and a renewed love for the business you built." />
+            sub="The shift isn’t just better marketing — it’s clarity, confidence, and a renewed love for the business they built." />
             <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-3" style={{ marginTop: 48 }}>
               {experiences.map(([ic, t, b]) =>
@@ -209,7 +209,7 @@
           <window.Container>
             <div className="about-trust__grid">
               <div className="about-trust__photo reveal">
-                <img src="assets/laura-belocal.png" alt="Laura Capes Terry holding BeLocal Georgetown" />
+                <img src="assets/laura-trust.jpg" alt="Laura Capes Terry holding BeLocal Georgetown" />
               </div>
               <div className="reveal">
                 <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "43px" }}>Why Businesses Trust Laura</h2>
@@ -233,7 +233,7 @@
         <section id="awards" className="bg-page section--sm">
           <window.Container>
             <div className="home-recog__row reveal">
-              {['georgetowns-best-2025.png', 'texas-downtown-award-winner.png', 'fg-society-certified-marketer.png', 'georgetowns-best-2023.png', 'georgetowns-best-2024.png', 'storybrand-certified-guide.png'].map((f) =>
+              {['georgetowns-best-2025.png', 'georgetowns-best-2024.png', 'georgetowns-best-2023.png', 'texas-downtown-award-winner.png', 'storybrand-certified-guide.png', 'fg-society-certified-marketer.png'].map((f) =>
               <img key={f} src={`assets/awards/${f}`} alt="" style={{ height: 140, width: 'auto', objectFit: 'contain' }} />
               )}
             </div>
@@ -303,7 +303,7 @@
         </section>
 
         {/* Contact form */}
-        <window.StartConversation sub="When you work with me, you will get a proven process for growing your business." />
+        <window.StartConversation sub="Working with Laura means a proven process for growing a business." />
       </div>);
 
   }

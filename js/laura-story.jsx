@@ -55,7 +55,7 @@
         <section className="bg-card section" data-screen-label="The journey">
           <window.Container>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 72 }}>
-              <Chapter no="One" kicker="The beginning" title="It started with a love of telling the truth, beautifully" img="assets/laura-candid.jpg" alt="Laura Capes Terry">
+              <Chapter no="One" kicker="The beginning" title="It started with a love of telling the truth, beautifully" img="assets/laura-story-beginning.jpg" alt="Laura Capes Terry">
                 <p style={{ ...para }}>Long before AI and algorithms, Laura learned that great marketing is really just clear, honest communication — helping good businesses be understood by the people who need them. That conviction shaped a 30-year career in marketing, media, and brand leadership.</p>
                 <p style={{ ...para, margin: 0 }}>Along the way she earned national recognition for innovative work, including a Benny Award and a FAST Company cover. But the awards were never the point. The point was always the people on the other side of the message.</p>
               </Chapter>
@@ -65,7 +65,7 @@
                 <p style={{ ...para, margin: 0 }}>It took courage to plant that seed. It&rsquo;s a theme she&rsquo;s returned to ever since — in her work, her writing, and the entrepreneurs she now guides.</p>
               </Chapter>
 
-              <Chapter no="Three" kicker="The mission" title="Building a yellow brick road for her own community" img="assets/laura-belocal.png" alt="Laura Capes Terry holding BeLocal Georgetown">
+              <Chapter no="Three" kicker="The mission" title="Building a yellow brick road for her own community" img="assets/laura-story-mission.jpg" alt="Laura Capes Terry holding BeLocal Georgetown">
                 <p style={{ ...para }}>As Georgetown grew, Laura saw new residents arriving every day — and trusted local businesses struggling to be seen. So she became the publisher of <strong>BeLocal Georgetown</strong>, a curated print, digital, mobile, and social ecosystem that welcomes newcomers and connects them to the best the city has to offer.</p>
                 <p style={{ ...para, margin: 0 }}>It earned the Texas Downtown Association President&rsquo;s Award — but more importantly, it built relationships rooted in trust, not noise.</p>
               </Chapter>

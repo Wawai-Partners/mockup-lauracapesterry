@@ -4,10 +4,10 @@
 
   const byLaura = [
     ['assets/books/courage-plant-seed.png', 'The Courage to Plant a Seed', 'Available now',
-      'A reflection on the faith, courage, and tenacity it takes to start something new — and the beautiful growth that becomes possible when you do. For entrepreneurs, dreamers, and anyone called to build something meaningful.',
+      'A reflection on the faith, courage, and tenacity it takes to start something new — and the beautiful growth that becomes possible when they do. For entrepreneurs, dreamers, and anyone called to build something meaningful.',
       'Read / Download', '#'],
     ['assets/books/courage-find-voice.png', 'The Courage to Find My Voice', 'Coming soon',
-      'Laura\u2019s upcoming book on rediscovering your authentic brand voice — and using it with confidence in your marketing, your business, and your life.',
+      'Laura\u2019s upcoming book on rediscovering an authentic brand voice — and using it with confidence in marketing, business, and life.',
       'Join the waitlist', 'contact.html'],
     ['assets/books/be-seen-trusted-chosen.png', 'Be Seen. Be Trusted. Be Chosen.', 'Coming someday',
       'The full-length book version of Laura\u2019s signature marketing framework — the ultimate guide for local business owners who want to become the business their community loves and recommends.',

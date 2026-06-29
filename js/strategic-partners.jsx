@@ -3,14 +3,20 @@
   const { Button, Pill } = window.LauraCapesTerryDesignSystem_1d8d61;
 
   const partners = [
-    ['fa-anchor', 'Anchor Media', 'A trusted media partner offering additional local advertising and marketing reach for Georgetown and Central Texas businesses.', null, 'assets/partners/anchor.webp'],
+    ['fa-heart', 'Be Locally Loved', 'A media platform and podcast that spotlights beloved local businesses, charities, community leaders, and creative connectors who are helping communities thrive through trust, connection, and service.', null, 'assets/partners/be-locally-loved.png'],
     ['fa-star', 'BeLocal Georgetown', 'Laura\u2019s own award-winning local media company — connecting Georgetown businesses with residents through print, digital, mobile, social, and events.', 'belocal.html', 'assets/partners/belocal.png'],
-    ['fa-briefcase', 'Grayson Media & Marketing', 'The parent company of BeLocal Georgetown and Laura\u2019s full-service marketing consulting firm — brand strategy, media placement, and marketing leadership.', null, 'assets/partners/grayson.webp'],
-    ['fa-door-open', 'Hello Georgetown', 'A local resource welcoming new residents to Georgetown — ideal for businesses that want to be discovered by newcomers before they develop loyalties elsewhere.', null, 'assets/partners/hello-georgetown.webp'],
-    ['fa-map-location-dot', 'Let\u2019s Go Locals', 'A community-first business directory and events platform celebrating Georgetown\u2019s local business community.', null, 'assets/partners/lets-go-locals.jpg'],
-    ['fa-pen-ruler', 'Moxie 360 Marketing', 'A trusted marketing partner offering complementary services in digital marketing, design, and brand strategy.', null, 'assets/partners/moxie360.png'],
-    ['fa-gears', 'Santosha Solutions', 'A strategic partner offering specialized business consulting and operational excellence services.', null, 'assets/partners/santosha.png'],
-    ['fa-handshake-angle', 'Wawai Partners', 'A values-aligned business consulting and leadership firm serving entrepreneurs and organizations in Central Texas.', null, 'assets/partners/wawai.png']];
+    ['fa-briefcase', 'Grayson Media & Marketing', 'The parent company of BeLocal Georgetown and Laura\u2019s full-service marketing consulting firm — brand strategy, media placement, and marketing leadership.', null, 'assets/partners/grayson.png'],
+    ['fa-print', 'Roberts Printing', 'A trusted Georgetown print partner — master printers for half a century, delivering high-quality printing for local businesses and organizations.', null, 'assets/partners/roberts-printing.jpeg'],
+    ['fa-landmark', 'Downtown Georgetown Association', 'A nonprofit dedicated to preserving and promoting the historic Georgetown Square — supporting the local merchants, events, and small businesses that keep downtown vibrant and thriving.', null, 'assets/partners/downtown-georgetown-association-logo.png'],
+    ['fa-map-location-dot', 'Let\u2019s Go Locals', 'Let\u2019s Go Locals is a free online platform that helps Georgetown residents discover local businesses, community events, and local stories while helping businesses promote, connect, and be seen.', null, 'assets/partners/lets-go-locals.jpg'],
+    ['fa-pen-ruler', 'Moxie 360 Marketing', 'A trusted marketing partner offering world-class services in digital marketing, design, and brand strategy.', null, 'assets/partners/moxie360.png'],
+    ['fa-gears', 'Santosha Solutions', 'A strategic partner offering specialized business consulting and digital marketing services.', null, 'assets/partners/santosha.png'],
+    ['fa-shield-halved', 'TeamLogic IT', 'TeamLogic IT provides managed IT services, cybersecurity, cloud solutions, and tech support to help businesses stay secure, connected, and running smoothly.', null, 'assets/partners/teamlogic-it.webp'],
+    ['fa-microphone-lines', 'The Unbridled Creative', 'A podcast for faith-driven creatives, entrepreneurs, and dreamers who want to pursue their calling with courage, creativity, and purpose.', null, 'assets/partners/unbridled-creative.jpg'],
+    ['fa-building', 'Turner Commercial Properties', 'A Georgetown-based commercial real estate company helping businesses buy, sell, and lease improved and unimproved commercial properties throughout Central Texas.', null, 'assets/partners/turner-commercial.jpg'],
+    ['fa-handshake-angle', 'Wawai Partners', 'A values-aligned business consulting and leadership firm serving entrepreneurs and organizations in Central Texas.', null, 'assets/partners/wawai.png'],
+    ['fa-scale-balanced', 'West Short & Howell, PLLC', 'A law firm providing trusted legal counsel in civil litigation, estate planning, probate, real estate, and business matters.', null, 'assets/partners/west-short-howell.png'],
+    ['fa-door-open', 'Hello Georgetown', 'Hello Georgetown is a local digital media platform that helps residents stay connected to Georgetown news, events, local businesses, and community happenings.', null, 'assets/partners/hello-georgetown.webp']];
 
   function PartnersPage() {
     return (

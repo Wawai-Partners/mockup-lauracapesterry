@@ -4,6 +4,14 @@
    system tokens (colors.css / typography.css / spacing.css).
    ============================================================ */
 
+@font-face {
+  font-family: 'Brittany Signature';
+  src: url('assets/fonts/BrittanySignature.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -96,7 +104,7 @@ a { color: inherit; }
   display: flex; align-items: center; gap: clamp(16px, 3vw, 40px);
 }
 .navbar__logo { display: flex; align-items: center; text-decoration: none; flex: 0 0 auto; }
-.navbar__logo img { height: 52px; width: auto; display: block; }
+.navbar__logo img { height: 57px; width: auto; display: block; }
 .navbar__right { display: flex; align-items: center; gap: clamp(14px, 1.6vw, 22px); margin-left: auto; flex: 0 0 auto; }
 .navbar__social { display: flex; align-items: center; gap: 16px; color: var(--color-primary); font-size: 17px; }
 .navbar__social a { color: var(--color-primary); transition: opacity var(--dur-fast) var(--ease-standard); }
@@ -301,7 +309,7 @@ a.mega-node__label:hover { color: var(--color-primary); }
 .footer-col--brand { text-align: center; padding-top: 8px; }
 .footer-logo { display: inline-block; text-decoration: none; }
 .footer-logo img { height: 70px; width: auto; display: block; margin: 0 auto; }
-.footer-connect { font-family: var(--font-script); font-size: 34px; color: var(--color-primary); margin: 22px 0 16px; line-height: 1; }
+.footer-connect { font-family: 'Brittany Signature', cursive; font-weight: 400; font-size: 46px; color: var(--color-primary); margin: 18px 0 16px; line-height: 1; }
 .footer-social--lg { justify-content: center; gap: 14px; }
 .footer-social--lg a { width: 42px; height: 42px; font-size: 16px; }
 
@@ -320,6 +328,23 @@ a.mega-node__label:hover { color: var(--color-primary); }
   transition: background var(--dur-fast) var(--ease-standard), color var(--dur-fast);
 }
 .contact-soc:hover { background: var(--color-accent); color: #fff; }
+.footer-explore {
+  border-top: 1px solid var(--border-subtle);
+  max-width: var(--container-max); margin: 0 auto;
+  padding: 30px var(--container-gutter) 6px;
+  text-align: center;
+}
+.footer-explore__head { font-size: 16px; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 16px; }
+.footer-explore__links {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 12px 28px; max-width: 760px; margin: 0 auto;
+}
+.footer-explore__links a {
+  font-family: var(--font-body); font-size: 14px; color: var(--text-body);
+  text-decoration: none; transition: color var(--dur-fast) var(--ease-standard);
+}
+.footer-explore__links a:hover { color: var(--color-primary); }
+
 .footer-bottom {
   border-top: 1px solid var(--border-subtle);
   max-width: var(--container-max); margin: 0 auto;
@@ -1370,7 +1395,6 @@ a:hover { text-decoration: none; }
 .about-hero__photo {
   position: relative; z-index: 2; height: 640px; width: auto; max-width: 100%;
   object-fit: contain; object-position: bottom center; display: block;
-  filter: drop-shadow(0 18px 40px rgba(36,82,96,0.28));
 }
 .about-hero__vecs { position: absolute; inset: 0; z-index: 0; overflow: visible; pointer-events: none; }
 .about-hero__vec {

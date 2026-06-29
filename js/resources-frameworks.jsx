@@ -6,7 +6,7 @@
     ['fa-route', 'The Proven Path to Marketing Success', 'A step-by-step roadmap that takes local businesses from confusion and scattered effort to strategic clarity and sustainable growth. The framework Laura uses to onboard every new client.'],
     ['fa-filter', 'The Trust Funnel', 'A visual model for how local customers move from \u201Cnever heard of you\u201D to \u201Cloyal advocate\u201D — and what marketing actions accelerate each stage of the journey.'],
     ['fa-arrows-spin', 'Circular Viralocity', 'Laura\u2019s proprietary framework for turning community connections, local media, and word-of-mouth into a self-reinforcing growth engine. The more you invest in community, the more momentum builds — exponentially.'],
-    ['fa-heart-circle-check', 'Return on Impact (ROI)', 'A reframe on traditional ROI — shifting focus from return on investment to return on impact: how your marketing builds relationships, reputation, and long-term business equity.'],
+    ['fa-heart-circle-check', 'Return on Impact (ROI)', 'A reframe on traditional ROI — shifting focus from return on investment to return on impact: how marketing builds relationships, reputation, and long-term business equity.'],
     ['fa-laptop-code', 'Website Success Framework', 'Six critical elements every local business website needs to generate leads, build trust, and convert visitors — with specific guidance for above-the-fold clarity.'],
     ['fa-rectangle-ad', 'Great Print Ad Framework', 'The anatomy of a high-performing print ad — headline, visual, body copy, call to action, and brand consistency — designed specifically for local media like BeLocal Georgetown.']];
 
@@ -45,7 +45,7 @@
                 The frameworks behind Laura’s marketing approach
               </h1>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: 0 }}>
-                The strategic scaffolding Laura uses with every client — a clear way to think about your marketing, and a repeatable system for growth.
+                The strategic scaffolding Laura uses with every client — a clear way to think about marketing, and a repeatable system for growth.
               </p>
             </div>
           </window.Container>
@@ -62,7 +62,7 @@
                   A foundational overview of the core elements every local business needs in place for their marketing to work. If any block is missing or weak, the whole structure suffers.
                 </p>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.7, color: 'var(--text-body)', margin: 0 }}>
-                  Each layer builds on the one below it — from a clear strategic foundation, up through being seen and trusted, to becoming the business your community chooses.
+                  Each layer builds on the one below it — from a clear strategic foundation, up through being seen and trusted, to becoming the business the community chooses.
                 </p>
               </div>
               <div className="reveal"><BuildingBlocks /></div>
@@ -91,9 +91,9 @@
         <section className="bg-dark section">
           <window.Container>
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 620, margin: '0 auto' }}>
-              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Want to apply these to your business?</h2>
+              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Want to apply these to a business?</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
-                Book a session and Laura will map the right frameworks to where your business is today.
+                Book a session and Laura will map the right frameworks to where a business is today.
               </p>
               <window.BookButton size="large" variant="accent" style={{ background: '#fff' }}>Book a Session <i className="fa-solid fa-heart"></i></window.BookButton>
             </div>

@@ -38,7 +38,7 @@
   ['016', 'Building Community From the Inside Out with Cat Phelps of the Georgetown Family YMCA', 'May 20, 2026', '42 min',
   'Cat Phelps of the Georgetown Family YMCA on building community from the inside out, one relationship at a time.'],
   ['015', 'How Marketing Works (Part 4 of 4): Marketing is a System, Not a Campaign', 'May 13, 2026', '31 min',
-  'The finale of the marketing series: why marketing is a system you build, not a campaign you launch.'],
+  'The finale of the marketing series: why marketing is a system that’s built, not a campaign that’s launched.'],
   ['014', 'How Marketing Works (Part 3 of 4) — The Real ROI of Marketing and Why Most Businesses Measure It Wrong', 'May 6, 2026', '34 min',
   'Most businesses measure marketing ROI wrong. Here’s the real way to think about return — and the long game it requires.'],
   ['013', 'How Marketing Works (Part 2 of 4): The Timeline of Marketing and Why People Quit Too Early', 'April 29, 2026', '33 min',
@@ -54,7 +54,7 @@
   ['008', 'How Marketing Works (Overview): Reframing ROI, Trust, and What Actually Drives Growth', 'March 25, 2026', '35 min',
   'An overview of the marketing series: reframing ROI, trust, and what actually drives sustainable growth.'],
   ['007', 'How to Use AI Without Losing Your Voice', 'March 18, 2026', '32 min',
-  'A grounded approach to using AI in your marketing without losing the voice that makes you, you.']];
+  'A grounded approach to using AI in marketing without losing the voice that makes a business distinct.']];
 
 
   const STATS = [
@@ -137,7 +137,7 @@
                 or self-promotion, but through service, relationships, authenticity, and showing up consistently
                 over time.
               </p>
-              <p className="pod-about__p">You’ll hear inspiring stories, practical insights, and thoughtful conversations about:</p>
+              <p className="pod-about__p">Listeners hear inspiring stories, practical insights, and thoughtful conversations about:</p>
               <ul className="pod-about__list">
                 <li>Building businesses people know, love, and trust</li>
                 <li>Strengthening community through relationships</li>
@@ -146,7 +146,7 @@
                 <li>The hidden power of being locally loved</li>
               </ul>
               <p className="pod-about__p">
-                Whether you’re a business owner, entrepreneur, community leader, creative connector, or someone
+                Whether someone is a business owner, entrepreneur, community leader, creative connector, or someone
                 who simply loves where they live, Be Locally Loved exists to celebrate the people and places
                 making local life more connected, meaningful, and human.
               </p>

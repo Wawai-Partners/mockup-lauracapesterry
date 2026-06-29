@@ -73,7 +73,7 @@
     return (
       <section className="home-hero" data-screen-label="Hero">
         <div className="home-hero__inner">
-          <div className="home-hero__copy reveal" style={{ width: "586px" }}>
+          <div className="home-hero__copy reveal" style={{ maxWidth: "586px" }}>
             <div className="home-hero__rule" aria-hidden="true">
               <span className="home-hero__rule-line"></span>
               <i className="fa-solid fa-heart"></i>
@@ -95,7 +95,7 @@
           </div>
           <div className="home-hero__figure reveal">
             <img className="home-hero__brush" src="assets/hero-brushstroke-cool.png" alt="" aria-hidden="true" />
-            <img className="home-hero__photo" src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA — strategic marketing guidance" style={{ width: "580px", height: "auto" }} />
+            <img className="home-hero__photo" src="assets/laura-hero-podium.png" alt="Laura Capes Terry, MBA — strategic marketing guidance" style={{ maxWidth: "580px", width: "100%", height: "auto" }} />
           </div>
         </div>
       </section>);
@@ -107,7 +107,7 @@
   function PhraseBand() {
     return (
       <section className="phrase-band" aria-label="Brand themes" style={{ backgroundColor: "var(--lct-navy)" }}>
-        <div className="phrase-band__inner" style={{ margin: "0px 7px 0px 73px", padding: "22px 20px" }}>
+        <div className="phrase-band__inner" style={{ padding: "22px 20px" }}>
           {PHRASES.map((p, i) =>
           <React.Fragment key={p}>
               {i > 0 && <i className="fa-solid fa-heart phrase-band__sep" aria-hidden="true" style={{ color: "rgb(192, 100, 120)" }}></i>}
@@ -121,9 +121,9 @@
 
   /* ---- Problem: "AI is changing everything" ---- */
   const PAINS = [
-  ['You’re on the edge of your expertise', '—unsure which AI tools, trends, and tactics actually support your goals, and which ones just add noise.'],
-  ['You’re out of time', '—juggling too many roles to slow down, think strategically, and create marketing that truly reflects your voice and values.'],
-  ['You’re feeling disconnected', '—craving authentic, human connection in a world that’s becoming faster, louder, and more automated by the day.']];
+  ['They’re on the edge of their expertise', '—unsure which AI tools, trends, and tactics actually support their goals, and which ones just add noise.'],
+  ['They’re out of time', '—juggling too many roles to slow down, think strategically, and create marketing that truly reflects their voice and values.'],
+  ['They’re feeling disconnected', '—craving authentic, human connection in a world that’s becoming faster, louder, and more automated by the day.']];
 
   function Problem() {
     return (
@@ -132,7 +132,7 @@
           <div className="jk-levelup__copy reveal">
             <h2 className="jk-h">AI is changing <span className="jk-ink-rose">everything.</span></h2>
             <p className="jk-lead-em">And most business owners are drowning in distraction and overwhelm.</p>
-            <p className="jk-p">You know marketing matters, but:</p>
+            <p className="jk-p">Most business owners know marketing matters, but:</p>
             <ol className="problem-list">
               {PAINS.map(([lead, rest], i) =>
               <li key={i}>
@@ -143,17 +143,17 @@
             </ol>
             <p className="jk-p" style={{ marginTop: 22 }}>
               AI was supposed to make things easier. But without clear guidance and experienced marketing
-              leadership, it often does the opposite — amplifying confusion, diluting your message, and
-              pulling your attention in too many directions at once.
+              leadership, it often does the opposite — amplifying confusion, diluting the message, and
+              pulling attention in too many directions at once.
             </p>
-            <p className="jk-levelup__tag">You don’t have to figure it out alone</p>
+            <p className="jk-levelup__tag">They don’t have to figure it out alone</p>
             <div><Button href={CALENDLY} target="_blank" rel="noopener" size="large" className="jk-levelup__cta">Work With Laura</Button></div>
           </div>
         </div>
         <div className="jk-levelup__photo reveal">
           <image-slot id="home-problem-photo" shape="rect" fit="cover"
           placeholder="Drop a photo — an overwhelmed business owner"
-          src="assets/laura-office-writing.jpg"></image-slot>
+          src="assets/laura-speaking-mic.png"></image-slot>
         </div>
       </section>);
 
@@ -182,15 +182,15 @@
               </p>
               <p className="jk-p">
                 That’s why Laura guides faith-filled entrepreneurs in harnessing AI with wisdom, clarity, and
-                purpose. Her goal is to help you simplify your marketing, strengthen your message, and scale
-                your business with confidence.
+                purpose. Her goal is to help business owners simplify their marketing, strengthen their message, and scale
+                their business with confidence.
               </p>
               <p className="jk-p jk-p--em">
-                AI doesn’t replace heart — it amplifies it. And you don’t have to figure it out alone.
+                AI doesn’t replace heart — it amplifies it. And no one has to figure it out alone.
               </p>
               <p className="jk-p">
-                Whether you need clarity, consistency, or a complete refresh, Laura meets you at the decision
-                table and helps you move forward with confidence — one strategic step at a time.
+                Whether a business needs clarity, consistency, or a complete refresh, Laura meets owners at the decision
+                table and helps them move forward with confidence — one strategic step at a time.
               </p>
               <div style={{ marginTop: 26 }}>
                 <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Schedule a Discovery Call</Button>
@@ -235,7 +235,7 @@
   const WAYS = [
   {
     icon: 'fa-chart-line', title: 'AI Strategy Sessions',
-    body: 'Private 90-minute consultation to evaluate your marketing strategy and identify what’s working, what’s not, and where AI can support your strategy, save time, and amplify your message.',
+    body: 'Private 90-minute consultation to evaluate a business\u2019s marketing strategy and identify what\u2019s working, what\u2019s not, and where AI can support the strategy, save time, and amplify the message.',
     ideal: 'Ideal for solopreneurs and business owners ready to simplify their marketing and move forward with direction and peace of mind.'
   },
   {
@@ -258,7 +258,7 @@
             <h2 className="jk-h jk-h--md">How We Can <span className="jk-script" style={{ color: "var(--lct-navy)", fontWeight: "700", fontFamily: 'var(--font-heading)' }}>Work</span> Together</h2>
             <p className="jk-head__lead">
               Every partnership begins with clarity and leadership. Laura helps faith-filled entrepreneurs use
-              <strong> modern marketing and AI with strategy, purpose, and heart</strong> — so you can stop
+              <strong> modern marketing and AI with strategy, purpose, and heart</strong> — so they can stop
               reacting to trends and start leading with focus and confidence.
             </p>
           </div>
@@ -279,9 +279,9 @@
 
   /* ---- How to Get Started ---- */
   const STEPS = [
-  ['Start a Conversation', 'Laura begins by understanding where you are, what you’re working toward, and what’s currently getting in the way.', 'This is a focused, intentional conversation — not a sales pitch.'],
-  ['Identify What Matters Most', 'Together, you’ll surface quick wins, areas of unnecessary complexity, and where AI or modern tools could help — or where they’re adding noise.', 'You’ll leave with clearer priorities and a recommended next step.'],
-  ['Decide the Right Path Forward', 'If it makes sense to go deeper, Laura will outline what that could look like.', 'If not, you’ll still walk away with clarity, direction, and confidence about what to do next.']];
+  ['Start a Conversation', 'Laura begins by understanding where a business owner is, what they’re working toward, and what’s currently getting in the way.', 'This is a focused, intentional conversation — not a sales pitch.'],
+  ['Identify What Matters Most', 'Together, Laura and the client surface quick wins, areas of unnecessary complexity, and where AI or modern tools could help — or where they’re adding noise.', 'They leave with clearer priorities and a recommended next step.'],
+  ['Decide the Right Path Forward', 'If it makes sense to go deeper, Laura will outline what that could look like.', 'If not, they’ll still walk away with clarity, direction, and confidence about what to do next.']];
 
   const STEP_TABS = ['var(--lct-teal-500)', 'var(--lct-sky-500)', 'var(--lct-navy-500)'];
   function HowToStart() {
@@ -320,9 +320,9 @@
 
   /* ---- What Clients Say ---- */
   const STORIES = [
-  ['Since partnering with Laura, she’s been an invaluable guide, helping us identify and implement the right strategies for our business. We only regret not reaching out to her sooner.', 'Wendy Del Rio', 'An Idea Front'],
-  ['We had no experience in marketing and no idea where to start. Laura immediately understood our situation and clearly laid out the steps we needed to take. For the first time, we could see a clear path forward.', 'Wesley Heinige', 'Bowen Door'],
-  ['From the moment I met Laura, I knew I was in good hands. She’s incredibly knowledgeable, genuinely cares about business owners, and leads with integrity — not pressure.', 'Terry Bingman', 'The AG Company']];
+  ['Having been a client, a vendor partner, and a friend throughout your journey I can say that you are one of the best marketing executives I have ever worked with! Your path should inspire women who wish to be successful in a male-dominated industry and for men who want to understand what working with a pro who commands respect and is amazing at their craft can do for the bottom line!', 'Guy Williams', ''],
+  ['Working with Laura has been a game-changer. Already having an established, successful small business, we initially thought we could manage the transition to an online presence and development of a marketing strategy ourselves. However, we’ve realized just how challenging and complex that process is — and how much we didn’t know. Since partnering with Laura, she’s been an invaluable guide, helping us identify and implement the right strategies for our needs. We only regret not reaching out to her sooner.', 'Wendy Del Re', ''],
+  ['Since the very moment I met Laura, I knew I was in good hands. Not only is she incredibly knowledgeable on all things marketing, media, story-branding, and beyond, more importantly—she genuinely cares for business owners, and people. I have witnessed her interact with countless individuals, where she fully engages and empathizes with them. Laura isn’t here to sell you something you don’t need. She is here to serve you, and she does so very generously. If you need assistance with any marketing at all, Laura is my top recommendation!', 'Terry Wilkie', '']];
 
   function ClientsSay() {
     return (
@@ -359,24 +359,24 @@
       <section data-screen-label="Moments">
         <div className="photo-mosaic">
           <div className="pm-pool"><img src="assets/moments/pool-portrait.png" alt="Laura Capes Terry" /></div>
-          <div className="pm-gala"><img src="assets/moments/gala.png" alt="Laura with friends at a gala" /></div>
+          <div className="pm-gala"><img src="assets/moments/mosaic-gala.png" alt="Laura with friends at a gala" /></div>
           <div className="pm-award"><img src="assets/moments/award-couple.png" alt="Laura and team with awards" /></div>
           <div className="pm-belocal"><img src="assets/moments/belocal-group.png" alt="The BeLocal team" /></div>
           <div className="pm-cap home-mosaic__cap">
             <p className="ed-serif">Be seen.<br />Be trusted.<br />Be chosen.</p>
             <p>Georgetown, Texas</p>
           </div>
-          <div className="pm-library"><img src="assets/moments/library-couple.png" alt="Laura recording at the library" /></div>
+          <div className="pm-library"><img src="assets/moments/mosaic-library-couple.png" alt="Laura recording at the library" /></div>
           <div className="pm-podcast"><img src="assets/moments/podcast.png" alt="Laura recording the podcast" /></div>
-          <div className="pm-beach"><img src="assets/moments/beach-sunset.png" alt="Laura at the beach" /></div>
-          <div className="pm-resort"><img src="assets/moments/resort.png" alt="Laura traveling" /></div>
+          <div className="pm-beach"><img src="assets/moments/pwow-podium.jpeg" alt="Laura speaking at Professional Women of Williamson County" /></div>
+          <div className="pm-resort"><img src="assets/moments/laura-horse.jpeg" alt="Laura with the horse she sponsors" /></div>
         </div>
       </section>);
 
   }
 
   /* ---- Website guide band ---- */
-  const GUIDE_GETS = ['Who you help', 'What you offer', 'And what to do next'];
+  const GUIDE_GETS = ['Who they help', 'What they offer', 'And what to do next'];
   function WebsiteGuide() {
     const toast = window.useToast();
     return (
@@ -386,10 +386,10 @@
             <div className="guide-form-card reveal">
               <p className="guide-form-card__tag">Free Guide</p>
               <h3 className="h-display" style={{ fontSize: 'var(--fs-h3)', margin: '0 0 12px' }}>
-                Does your website clearly explain what you do — and what to do next?
+                Does a business website clearly explain what the company does — and what to do next?
               </h3>
               <p className="guide-form-card__desc">
-                Download this clarity-first guide to identify what’s working, what’s confusing, and how to make
+                This clarity-first guide helps business owners identify what’s working, what’s confusing, and how to make
                 simple homepage improvements that actually help visitors take action.
               </p>
               <form onSubmit={(e) => {e.preventDefault();toast('On its way! Check your inbox for the Website Clarity Guide.');}}
@@ -404,20 +404,20 @@
             </div>
             <div className="guide-copy reveal">
               <h2 className="jk-h jk-h--md jk-on-dark" style={{ margin: '0 0 10px' }}>Building Better Websites</h2>
-              <p className="guide-copy__sub" style={{ color: "rgb(255, 255, 255)" }}>Six clarity-first website fixes — plus AI prompts to help you implement them faster.</p>
+              <p className="guide-copy__sub" style={{ color: "rgb(255, 255, 255)" }}>Six clarity-first website fixes — plus AI prompts to help business owners implement them faster.</p>
               <p className="guide-copy__p">
-                If your website feels “almost right” but not quite effective, it’s often a clarity issue — not a design problem.
+                If a website feels “almost right” but not quite effective, it’s often a clarity issue — not a design problem.
               </p>
               <p className="guide-copy__p">
-                This free guide walks you through six simple, high-impact fixes focused on your homepage above the
+                This free guide walks business owners through six simple, high-impact fixes focused on the homepage above the
                 fold so visitors can quickly understand:
               </p>
               <ul className="guide-copy__list">
                 {GUIDE_GETS.map((g) => <li key={g}><i className="fa-regular fa-circle-check" style={{ color: "rgb(255, 255, 255)" }}></i>{g}</li>)}
               </ul>
               <p className="guide-copy__p">
-                You’ll also find optional AI prompts you can use as a thinking partner to help you evaluate and
-                improve your site faster — without losing your voice or overcomplicating the process.
+                It also includes optional AI prompts to use as a thinking partner for evaluating and
+                improving a site faster — without losing the business’s voice or overcomplicating the process.
               </p>
             </div>
           </div>
@@ -436,7 +436,7 @@
             <Sunburst />
             <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: "700", color: "var(--lct-navy)" }}>Conversation</span></h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', textAlign: 'center', margin: '0 auto 26px', maxWidth: 480 }}>
-              This is a short, intentional conversation to understand your goals, identify low-hanging
+              This is a short, intentional conversation to understand a business’s goals, identify low-hanging
               opportunities, and recommend a smart next step.
             </p>
             <form onSubmit={(e) => {e.preventDefault();toast('Thanks! Laura will reach out shortly.');}} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -444,7 +444,7 @@
               <Input placeholder="Email" type="email" aria-label="Email" required />
               <Input placeholder="Company Name" aria-label="Company name" />
               <Input placeholder="Phone Number" type="tel" aria-label="Phone number" />
-              <Input placeholder="What’s feeling most unclear in your marketing now?" aria-label="Message" />
+              <Input placeholder="What’s feeling most unclear in the marketing right now?" aria-label="Message" />
               <div style={{ textAlign: 'center', marginTop: 6 }}><Button type="submit" size="large">Start a Conversation</Button></div>
             </form>
           </div>

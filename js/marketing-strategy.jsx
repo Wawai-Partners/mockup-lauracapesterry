@@ -8,7 +8,7 @@
   const services = [
     {
       icon: 'fa-user-tie', title: 'Private Coaching', cta: ['Inquire About Private Coaching', 'contact.html', false],
-      what: "One-on-one marketing coaching tailored to your specific business, goals, and challenges. Not a generic program — a custom strategic partnership designed around you.",
+      what: "One-on-one marketing coaching tailored to a specific business, its goals, and its challenges. Not a generic program — a custom strategic partnership designed around the owner.",
       who: "Business owners who want personalized guidance, accountability, and expert marketing thinking applied directly to their business.",
       list: ['Regular strategy sessions with Laura', 'Personalized marketing plan and priorities', 'AI integration guidance and implementation support', 'Messaging and brand clarity work', 'Accountability and consistent forward momentum']
     },
@@ -20,13 +20,13 @@
     },
     {
       icon: 'fa-microchip', title: 'AI Consulting', cta: ['Book an AI Strategy Session', null, true],
-      what: "Practical, hands-on guidance for integrating AI into your marketing — without the overwhelm, the hype, or the risk of losing your authentic voice.",
+      what: "Practical, hands-on guidance for integrating AI into a business’s marketing — without the overwhelm, the hype, or the risk of losing an authentic voice.",
       who: "Owners who know AI can help but don't know where to start — or who started and feel lost, scattered, or unsure they're using it well.",
-      list: ['Which AI tools are right for YOUR business', 'How to train AI to sound like you (not a robot)', 'Content creation workflows using AI', 'AI for email, social media, and customer communication', 'Ethical and strategic use of AI in your brand']
+      list: ['Which AI tools are right for a specific business', 'How to train AI to sound like the owner (not a robot)', 'Content creation workflows using AI', 'AI for email, social media, and customer communication', 'Ethical and strategic use of AI in your brand']
     },
     {
       icon: 'fa-chess-king', title: 'Fractional CMO', cta: ['Explore Fractional CMO Services', null, true],
-      what: "Executive-level marketing leadership on a part-time, flexible basis. Laura becomes your strategic marketing leader — attending key meetings, guiding your team, and driving marketing forward — without the full-time salary.",
+      what: "Executive-level marketing leadership on a part-time, flexible basis. Laura becomes the business’s strategic marketing leader — attending key meetings, guiding the team, and driving marketing forward — without the full-time salary.",
       who: "Growing businesses with a team (or building one) that need consistent, senior-level marketing direction to scale with clarity and confidence.",
       list: ['Monthly strategic marketing leadership', 'Team guidance and marketing system development', 'AI and technology integration', 'Brand strategy and messaging oversight', 'KPI setting and accountability']
     }];
@@ -54,7 +54,7 @@
             <div className="reveal" style={{ maxWidth: 880, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>How I Help · Marketing Strategy & Leadership</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Stop reacting to trends. Start leading with <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>strategy</span>
+                Stop reacting to trends. Start leading with <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>strategy</span>.
               </h1>
               <p className="lead">Laura provides the marketing leadership, strategic clarity, and expert guidance that growing businesses need — without the cost of a full-time CMO.</p>
               <div style={{ marginTop: 28 }}><BookButton size="large">Book a Discovery Call <i className="fa-solid fa-heart"></i></BookButton></div>
@@ -66,7 +66,7 @@
         <section className="bg-card section" data-screen-label="Services">
           <window.Container>
             <window.SectionTitle title="Ways to work" script="together"
-              sub="From hands-on coaching to executive marketing leadership — choose the level of partnership that fits where you are." />
+              sub="From hands-on coaching to executive marketing leadership — choose the level of partnership that fits where a business is." />
             <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-2" style={{ marginTop: 44 }}>
               {services.map((s) => (
@@ -146,7 +146,7 @@
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 620, margin: '0 auto' }}>
               <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Lead your marketing with clarity</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
-                Start with a short, no-pressure conversation about where you are and where you want to go.
+                Start with a short, no-pressure conversation about where the business is and where it wants to go.
               </p>
               <BookButton size="large" variant="accent" style={{ background: '#fff' }}>Book a Discovery Call <i className="fa-solid fa-heart"></i></BookButton>
             </div>

@@ -1,7 +1,7 @@
 /* Laura Capes Terry — Start Here: Find Your Best Next Step (/start-here)
    Interactive "compass" — select challenges, get routed recommendations. */
 (function () {
-  const { Button, Pill } = window.LauraCapesTerryDesignSystem_1d8d61;
+  const { Button, Pill, Input } = window.LauraCapesTerryDesignSystem_1d8d61;
   const { useState } = React;
 
   /* Each option: id, icon, the challenge statement, and routed recommendations. */
@@ -24,6 +24,7 @@
   const CALENDLY = 'https://calendly.com/laura-terry/discovery-call';
 
   function StartHerePage() {
+    const toast = window.useToast();
     const [sel, setSel] = useState({});
     const [shown, setShown] = useState(false);
     const toggle = (id) => { setSel((p) => ({ ...p, [id]: !p[id] })); setShown(false); };
@@ -110,6 +111,82 @@
                   </div>
                 </div>
               ) : null}
+            </div>
+          </window.Container>
+        </section>
+
+        {/* Contact form + info */}
+        <section className="bg-card section" data-screen-label="Contact Laura">
+          <window.Container>
+            <window.SectionTitle title="Or just" script="say hello"
+            sub="Prefer to skip the compass? Tell Laura what’s on your mind and she’ll personally point you in the right direction." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
+            <div className="split" style={{ alignItems: 'start', gridTemplateColumns: '1.15fr 0.85fr', marginTop: 48 }}>
+              <div className="reveal card" style={{ boxShadow: 'var(--shadow-md)', padding: 40 }}>
+                <h3 className="h-display" style={{ fontSize: 'var(--fs-h3)', margin: '0 0 8px' }}>Send Laura a message</h3>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 24px' }}>
+                  Tell Laura a little about the business and what’s feeling unclear right now. She’ll personally follow up.
+                </p>
+                <form onSubmit={(e) => {e.preventDefault();toast('Thanks! Laura will reach out shortly.');}} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                    <Input placeholder="First name" aria-label="First name" required />
+                    <Input placeholder="Last name" aria-label="Last name" required />
+                  </div>
+                  <Input placeholder="Email" type="email" aria-label="Email" required />
+                  <Input placeholder="Company name" aria-label="Company name" />
+                  <Input placeholder="Phone number" aria-label="Phone number" />
+                  <Input placeholder="What’s feeling most unclear in the marketing right now?" aria-label="Message" />
+                  <div style={{ marginTop: 6 }}><Button type="submit">Send message</Button></div>
+                </form>
+              </div>
+
+              <div className="reveal" style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+                <div className="card" style={{ padding: 28 }}>
+                  <h3 className="h-display" style={{ fontSize: 'var(--fs-h4)', marginBottom: 6 }}>Prefer to talk?</h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: '0 0 16px' }}>Book a free discovery call and get clarity on the next step.</p>
+                  <window.BookButton fullWidth>Schedule a Discovery Call</window.BookButton>
+                </div>
+                {[
+                ['fa-location-dot', 'Based in', 'Georgetown, Texas'],
+                ['fa-envelope', 'Email', 'hello@lauracapesterry.com'],
+                ['fa-clock', 'Response time', 'Usually within one business day']].
+                map(([ic, label, val]) =>
+                <div key={label} style={{ display: 'flex', gap: 16, alignItems: 'center', padding: '4px 4px' }}>
+                    <div style={{ width: 46, height: 46, flex: 'none', borderRadius: 12, background: 'var(--surface-tint)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <i className={`fa-solid ${ic}`} style={{ color: 'var(--color-accent)', fontSize: 18 }}></i>
+                    </div>
+                    <div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--color-primary)' }}>{label}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'var(--text-heading)', marginTop: 2 }}>{val}</div>
+                    </div>
+                  </div>
+                )}
+                <div style={{ display: 'flex', gap: 10, paddingLeft: 4 }}>
+                  <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" className="contact-soc" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" className="contact-soc" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </window.Container>
+        </section>
+
+        {/* What happens next */}
+        <section className="bg-page section" data-screen-label="What happens next">
+          <window.Container>
+            <window.SectionTitle title="What happens" script="next" sub="Working with Laura always starts the same calm, intentional way." />
+            <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
+            <div className="grid grid-3" style={{ marginTop: 48 }}>
+              {[
+              ['1', 'We talk', 'Laura listens to understand where the business is, what the owner is working toward, and what’s getting in the way.'],
+              ['2', 'We find what matters', 'Together Laura and the owner surface quick wins, sources of overwhelm, and where AI or modern tools could help.'],
+              ['3', 'A clear next step', 'Whether or not they work together, the owner leaves with direction and confidence about what to do next.']].
+              map(([n, t, b]) =>
+              <div key={n} className="reveal" style={{ textAlign: 'center' }}>
+                  <div style={{ width: 54, height: 54, margin: '0 auto 18px', borderRadius: '50%', background: 'var(--surface-tint-strong)', color: 'var(--color-primary)', fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 22, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{n}</div>
+                  <h3 className="h-display" style={{ marginBottom: 10, fontSize: "23px" }}>{t}</h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{b}</p>
+                </div>
+              )}
             </div>
           </window.Container>
         </section>

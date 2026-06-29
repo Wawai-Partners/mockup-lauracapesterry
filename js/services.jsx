@@ -28,10 +28,10 @@
             <div className="reveal" style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center', paddingTop: 28, paddingBottom: 28 }}>
               <Pill style={{ marginBottom: 18 }}>Services</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', color: '#fff', marginBottom: 16 }}>
-                Experienced marketing leadership, on your terms
+                Experienced marketing leadership, on a business’s terms
               </h1>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: 0 }}>
-                Whether you’re ready to <strong>integrate AI into your marketing</strong>, clarify your message, or <strong>strengthen your local visibility</strong>, Laura meets you where you are — one strategic step at a time.
+                Whether a business is ready to <strong>integrate AI into its marketing</strong>, clarify its message, or <strong>strengthen its local visibility</strong>, Laura meets owners where they are — one strategic step at a time.
               </p>
             </div>
           </window.Container>
@@ -41,14 +41,14 @@
         <section className="bg-page section">
           <window.Container>
             <window.SectionTitle overline="How Laura Helps" title="Ways to work together"
-              sub="Every engagement is built on clarity and leadership — and tailored to where your business is now." />
+              sub="Every engagement is built on clarity and leadership — and tailored to where a business is now." />
             <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-2" style={{ marginTop: 48 }}>
               <ServiceCard icon="fa-wand-magic-sparkles" tag="Clarity & AI" title="AI Strategy Sessions"
-                body="A private, 90-minute strategic session to bring clarity to your marketing and confidence to your next decisions — especially in an AI-driven landscape. Together you’ll look at what’s working, what’s not, and where AI can actually help, without adding noise or losing your voice."
+                body="A private, 90-minute strategic session to bring clarity to a business’s marketing and confidence to its next decisions — especially in an AI-driven landscape. Together, Laura and the owner look at what’s working, what’s not, and where AI can actually help, without adding noise or losing the brand’s voice."
                 footer={<BookButton size="small">Book a session</BookButton>} />
               <ServiceCard icon="fa-compass" tag="Ongoing Leadership" title="Fractional Marketing Leadership"
-                body="Ongoing executive-level marketing leadership for business owners who want clarity, consistency, and momentum — without hiring a full-time CMO. Laura clarifies your message, guides strategic decisions, integrates AI wisely, and builds a marketing approach that supports long-term growth."
+                body="Ongoing executive-level marketing leadership for business owners who want clarity, consistency, and momentum — without hiring a full-time CMO. Laura clarifies the message, guides strategic decisions, integrates AI wisely, and builds a marketing approach that supports long-term growth."
                 footer={<BookButton size="small">Discuss a partnership</BookButton>} />
               <ServiceCard icon="fa-microphone-lines" tag="Training & Speaking" title="Workshops & Speaking"
                 body="Keynotes and custom trainings focused on building brands with heart in the age of AI. Laura speaks to entrepreneurs, leadership teams, and organizations about clarity, confidence, trust-based marketing, and navigating AI without losing human connection."
@@ -67,7 +67,7 @@
         </section>
 
         {/* Contact band */}
-        <window.StartConversation sub="Not sure which path is right? Tell Laura where you are, and she’ll recommend a smart next step." />
+        <window.StartConversation sub="Not sure which path is right? Tell Laura where the business is, and she’ll recommend a smart next step." />
       </div>
     );
   }

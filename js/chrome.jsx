@@ -17,13 +17,7 @@ const MEGA = [
   { label: 'Awards & Certifications', href: 'awards.html' },
   { label: 'Client Reviews', href: 'reviews.html' },
   { label: 'Giving Back', href: 'giving-back.html' },
-  { label: 'Laura’s Story', href: 'laura-story.html' },
-  { label: 'In the Media / Press', href: 'press.html' },
-  { label: 'Speaking & Writing', href: 'speaking-writing.html' },
-  { label: 'Video: StoryBrand Guide', href: 'https://drive.google.com/file/d/16UoXlUX214Gdj5NkHwORo9feKo90q3gI/view?usp=drive_link' },
-  { label: 'Video: Meet Our Publisher', href: 'https://drive.google.com/file/d/1NE92p4MA9_qbFrXTbq7CZQlpG_GQDHIP/view?usp=drive_link' },
-  { label: 'Why Businesses Trust Laura', href: 'about.html#trust' },
-  { label: 'Why Laura Publishes BeLocal', href: 'why-belocal.html' }]
+  { label: 'Why BeLocal', href: 'why-belocal.html' }]
 
 },
 {
@@ -60,13 +54,13 @@ const NAV = MEGA.map((m) => [m.label, m.href]);
 const MEGA_BY = {};
 MEGA.forEach((m) => {MEGA_BY[m.label] = m;});
 const NAV_TOP = [
-{ label: 'Home', href: 'index.html' },
 MEGA_BY['About'],
 MEGA_BY['How I Help'],
-{ label: 'Podcast', href: 'podcast.html' },
+{ label: 'Podcast', href: 'podcast.html', items: [
+  { label: 'Be Locally Loved', href: 'podcast.html' },
+  { label: 'The Unbridled Creative', href: 'podcast.html' }] },
 { label: 'Blog', href: 'blog.html' },
-MEGA_BY['Resources'],
-{ label: 'Start Here', href: 'start-here.html' }];
+MEGA_BY['Resources']];
 
 
 /* Recursive renderer for nested mega-menu items (desktop). */
@@ -74,10 +68,10 @@ function MegaItem({ node }) {
   const ext = node.href && node.href.startsWith('http');
   const hasKids = node.kids && node.kids.length;
   if (!hasKids) {
-    return <a className="mega-link" href={node.href || '#'} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{node.label}</a>;
+    return <a className="mega-link" href={node.href || '#'} target="_blank" rel="noopener">{node.label}</a>;
   }
   const Label = node.href ?
-  <a className="mega-node__label" href={node.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{node.label}</a> :
+  <a className="mega-node__label" href={node.href} target="_blank" rel="noopener">{node.label}</a> :
   <span className="mega-node__label">{node.label}</span>;
   return (
     <div className="mega-node">
@@ -115,7 +109,7 @@ function DropItem({ node }) {
   return (
     <li className={`drop__item ${hasKids ? 'has-sub' : ''}`} onMouseEnter={onEnter}>
       {node.href ?
-      <a className="drop__link" href={node.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{inner}</a> :
+      <a className="drop__link" href={node.href} target="_blank" rel="noopener">{inner}</a> :
       <span className="drop__link drop__link--parent">{inner}</span>}
       {hasKids &&
       <ul ref={flyRef} className={`drop__menu drop__flyout ${flip ? 'drop__flyout--left' : ''}`}>
@@ -131,12 +125,12 @@ function DrawerItem({ node, depth }) {
   const ext = node.href && node.href.startsWith('http');
   const hasKids = node.kids && node.kids.length;
   if (!hasKids) {
-    return <a className="drawer__leaf" href={node.href || '#'} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined} style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</a>;
+    return <a className="drawer__leaf" href={node.href || '#'} target="_blank" rel="noopener" style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</a>;
   }
   return (
     <React.Fragment>
       {node.href ?
-      <a className="drawer__leaf drawer__leaf--parent" href={node.href} target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined} style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</a> :
+      <a className="drawer__leaf drawer__leaf--parent" href={node.href} target="_blank" rel="noopener" style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</a> :
       <span className="drawer__leaf drawer__leaf--parent" style={{ paddingLeft: 14 + depth * 14 }}>{node.label}</span>}
       {node.kids.map((k, i) => <DrawerItem key={k.label + i} node={k} depth={depth + 1} />)}
     </React.Fragment>);
@@ -273,14 +267,14 @@ function StartConversation({ sub, id = 'contact' }) {
           <Sunburst />
           <h2 className="jk-h jk-h--md" style={{ textAlign: 'center', margin: '0 0 12px' }}>Let’s Start a <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', color: "var(--lct-navy)", fontWeight: "700" }}>Conversation</span></h2>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.6, color: 'var(--text-body)', textAlign: 'center', margin: '0 auto 26px', maxWidth: 480 }}>
-            {sub || 'This is a short, intentional conversation to understand your goals, identify low-hanging opportunities, and recommend a smart next step.'}
+            {sub || 'This is a short, intentional conversation to understand a business’s goals, identify low-hanging opportunities, and recommend a smart next step.'}
           </p>
           <form onSubmit={(e) => {e.preventDefault();toast('Thanks! Laura will reach out shortly.');}} style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
             <DS.Input placeholder="Name" aria-label="Name" required />
             <DS.Input placeholder="Email" type="email" aria-label="Email" required />
             <DS.Input placeholder="Company Name" aria-label="Company name" />
             <DS.Input placeholder="Phone Number" type="tel" aria-label="Phone number" />
-            <DS.Input placeholder="What’s feeling most unclear in your marketing now?" aria-label="Message" />
+            <DS.Input placeholder="What’s feeling most unclear in the marketing right now?" aria-label="Message" />
             <div style={{ textAlign: 'center', marginTop: 6 }}><DS.Button type="submit" size="large">Start a Conversation</DS.Button></div>
           </form>
         </div>
@@ -333,14 +327,14 @@ function Header({ current }) {
               if (!hasMenu) {
                 return (
                   <div key={m.label} className="nav__item">
-                    <a className={`nav__top ${current === m.label ? 'is-active' : ''}`} href={m.href}>{m.label}</a>
+                    <a className={`nav__top ${current === m.label ? 'is-active' : ''}`} href={m.href} target="_blank" rel="noopener">{m.label}</a>
                   </div>);
 
               }
               return (
                 <div key={m.label} className={`nav__item ${mega === m.label ? 'is-open' : ''}`}
                 onMouseEnter={() => openMega(m.label)} onMouseLeave={scheduleClose}>
-                  <a className={`nav__top ${current === m.label ? 'is-active' : ''}`} href={m.href}
+                  <a className={`nav__top ${current === m.label ? 'is-active' : ''}`} href={m.href} target="_blank" rel="noopener"
                   aria-expanded={mega === m.label} aria-haspopup="true"
                   onFocus={() => openMega(m.label)}>
                     {m.label}<i className="fa-solid fa-chevron-down chev" aria-hidden="true"></i>
@@ -360,9 +354,10 @@ function Header({ current }) {
             <span className="navbar__social">
               <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/lauracapesterry/" target="_blank" rel="noopener" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
             </span>
             <span className="navbar__cta">
-              <DS.Button href="contact.html" variant="primary" size="small">Contact</DS.Button>
+              <DS.Button href="start-here.html" variant="primary" size="small" target="_blank" rel="noopener">Start Here</DS.Button>
             </span>
             <button className="hamburger" aria-label="Menu" onClick={() => setOpen((o) => !o)}>
               <i className={`fa-solid ${open ? 'fa-xmark' : 'fa-bars'}`}></i>
@@ -376,7 +371,7 @@ function Header({ current }) {
         {NAV_TOP.map((m) => {
           const hasMenu = Array.isArray(m.items) && m.items.length > 0;
           if (!hasMenu) {
-            return <a key={m.label} className="drawer__link" href={m.href}>{m.label}</a>;
+            return <a key={m.label} className="drawer__link" href={m.href} target="_blank" rel="noopener">{m.label}</a>;
           }
           return (
             <div key={m.label} className="drawer__group">
@@ -385,7 +380,7 @@ function Header({ current }) {
                 {m.label}<i className={`fa-solid fa-chevron-${drawerSub === m.label ? 'up' : 'down'}`}></i>
               </button>
               <div className={`drawer__sub ${drawerSub === m.label ? 'is-open' : ''}`}>
-                <a href={m.href} className="drawer__suboverview">All {m.label} →</a>
+                <a href={m.href} className="drawer__suboverview" target="_blank" rel="noopener">All {m.label} →</a>
                 {m.items.map((node, i) => <DrawerItem key={node.label + i} node={node} depth={0} />)}
               </div>
             </div>);
@@ -403,11 +398,21 @@ function Footer() {
   const IG_URL = 'https://www.instagram.com/lauracapesterrymba/';
   const shortLinks = [
   ['Home', 'index.html'], ['About', 'about.html'], ['How I Help', 'services.html'],
-  ['Podcast', 'podcast.html'], ['Blog', 'blog.html'], ['Resources', 'resources.html'], ['Start Here', 'start-here.html']];
+  ['Podcast', 'podcast.html'], ['Blog', 'blog.html'], ['Resources', 'resources.html'], ['Start Here', 'start-here.html'], ['Contact', 'contact.html']];
+
+  /* Overflow links moved out of the About mega-menu (June 2026) — now live in the footer. */
+  const aboutMore = [
+  ['Laura’s Story', 'laura-story.html'],
+  ['In the Media / Press', 'press.html'],
+  ['Speaking & Writing', 'speaking-writing.html'],
+  ['Why Businesses Trust Laura', 'about.html#trust'],
+  ['Why Laura Publishes BeLocal', 'why-belocal.html'],
+  ['Video: StoryBrand Guide', 'https://drive.google.com/file/d/16UoXlUX214Gdj5NkHwORo9feKo90q3gI/view?usp=drive_link'],
+  ['Video: Meet Our Publisher', 'https://drive.google.com/file/d/1NE92p4MA9_qbFrXTbq7CZQlpG_GQDHIP/view?usp=drive_link']];
 
   const igPhotos = [
   'pool-portrait.png', 'gala.png', 'award-couple.png', 'belocal-group.png',
-  'library-couple.png', 'podcast.png', 'beach-sunset.png', 'resort.png'];
+  'library-couple.png', 'podcast.png', 'pwow-podium.jpeg', 'resort.png'];
 
   const legal = [
   ['Terms', 'contact.html'], ['Privacy', 'contact.html'],
@@ -434,21 +439,22 @@ function Footer() {
           <div className="footer-arch">
             <h3 className="footer-head" style={{ fontSize: "20px" }}>Short Links</h3>
             <nav className="footer-shortlinks" aria-label="Footer">
-              {shortLinks.map(([l, h]) => <a key={l} href={h}>{l}</a>)}
+              {shortLinks.map(([l, h]) => <a key={l} href={h} target="_blank" rel="noopener">{l}</a>)}
             </nav>
             <span className="footer-arch__base" aria-hidden="true"></span>
           </div>
         </div>
 
         <div className="footer-col footer-col--brand">
-          <a className="footer-logo" href="index.html" aria-label="Laura Capes Terry — home">
+          <a className="footer-logo" href="index.html" target="_blank" rel="noopener" aria-label="Laura Capes Terry — home">
             <img src={window.__resources && window.__resources.logo || 'assets/logo-horizontal.png'} alt="Laura Capes Terry, MBA" />
           </a>
-          <p className="footer-connect" style={{ fontSize: "20px" }}>Let’s stay connected</p>
+          <p className="footer-connect">Let’s stay connected</p>
           <div className="footer-social footer-social--lg">
             <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
             <a href={IG_URL} target="_blank" rel="noopener" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-            <a href="podcast.html" aria-label="Podcast"><i className="fa-solid fa-microphone-lines"></i></a>
+            <a href="https://www.linkedin.com/in/lauracapesterry/" target="_blank" rel="noopener" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
+            <a href="podcast.html" target="_blank" rel="noopener" aria-label="Podcast"><i className="fa-solid fa-microphone-lines"></i></a>
             <a href={CALENDLY} target="_blank" rel="noopener" aria-label="Book a call"><i className="fa-solid fa-phone"></i></a>
           </div>
         </div>
@@ -456,7 +462,7 @@ function Footer() {
         <div className="footer-col footer-col--news">
           <h3 className="footer-head" style={{ fontSize: "20px" }}>Join the Newsletter</h3>
           <p className="footer-news__desc">
-            Practical, human-first marketing guidance — and the smartest ways to use AI without losing your voice. No spam, ever.
+            Practical, human-first marketing guidance — and the smartest ways to use AI without losing the human voice. No spam, ever.
           </p>
           <form className="footer-form" onSubmit={(e) => {e.preventDefault();toast('You’re in! Watch your inbox for Laura’s next note.');}}>
             <DS.Input placeholder="First name" aria-label="First name" required />
@@ -464,6 +470,16 @@ function Footer() {
             <DS.Button type="submit" fullWidth>Join Now</DS.Button>
           </form>
         </div>
+      </div>
+
+      {/* Explore band — overflow links moved out of the About menu */}
+      <div className="footer-explore">
+        <h3 className="footer-head footer-explore__head">More About Laura</h3>
+        <nav className="footer-explore__links" aria-label="More about Laura">
+          {aboutMore.map(([l, h]) =>
+          <a key={l} href={h} target="_blank" rel="noopener">{l}</a>
+          )}
+        </nav>
       </div>
 
       <div className="footer-bottom">

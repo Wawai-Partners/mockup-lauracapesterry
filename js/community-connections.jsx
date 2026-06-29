@@ -11,7 +11,7 @@
       'Weekly structured networking meetings',
       'One-to-one relationship building with members',
       'A proven referral system that generates real business',
-      'A community of professionals who actively promote your work'];
+      'A community of professionals who actively promote their members’ work'];
 
 
     return (
@@ -39,7 +39,7 @@
                 <Pill style={{ marginBottom: 14 }}>BeLocal Georgetown</Pill>
                 <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '36px' }}>More than a media company — a community hub</h2>
                 <p style={{ ...para }}>BeLocal Georgetown connects business owners with residents, with each other, and with the events and moments that matter most in Georgetown.</p>
-                <p style={{ ...para, margin: 0 }}>As a BeLocal sponsor, you're not just buying an ad — you're joining a community of businesses that care about Georgetown.</p>
+                <p style={{ ...para, margin: 0 }}>As a BeLocal sponsor, a business isn’t just buying an ad — it’s joining a community of businesses that care about Georgetown.</p>
                 <div style={{ marginTop: 28 }}><Button href="belocal.html" variant="accent">Explore BeLocal →</Button></div>
               </div>
             </div>
@@ -54,7 +54,7 @@
                 <Pill style={{ marginBottom: 14 }}>BNI GTX</Pill>
                 <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: '33px' }}>Business by referral</h2>
                 <p style={{ ...para }}>BNI (Business Network International) is the world's largest and most successful business networking organization. BNI GTX is Georgetown's premier chapter.</p>
-                <p style={{ ...para }}>Laura is an active BNI member and can help you evaluate whether BNI is the right fit for your business — and how to get the most out of membership if you join.</p>
+                <p style={{ ...para }}>Laura is an active BNI member and can help business owners evaluate whether BNI is the right fit — and how to get the most out of membership if they join.</p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
                   {bni.map((t) =>
                   <li key={t} style={{ display: 'flex', gap: 12 }}>
@@ -64,11 +64,7 @@
                   )}
                 </ul>
               </div>
-              <div className="reveal card bg-tint" style={{ border: 'none', textAlign: 'center', alignSelf: 'center', padding: 48 }}>
-                <window.SunIcon icon="fa-people-arrows" size={92} />
-                <div className="h-display" style={{ fontSize: 25, marginTop: 18 }}>Georgetown's premier chapter</div>
-                <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-body)', margin: '10px 0 0' }}>A proven referral system, built on real relationships.</p>
-              </div>
+              <img className="reveal" src="assets/bni-gtx-group.jpg" alt="BNI GTX Georgetown chapter members celebrating together" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'var(--radius-lg, 16px)', alignSelf: 'center' }} />
             </div>
           </window.Container>
         </section>
@@ -77,7 +73,7 @@
         <section className="bg-card section" data-screen-label="More connections">
           <window.Container>
             <window.SectionTitle title="More ways to connect &amp;" script="grow together"
-            sub="Beyond networking, Laura helps you build a referral-rich web of local businesses and real-world moments with your customers." />
+            sub="Beyond networking, Laura helps business owners build a referral-rich web of local businesses and real-world moments with their customers." />
             <div className="heart-divider" aria-hidden="true"><i className="fa-solid fa-heart"></i></div>
             <div className="grid grid-2" style={{ marginTop: 48 }}>
               {[
@@ -100,7 +96,7 @@
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 620, margin: '0 auto' }}>
               <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Become a name people recommend</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
-                Let's find the right networks and connections for your business.
+                Let's find the right networks and connections for a business.
               </p>
               <BookButton size="large" variant="accent" style={{ background: '#fff' }}>Explore Community Connection Opportunities <i className="fa-solid fa-heart"></i></BookButton>
             </div>

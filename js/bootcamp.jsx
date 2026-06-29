@@ -24,13 +24,13 @@
     ['Transformed your marketing plan so you can market your business with confidence',
      'Many local business owners rely on gut instinct to make marketing decisions and risk throwing hard-earned profits in the trash can. Learn how to put first-things-first in your marketing so you can pull more profit from your plan.'],
     ['Learned a proven framework for marketing a local business so you can make smarter decisions',
-     'I\u2019ll introduce you to The Building Blocks for Marketing Success\u2122 — a proven framework I\u2019ve used to build dozens of brands and help hundreds of local business owners market their brand with confidence.'],
+     'Laura introduces The Building Blocks for Marketing Success\u2122 — a proven framework she\u2019s used to build dozens of brands and help hundreds of local business owners market their brand with confidence.'],
     ['Leveraged the power of the StoryBrand framework for your website homepage',
      'Your website is your #1 salesperson. It works 24/7 and never complains or asks for overtime. Learn how to apply the magic of StoryBrand to your home page design to attract and convert more customers.'],
     ['Discovered the power of your front lines and existing clients to grow without spending money',
      'Everyone knows it\u2019s cheaper and easier to keep the customers you have than to attract, engage, and convert new ones. Learn how to leverage this insight to gain traction in your organization.'],
     ['Mitigated the risk inherent in all advertising so you can make smarter media buys',
-     'Whether the economy is crashing or booming, it\u2019s important to know how to mitigate risk anytime you\u2019re spending money on advertising. Learn the framework I use to find the no-brainers and low-hanging fruit for quick wins.']];
+     'Whether the economy is crashing or booming, it\u2019s important to know how to mitigate risk anytime you\u2019re spending money on advertising. Learn the framework Laura uses to find the no-brainers and low-hanging fruit for quick wins.']];
 
   const MODULES = [
     ['Module 1', 'Marketing Plans Made Smarter',
@@ -39,7 +39,7 @@
       'We\u2019ll get to know each other so we can walk this journey together.',
       'We\u2019ll discover where you are and where you need to go.']],
     ['Module 2', 'The Building Blocks for Marketing Success\u2122',
-     'In this module, you\u2019ll learn the marketing framework that I used to take a local mom-and-pop from 1 retail store to 18 in 6 years.',
+     'In this module, you\u2019ll learn the marketing framework Laura used to take a local mom-and-pop from 1 retail store to 18 in 6 years.',
      ['You\u2019ll learn the importance of sequence so you can gain traction.',
       'You\u2019ll learn how to put first-things-first so you can make smarter decisions.',
       'You\u2019ll learn how to leverage your #1 salesperson to convert more clients.']],
@@ -63,10 +63,10 @@
      ['Learn the best times to buy (or not to buy) ads for your business',
       'Learn how to mitigate risk in every opportunity before you buy',
       'Learn how to find no-brainers and low-hanging fruit']],
-    ['fa-comments', 'Direct Access to Me: Personal Coaching', 'Valued at $3,000',
-     ['Email your questions directly to me so you feel supported',
-      'I\u2019ll evaluate your homepage and see if it passes the grunt test',
-      'I\u2019ll review your ideal client avatars to make sure they\u2019re on target']]];
+    ['fa-comments', 'Direct Access to Laura: Personal Coaching', 'Valued at $3,000',
+     ['Email questions directly to Laura for support',
+      'Laura evaluates your homepage and sees if it passes the grunt test',
+      'Laura reviews your ideal client avatars to make sure they\u2019re on target']]];
 
   const TESTIMONIALS = [
     ['Jeff Kikel', 'T-Werx Coworking',
@@ -80,21 +80,21 @@
     ['The Marketing Plans Made Smarter Bootcamp', '$5,000'],
     ['The StoryBrand Magic Bonus', '$2,500'],
     ['The Mitigate Risk in Media Bonus', '$1,500'],
-    ['Direct Access to Me for Personal Coaching', '$3,000']];
+    ['Direct Access to Laura for Personal Coaching', '$3,000']];
 
   const FAQS = [
     ['I\u2019ve been trying to get new clients for a while now, and I just can\u2019t get any traction. What do you recommend?',
      'Traction almost always comes from sequence, not effort. Most owners chase new leads before they\u2019ve clarified their message, optimized their #1 salesperson (your website), and maximized the customers they already have. The Bootcamp walks you through the Building Blocks for Marketing Success in the right order — so you stop spinning your wheels and start gaining momentum.'],
-    ['Can I just hire you to coach me? Or do I have to take the Bootcamp first?',
-     'The Bootcamp is the fastest, most affordable way to get the full framework — and it includes direct access to me for personal coaching along the way. Many owners start here, then continue with one-on-one work once they\u2019ve built a smarter plan. Either way, the Bootcamp gives us a shared language and a strong foundation to build on.'],
-    ['This seems like a lot of value for the price… can I really get all of this for $97?',
-     'Yes. The full program — four modules, three bonuses, and direct access to me — is valued at over $10,000. I priced the Bootcamp at $97 because I\u2019m a local business owner too, and I believe every owner deserves access to proven marketing strategy without a five-figure consulting bill.'],
+    ['Can I just hire Laura to coach me? Or do I have to take the Bootcamp first?',
+     'The Bootcamp is the fastest, most affordable way to get the full framework — and it includes direct access to Laura for personal coaching along the way. Many owners start here, then continue with one-on-one work once they\u2019ve built a smarter plan. Either way, the Bootcamp gives a shared language and a strong foundation to build on.'],
+    ['This seems like a lot of value for the price… can I really get all of this for $297?',
+     'Yes. The full program — four modules, three bonuses, and direct access to Laura — is valued at over $10,000. Laura priced the Bootcamp at $297 because she\u2019s a local business owner too, and she believes every owner deserves access to proven marketing strategy without a five-figure consulting bill.'],
     ['How does the program work? When will I get access to the modules?',
      'It\u2019s a self-paced video program with a workbook \u201cdo-it\u201d kit. You get instant, lifetime access to all four modules and every bonus the moment you enroll, so you can move as quickly — or as thoughtfully — as you like, and revisit any lesson whenever you need it.'],
     ['What if I\u2019m not happy with the course? Can I get my money back?',
-     'Absolutely. If after the first module you\u2019re not completely satisfied with the scope and goals of the course, email me with your completed pre-course assessment and I\u2019ll refund you. All I ask is that you show me you\u2019ve done the work up to that point.'],
+     'Absolutely. If after the first module you\u2019re not completely satisfied with the scope and goals of the course, email Laura with the completed pre-course assessment and she\u2019ll issue a refund. All she asks is that you show her you\u2019ve done the work up to that point.'],
     ['Can you remind me of everything I\u2019m getting when I sign up today?',
-     'You get the full Marketing Plans Made Smarter Bootcamp (4 modules), plus the StoryBrand Magic bonus, the Mitigate Risk in Media bonus, and Direct Access to Me for personal coaching — a program valued at over $10,000 — all for a one-time $97.']];
+     'You get the full Marketing Plans Made Smarter Bootcamp (4 modules), plus the StoryBrand Magic bonus, the Mitigate Risk in Media bonus, and Direct Access to Laura for personal coaching — a program valued at over $10,000 — all for a one-time $97.']];
 
   function FAQItem({ q, a }) {
     const [open, setOpen] = React.useState(false);
@@ -171,7 +171,7 @@
                 </h2>
                 <p style={{ ...para }}>If you're reading this, then you've survived 2020 and are already ahead of the game. You've pivoted. You've innovated. You've gotten scrappy when you had to. The important thing is you've survived and you're ready to thrive.</p>
                 <p style={{ ...para }}>The <strong>Marketing Plans Made Smarter Bootcamp</strong> is for fighters — just like you — and will give you the strategies and tools you need to get more from your marketing.</p>
-                <p style={{ ...para, margin: 0 }}>I get what's at stake. I'm a local business owner, too. You deserve more from your marketing, and I want to show you how to get it by sharing the framework I've used to build dozens of brands, help hundreds of local business owners, and grow a local mom-and-pop from 1 store to 18 in 6 years. It can help you too.</p>
+                <p style={{ ...para, margin: 0 }}>Laura gets what's at stake — she's a local business owner, too. Owners deserve more from their marketing, and she shows them how to get it by sharing the framework she's used to build dozens of brands, help hundreds of local business owners, and grow a local mom-and-pop from 1 store to 18 in 6 years.</p>
               </div>
               <img className="reveal img-card" src="assets/bootcamp/opening-door.png" alt="Business owner welcoming a customer" style={{ width: '100%' }} />
             </div>
@@ -284,7 +284,7 @@
                   </li>)}
               </ul>
               <p className="ed-serif" style={{ fontSize: 20, color: 'var(--lct-navy)', margin: '0 0 4px' }}>The entire program is valued at over $10,000.</p>
-              <p className="h-display" style={{ fontSize: 33, color: 'var(--color-primary)', margin: '0 0 24px' }}>Enroll now for only $97</p>
+              <p className="h-display" style={{ fontSize: 33, color: 'var(--color-primary)', margin: '0 0 24px' }}>Enroll now for only $297</p>
               <EnrollBtn size="large" />
             </div>
           </window.Container>
@@ -299,9 +299,9 @@
               </div>
               <div className="reveal">
                 <h2 className="ed-serif" style={{ fontSize: '30px', marginBottom: 16 }}>Risk-Free Guarantee</h2>
-                <p style={{ ...para }}>If after moving through the first module you are not completely satisfied with the scope and goals for the course, then you can email me for your money back. All I ask is that you show me you've done the work up to that point.</p>
+                <p style={{ ...para }}>If after moving through the first module you are not completely satisfied with the scope and goals for the course, then email Laura for a refund. All she asks is that you show her you've done the work up to that point.</p>
                 <p style={{ ...para }}>By the end of the first module, you should be clear about the gap between where you are and where you want to go with your marketing — and you should feel ready to walk the path to transformation.</p>
-                <p style={{ ...para, margin: 0, fontStyle: 'italic', color: 'var(--text-muted)', fontSize: 14.5 }}>Note: If you've already moved into Module 2 where I introduce The Building Blocks for Marketing Success, you will not be eligible for a refund. But I am confident you'll love this course and that it will transform the way you market your business.</p>
+                <p style={{ ...para, margin: 0, fontStyle: 'italic', color: 'var(--text-muted)', fontSize: 14.5 }}>Note: If you've already moved into Module 2 where Laura introduces The Building Blocks for Marketing Success, you will not be eligible for a refund. Laura is confident you'll love this course and that it will transform the way you market your business.</p>
               </div>
             </div>
           </window.Container>
@@ -325,7 +325,7 @@
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
               <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Ready to build a smarter marketing plan?</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
-                Join the Marketing Plans Made Smarter Bootcamp today and start marketing your business with confidence — for a one-time $97.
+                Join the Marketing Plans Made Smarter Bootcamp today and start marketing your business with confidence — for a one-time $297.
               </p>
               <EnrollBtn size="large" variant="accent" style={{ background: '#fff' }} />
             </div>
@@ -340,7 +340,7 @@
         <window.Container>
           <div className="reveal card" style={{ maxWidth: 640, margin: '0 auto', padding: '48px 52px', textAlign: 'center' }}>
             <h2 className="ed-serif" style={{ fontSize: 23, color: 'var(--color-primary)', marginBottom: 8, lineHeight: 1.3 }}>Marketing Plans Made Smarter — a Bootcamp for Local Business Owners</h2>
-            <p className="h-display" style={{ fontSize: 43, margin: '8px 0 2px' }}>Only $97</p>
+            <p className="h-display" style={{ fontSize: 43, margin: '8px 0 2px' }}>Only $297</p>
             <p style={{ fontFamily: 'var(--font-subhead)', fontWeight: 700, color: 'var(--color-primary)', letterSpacing: '0.06em', margin: '0 0 28px' }}>Valued at $10,000+</p>
             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 28px', textAlign: 'left' }}>
               <Check>Avoid throwing thousands of dollars in the trash can by making poor marketing decisions</Check>

@@ -45,7 +45,7 @@
     },
     {
       id: 'courses', icon: 'fa-graduation-cap', eyebrow: 'Courses',
-      title: 'Go deeper, at your own pace',
+      title: 'Go deeper, at any pace',
       blurb: 'Self-paced learning to build real marketing skill and confidence.',
       tiles: [
         ['Marketing Made Smarter Bootcamp', 'Course', '#'],
@@ -145,7 +145,7 @@
           <window.Container>
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
               <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', marginBottom: 14 }}>Not sure which resource is right?</h2>
-              <p className="lead" style={{ margin: '0 auto 26px' }}>Tell Laura your biggest marketing challenge and she’ll point you to the right next step.</p>
+              <p className="lead" style={{ margin: '0 auto 26px' }}>Tell Laura the biggest marketing challenge and she’ll point to the right next step.</p>
               <Button href="contact.html" size="large">Start Here</Button>
             </div>
           </window.Container>

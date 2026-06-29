@@ -11,11 +11,11 @@
     /* Headline recognition badges */
     const badges = [
       'georgetowns-best-2025.png',
+      'georgetowns-best-2024.png',
+      'georgetowns-best-2023.png',
       'texas-downtown-award-winner.png',
       'storybrand-certified-guide.png',
-      'fg-society-certified-marketer.png',
-      'georgetowns-best-2024.png',
-      'georgetowns-best-2023.png'];
+      'fg-society-certified-marketer.png'];
 
 
     /* Certifications */

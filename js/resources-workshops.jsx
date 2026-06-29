@@ -7,7 +7,8 @@
     ['fa-microchip', 'AI in Marketing: Practical Applications', 'Cut through the AI noise and learn which tools to use, how to train them, and how to integrate AI into your workflow — without losing your human voice.', 'Half- or full-day · Groups & organizations'],
     ['fa-layer-group', 'Don\u2019t Wing It — Batch It', 'A content system for owners tired of staring at a blank screen. Create a month\u2019s worth of content in one focused session — with help from AI.', '2\u20133 hour workshop · In-person or virtual'],
     ['fa-lightbulb', 'From Blank Screen to Brilliant Strategy', 'For owners who tried to figure out marketing alone and ended up overwhelmed. Go from scattered and stuck to clear and confident.', 'Half-day workshop · In-person'],
-    ['fa-shield-heart', 'Navigating the Trust Recession', 'Trust in business and advertising is at an all-time low. Learn to build authentic, community-rooted trust that makes you the obvious choice.', 'Keynote or half-day · In-person']];
+    ['fa-shield-heart', 'Navigating the Trust Recession', 'Trust in business and advertising is at an all-time low. Learn to build authentic, community-rooted trust that makes a business the obvious choice.', 'Keynote or half-day · In-person'],
+    ['fa-robot', 'Meet Your AI Co-Pilot', 'Partner with AI as a trusted co-pilot to gain clarity, build confidence, overcome excuses, and take practical steps toward the dream or message they feel called to bring to life.', 'Half-day workshop · In-person or virtual']];
 
   function WorkshopsPage() {
     return (
@@ -17,9 +18,9 @@
             <div className="reveal" style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center', paddingTop: 24, paddingBottom: 24 }}>
               <Pill variant="soft" style={{ marginBottom: 16 }}>Resources · Workshops</Pill>
               <h1 className="h-display" style={{ fontSize: 'var(--fs-h1)', marginBottom: 16 }}>
-                Hands-on learning that actually changes how you <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>market</span>
+                Hands-on learning that actually changes how businesses <span className="jk-script" style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)' }}>market</span>
               </h1>
-              <p className="lead">Laura’s workshops are practical, engaging, and built for real business owners — not academics. Walk in with a challenge. Walk out with tools you can use today.</p>
+              <p className="lead">Laura’s workshops are practical, engaging, and built for real business owners — not academics. Walk in with a challenge. Walk out with tools they can use today.</p>
             </div>
           </window.Container>
         </section>
@@ -48,7 +49,7 @@
         <section className="bg-dark section">
           <window.Container>
             <div className="reveal" style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
-              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Bring a workshop to your organization</h2>
+              <h2 className="h-display" style={{ fontSize: 'var(--fs-h2)', color: '#fff', marginBottom: 14 }}>Bring a workshop to an organization</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--fs-lead)', lineHeight: 1.6, color: 'rgba(255,255,255,0.92)', margin: '0 0 28px' }}>
                 Available for Chambers of Commerce, BNI chapters, business associations, leadership groups, and corporate teams throughout Central Texas.
               </p>

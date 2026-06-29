@@ -3,9 +3,10 @@
   const { Button, Pill } = window.LauraCapesTerryDesignSystem_1d8d61;
 
   const videos = [
+    ['Dreams are a Wish Your Heart Makes', 'Laura taught PWOW members how to partner with AI as a trusted co-pilot so they could quiet limiting beliefs, gain clarity and confidence, and start taking action toward the dream, business, brand, or message they feel called to bring to life.', 'https://drive.google.com/file/d/1SvUbeoKm4FZJLqzNmE5Lz6NSOO41PeFD/view', 'Watch the talk', 'assets/videos/dreams-are-a-wish.jpg'],
     ['BNI Featured Speaker Presentation', 'Laura delivers her signature presentation to BNI Georgetown — covering local marketing essentials, trust-building strategies, and the power of community connection.', 'https://www.youtube.com/watch?v=TVNhz8bQdjI', 'Watch on YouTube', 'assets/videos/bni-featured-speaker.jpg'],
     ['BNI Member Testimonials', 'Georgetown business owners share their experiences working with Laura — and the impact of her marketing guidance on their businesses.', 'https://www.youtube.com/watch?v=plaGFgImBPk', 'Watch on YouTube', 'assets/videos/bni-testimonials.jpg'],
-    ['Teach ChatGPT to Sound Like You', 'A hands-on tutorial showing local business owners exactly how to train ChatGPT to write in their authentic voice — so AI-assisted content sounds like you.', 'https://drive.google.com/file/d/1tjgM5hZQigpMgeipVA6tHj01QsXXhtU-/view?usp=drive_link', 'Watch tutorial', 'assets/videos/teach-chatgpt.png']];
+    ['Teach ChatGPT to Sound Like You', 'A hands-on tutorial showing local business owners exactly how to train ChatGPT to write in their authentic voice — so AI-assisted content sounds like them.', 'https://drive.google.com/file/d/1tjgM5hZQigpMgeipVA6tHj01QsXXhtU-/view?usp=drive_link', 'Watch tutorial', 'assets/videos/teach-chatgpt.png']];
 
   function VideosPage() {
     return (
