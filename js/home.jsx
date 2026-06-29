@@ -369,7 +369,7 @@
           <div className="pm-library"><img src="assets/moments/mosaic-library-couple.png" alt="Laura recording at the library" /></div>
           <div className="pm-podcast"><img src="assets/moments/podcast.png" alt="Laura recording the podcast" /></div>
           <div className="pm-beach"><img src="assets/moments/pwow-podium.jpeg" alt="Laura speaking at Professional Women of Williamson County" /></div>
-          <div className="pm-resort"><img src="assets/moments/laura-horse.jpeg" alt="Laura with the horse she sponsors" /></div>
+          <div className="pm-resort"><img src="assets/moments/laura-horse.jpeg" alt="Laura with friends and the therapy horse they support" /></div>
         </div>
       </section>);
 
