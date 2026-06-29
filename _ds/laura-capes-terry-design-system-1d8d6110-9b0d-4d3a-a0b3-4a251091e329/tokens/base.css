@@ -16,27 +16,38 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Headlines — Montserrat Bold, charcoal */
+h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--text-heading);
   font-weight: var(--fw-bold);
   line-height: var(--lh-tight);
-  margin: 0 0 0.4em;
+  margin: 0 0 0.3em;
   letter-spacing: var(--ls-tight);
+  text-wrap: balance;
+}
+/* Subheads — Montserrat SemiBold */
+h4, h5, h6 {
+  font-family: var(--font-subhead);
+  color: var(--text-heading);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-snug);
+  margin: 0 0 0.5em;
+  letter-spacing: var(--ls-subhead);
   text-wrap: balance;
 }
 h1 { font-size: var(--fs-h1); }
 h2 { font-size: var(--fs-h2); }
 h3 { font-size: var(--fs-h3); }
-h4 { font-size: var(--fs-h4); font-weight: var(--fw-semibold); }
+h4 { font-size: var(--fs-h4); }
 
 p { margin: 0 0 1em; text-wrap: pretty; }
 
 a { color: var(--text-link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-strong, b { font-weight: var(--fw-bold); }
+strong, b { font-weight: var(--fw-semibold); }
 
 img { max-width: 100%; display: block; }
 
-::selection { background: var(--lct-sky-200); color: var(--text-heading); }
+::selection { background: var(--lct-sky-200); color: var(--lct-navy-700); }

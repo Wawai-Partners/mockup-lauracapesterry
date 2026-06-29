@@ -1,48 +1,67 @@
 /* ============================================================
    Laura Capes Terry — Typography tokens
-   Headings: Fira Sans (geometric, confident, friendly).
-   Body:     Open Sans (highly legible, warm humanist sans).
+   Single brand typeface: Noto Sans (variable, roman + italic).
+   Used across headlines, subheads, body, and accent text.
    ============================================================ */
 :root {
-  --font-heading: 'Fira Sans', 'Helvetica Neue', Arial, sans-serif;
-  --font-body:    'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-subhead: 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-script:  'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
 
   /* Weights */
+  --fw-light:    300; /* @kind font */
   --fw-regular:  400; /* @kind font */
   --fw-medium:   500; /* @kind font */
   --fw-semibold: 600; /* @kind font */
   --fw-bold:     700; /* @kind font */
 
-  /* Type scale (desktop) — generous, editorial */
-  --fs-display:  56px;   /* hero H1 */
-  --fs-h1:       44px;
-  --fs-h2:       34px;
-  --fs-h3:       26px;
-  --fs-h4:       21px;
+  /* Type scale (desktop) — bold sans headlines, slightly tighter than serif */
+  --fs-display:  60px;   /* hero H1 */
+  --fs-h1:       46px;
+  --fs-h2:       30px;
+  --fs-h3:       23px;
+  --fs-h4:       20px;   /* subhead — Montserrat */
   --fs-lead:     20px;   /* intro paragraphs */
   --fs-body:     17px;
   --fs-small:    15px;
   --fs-caption:  13px;
-  --fs-overline: 13px;   /* used uppercase + tracked */
+  --fs-overline: 13px;   /* uppercase + tracked, Montserrat */
 
   /* Line heights */
-  --lh-tight:   1.1; /* @kind other */
-  --lh-snug:    1.25; /* @kind other */
+  --lh-tight:   1.08; /* @kind other */
+  --lh-snug:    1.2;  /* @kind other */
   --lh-normal:  1.45; /* @kind other */
-  --lh-relaxed: 1.65;   /* @kind other */
+  --lh-relaxed: 1.65; /* @kind other */
 
   /* Letter spacing */
-  --ls-tight:    -0.01em; /* @kind other */
-  --ls-normal:   0; /* @kind other */
-  --ls-overline: 0.14em;  /* @kind other */
+  --ls-tight:    -0.005em; /* @kind other */
+  --ls-normal:   0;        /* @kind other */
+  --ls-subhead:  0.04em;   /* @kind other */
+  --ls-overline: 0.16em;   /* @kind other */
 }
 
-/* Convenience helpers (optional, components mostly inline these) */
+/* Subhead / navigation helper — Montserrat SemiBold, lightly tracked */
+.lct-subhead {
+  font-family: var(--font-subhead);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-subhead);
+}
+
+/* Uppercase eyebrow / overline — Montserrat SemiBold, teal */
 .lct-overline {
-  font-family: var(--font-body);
-  font-weight: var(--fw-bold);
+  font-family: var(--font-subhead);
+  font-weight: var(--fw-semibold);
   font-size: var(--fs-overline);
   letter-spacing: var(--ls-overline);
   text-transform: uppercase;
   color: var(--color-primary);
+}
+
+/* Accent script — Brittany Signature, for warm personal touches only */
+.lct-script {
+  font-family: var(--font-script);
+  font-weight: var(--fw-regular);
+  color: var(--color-accent);
+  line-height: 1;
 }

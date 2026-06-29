@@ -127,9 +127,8 @@
             <window.Container>
               <div className="reveal" style={{ maxWidth: 820, margin: '0 auto' }}>
                 <div className="faq-cat__head">
-                  <span className="faq-cat__icon"><i className={`fa-solid ${c.icon}`}></i></span>
+                  <span className="faq-cat__icon"><window.SunIcon icon={c.icon} size={58} /></span>
                   <div>
-                    <div className="eyebrow">{c.sub}</div>
                     <h2 className="h-display" style={{ fontSize: 'var(--fs-h3)', marginTop: 2 }}>{c.label}</h2>
                   </div>
                 </div>
@@ -151,7 +150,7 @@
               <p className="lead" style={{ margin: '0 auto 26px' }}>You don’t have to figure it out alone. Book a free discovery call and Laura will meet you at the decision table — one strategic step at a time.</p>
               <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Button href={CALENDLY} target="_blank" rel="noopener" size="large">Schedule a Discovery Call</Button>
-                <Button href="start-here.html" variant="outline" size="large">Start Here</Button>
+                <Button href="contact.html" variant="accent" size="large">Start Here</Button>
               </div>
             </div>
           </window.Container>
