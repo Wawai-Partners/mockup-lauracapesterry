@@ -94,7 +94,7 @@
                 )}
             </div>
             <div className="about-hero__name" aria-hidden="true">Laura Capes<br />Terry</div>
-            <img className="about-hero__photo reveal" src="assets/laura-cutout.png" alt="Laura Capes Terry, MBA" />
+            <img className="about-hero__photo reveal" src="assets/laura-about-hero.png" alt="Laura Capes Terry, MBA" />
             <p className="about-hero__tag about-hero__tag--l">Be seen.<br />Be <span className="about-hero__tag-em">trusted</span>.</p>
             <p className="about-hero__tag about-hero__tag--r">Be <span className="about-hero__tag-em">chosen</span> —<br />without losing the heart.</p>
           </div>
@@ -209,7 +209,7 @@
           <window.Container>
             <div className="about-trust__grid">
               <div className="about-trust__photo reveal">
-                <img src="assets/laura-trust.jpg" alt="Laura Capes Terry holding BeLocal Georgetown" />
+                <img src="assets/laura-trust.jpg" alt="Laura Capes Terry speaking on stage" />
               </div>
               <div className="reveal">
                 <h2 className="ed-serif" style={{ marginBottom: 16, fontSize: "43px" }}>Why Businesses Trust Laura</h2>
