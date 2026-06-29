@@ -148,7 +148,7 @@
                 </div>
                 {[
                 ['fa-location-dot', 'Based in', 'Georgetown, Texas'],
-                ['fa-envelope', 'Email', 'hello@lauracapesterry.com'],
+                ['fa-envelope', 'Email', 'laura@lauracapesterry.com'],
                 ['fa-clock', 'Response time', 'Usually within one business day']].
                 map(([ic, label, val]) =>
                 <div key={label} style={{ display: 'flex', gap: 16, alignItems: 'center', padding: '4px 4px' }}>
@@ -164,6 +164,7 @@
                 <div style={{ display: 'flex', gap: 10, paddingLeft: 4 }}>
                   <a href="https://www.facebook.com/lauracapesterry" target="_blank" rel="noopener" className="contact-soc" aria-label="Facebook"><i className="fa-brands fa-facebook-f"></i></a>
                   <a href="https://www.instagram.com/lauracapesterrymba/" target="_blank" rel="noopener" className="contact-soc" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/lauracapesterry/" target="_blank" rel="noopener" className="contact-soc" aria-label="LinkedIn"><i className="fa-brands fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
