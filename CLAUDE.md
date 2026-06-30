@@ -1,17 +1,35 @@
-# Laura Capes Terry — project notes
+# Laura Capes Terry — Claude Code guardrails
 
-## Frontend target: Astro
-This HTML/CSS/JS prototype will be rebuilt in **Astro** (frontend framework). Keep all design work Astro-friendly:
+This repo is the **design prototype** for the Laura Capes Terry marketing site (multi-page
+HTML + React-via-Babel + a bound design system). It is being rebuilt in **Astro**, and will be
+**integrated with GoHighLevel (GHL)** for forms, scheduling, and CRM.
 
-- **Componentize cleanly.** Each page section maps to an Astro component (`.astro`). Keep the current per-section structure (Hero, Feature, Newsletter, Mosaic, etc.) so they port 1:1 to `src/components/*.astro`.
-- **Markup is canonical/semantic HTML** so it drops into `.astro` templates with minimal change. Avoid React-only patterns where a static section would do.
-- **Styling via `site.css` + design-system tokens** (CSS custom properties). This global CSS + token approach maps directly to Astro global styles / scoped `<style>` blocks. Keep using `var(--*)` tokens, not hard-coded values.
-- **Shared chrome** (header `MEGA` nav model, footer) → Astro layout (`src/layouts/*.astro`) + a nav data file.
-- **Interactivity** (mega-menu, mobile drawer, search toggle, checklist progress, carousels, tweaks) → Astro islands (`client:load` / `client:visible`) or small vanilla scripts. Keep interactive logic isolated and prop-driven so it becomes an island cleanly.
-- **Content/data arrays** (POSTS, MEGA, ITEMS, mentors, etc.) → move to Astro content collections / data files; keep them as plain data separate from markup.
-- **Assets** live in `assets/`; in Astro they go under `public/` (or `src/assets/` for processed images).
+> **Golden rule: the prototype is the visual source of truth. Do not redesign it.**
+> Your job is to port it faithfully to Astro, not to "improve" layout, color, type, or copy.
+> If you think something should change visually, propose it — don't apply it.
 
-(Earlier note: a faust.js build was mentioned — superseded by Astro.)
+## Read these first (in order)
+1. `docs/ARCHITECTURE.md` — how the current prototype is built (shell, chrome, page modules).
+2. `docs/ASTRO_MIGRATION.md` — target Astro structure and the rules for porting.
+3. `docs/DESIGN_SYSTEM.md` — how to consume the bound design system (tokens + components).
+4. `docs/COMPONENT_MAP.md` — every page, its sections, the nav/footer model, and data arrays.
+5. `docs/GHL_INTEGRATION.md` — how GoHighLevel plugs in without disturbing the design.
 
-## Brand / design system
-Bound design system: **Laura Capes Terry Design System** (teal `#31738f`, Fira Sans headings, Open Sans body). Use its tokens and components; no invented colors/fonts.
+## Hard constraints (do not violate)
+- **No invented design values.** Colors, fonts, spacing, radii, shadows come **only** from the
+  design-system token files (`var(--*)`). Never hardcode a hex, px font-size, or font family that
+  isn't already a token. The token files are the single source of truth — if a value looks wrong,
+  fix the token in the design system, not the consuming code.
+- **Do not edit anything under `_ds/`** — it is a bundled snapshot of the design system. The live
+  source is a separate project; treat `_ds/` as read-only vendored output.
+- **Preserve all copy verbatim.** Headlines, body, CTA labels, eyebrows — port text exactly.
+- **Preserve structure.** Section order, layout, and component composition stay 1:1 unless the
+  design system explicitly requires otherwise.
+- **Keep using the design-system components** (`Button`, `Input`, `Card`, …). Don't restyle raw
+  HTML to imitate them.
+
+## What "done" means for a ported page
+- Renders identically to the prototype (same sections, order, spacing, colors, type, copy).
+- Uses tokens + DS components, no hardcoded design values, no console errors.
+- Interactive bits are isolated as Astro islands or small vanilla scripts (see migration doc).
+- Any GHL-backed form/calendar is wired through the integration layer, not inline secrets.
