@@ -47,7 +47,7 @@
               </div>
               {[
               ['fa-location-dot', 'Based in', 'Georgetown, Texas'],
-              ['fa-envelope', 'Email', 'hello@lauracapesterry.com'],
+              ['fa-envelope', 'Email', 'laura@lauracapesterry.com'],
               ['fa-clock', 'Response time', 'Usually within one business day']].
               map(([ic, label, val]) =>
               <div key={label} style={{ display: 'flex', gap: 16, alignItems: 'center', padding: '4px 4px' }}>

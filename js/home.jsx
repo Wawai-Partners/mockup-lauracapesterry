@@ -359,7 +359,7 @@
       <section data-screen-label="Moments">
         <div className="photo-mosaic">
           <div className="pm-pool"><img src="assets/moments/pool-portrait.png" alt="Laura Capes Terry" /></div>
-          <div className="pm-gala"><img src="assets/moments/mosaic-gala.png" alt="Laura with friends at a gala" /></div>
+          <div className="pm-gala"><picture><source media="(max-width: 640px)" srcSet="assets/moments/gala-mobile.png" /><img src="assets/moments/mosaic-gala.png" alt="Laura with friends at a gala" /></picture></div>
           <div className="pm-award"><img src="assets/moments/award-couple.png" alt="Laura and team with awards" /></div>
           <div className="pm-belocal"><img src="assets/moments/belocal-group.png" alt="The BeLocal team" /></div>
           <div className="pm-cap home-mosaic__cap">
